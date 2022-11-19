@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
+  
+  
+  <title>基于博弈论的云/边缘计算资源分配与优化算法及应用 | Hexo</title>
+  <meta name="description" content="基于博弈论的云&#x2F;边缘计算资源分配与优化算法及应用 作者：胡俊艳 湖南大学 博士毕业论文  论文创新点 基于非合作博弈的多属性云计算资源竞价算法 时间约束感知的云计算资源联合采购博弈论方法 基于博弈论的边缘计算任务卸载算法  背景用户在意的是QoS，最小成本和最大收益问题，比如响应时间、可靠性、任务的完成时间、资源定价等， 云提供商的主要效益 需要考虑节约能耗、负载均衡等因素，这对减小开销">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于博弈论的云&#x2F;边缘计算资源分配与优化算法及应用">
+<meta property="og:url" content="http://example.com/2022/11/19/2022-07-22-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基于博弈论的云&#x2F;边缘计算资源分配与优化算法及应用 作者：胡俊艳 湖南大学 博士毕业论文  论文创新点 基于非合作博弈的多属性云计算资源竞价算法 时间约束感知的云计算资源联合采购博弈论方法 基于博弈论的边缘计算任务卸载算法  背景用户在意的是QoS，最小成本和最大收益问题，比如响应时间、可靠性、任务的完成时间、资源定价等， 云提供商的主要效益 需要考虑节约能耗、负载均衡等因素，这对减小开销">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724155121067.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724171032448.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724171333310.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724192555620.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220726091144358.png">
+<meta property="article:published_time" content="2022-11-19T12:57:59.691Z">
+<meta property="article:modified_time" content="2022-07-28T01:05:12.190Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="论文阅读 算力网络 边缘博弈">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724155121067.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://example.com/2022/11/19/2022-07-22-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/index.html">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+  
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/cofess" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">虫兑变</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Web Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> GuangZhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="Search" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="Type something..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">Home</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/%E5%BD%92%E6%A1%A3">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">Archives</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/%E5%88%86%E7%B1%BB">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">Categories</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/%E6%A0%87%E7%AD%BE">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">Tags</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">Repository</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">Books</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">Links</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">About</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    </nav>
+  </div>
+</header>
+
+  
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    
+      <div class="widget">
+    <h3 class="widget-title">Board</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+      
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tale/" rel="tag">Tale</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-merge-pull/" rel="tag">git merge pull</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/githubpags-jekyll/" rel="tag">githubpags jekyll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-JDBC/" rel="tag">java JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java-%E6%8E%92%E5%BA%8F/" rel="tag">java 排序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6/" rel="tag">leetcode 浮点数精度</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typora-github/" rel="tag">typora github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/" rel="tag">摩斯电码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C-%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" rel="tag">论文阅读 算力网络 边缘博弈</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/Tale/" style="font-size: 13px;">Tale</a> <a href="/tags/git-merge-pull/" style="font-size: 13px;">git merge pull</a> <a href="/tags/github/" style="font-size: 13px;">github</a> <a href="/tags/githubpags-jekyll/" style="font-size: 13px;">githubpags jekyll</a> <a href="/tags/java-JDBC/" style="font-size: 13px;">java JDBC</a> <a href="/tags/java-%E6%8E%92%E5%BA%8F/" style="font-size: 13px;">java 排序</a> <a href="/tags/leetcode-%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6/" style="font-size: 13px;">leetcode 浮点数精度</a> <a href="/tags/linux/" style="font-size: 13px;">linux</a> <a href="/tags/typora-github/" style="font-size: 13px;">typora github</a> <a href="/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/" style="font-size: 13px;">摩斯电码</a> <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C-%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" style="font-size: 14px;">论文阅读 算力网络 边缘博弈</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Archive</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">November 2022</a><span class="archive-list-count">14</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
+        
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/11/19/2021-10-07-%E9%B8%9F%E5%93%A5linux%E7%A7%81%E6%88%BF%E8%8F%9C%E7%90%90%E7%A2%8E%E7%9F%A5%E8%AF%86%E7%82%B9/" class="title">鸟哥linux私房菜琐碎知识点</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-11-19T12:57:59.719Z" itemprop="datePublished">2022-11-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/11/19/2021-10-14-git%20timeout%E9%97%AE%E9%A2%98/" class="title">push项目遇到timeout</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-11-19T12:57:59.716Z" itemprop="datePublished">2022-11-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/11/19/2021-10-18-typora+github%E5%AE%9E%E7%8E%B0%E5%9B%BE%E5%BA%8A/" class="title">使用typora+github实现图床</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-11-19T12:57:59.714Z" itemprop="datePublished">2022-11-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/11/19/2022-05-18-GitHubPages+jekyll/" class="title">使用GitHubPages+jekyll搭建博客平台</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-11-19T12:57:59.711Z" itemprop="datePublished">2022-11-19</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                
+              </p>
+              <p class="item-title">
+                <a href="/2022/11/19/2022-05-22-leetcode%E5%91%A8%E8%B5%9B/" class="title">5.22leetcode周赛</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2022-11-19T12:57:59.707Z" itemprop="datePublished">2022-11-19</time>
+              </p>
+            </div>
+          </li>
+          
+      </ul>
+    </div>
+  </div>
+  
+
+    
+  </div>
+</aside>
+
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-2022-07-22-论文阅读" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于博弈论的云/边缘计算资源分配与优化算法及应用
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/2022/11/19/2022-07-22-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="article-date">
+	  <time datetime="2022-11-19T12:57:59.691Z" itemprop="datePublished">2022-11-19</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB-%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C-%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" rel="tag">论文阅读 算力网络 边缘博弈</a>
+  </span>
+
+
+        
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/2022/11/19/2022-07-22-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/#comments" class="article-comment-link">Comments</a></span>
+        
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="基于博弈论的云-x2F-边缘计算资源分配与优化算法及应用"><a href="#基于博弈论的云-x2F-边缘计算资源分配与优化算法及应用" class="headerlink" title="基于博弈论的云&#x2F;边缘计算资源分配与优化算法及应用"></a>基于博弈论的云&#x2F;边缘计算资源分配与优化算法及应用</h1><blockquote>
+<p>作者：胡俊艳 湖南大学 博士毕业论文</p>
+</blockquote>
+<h2 id="论文创新点"><a href="#论文创新点" class="headerlink" title="论文创新点"></a>论文创新点</h2><ol>
+<li>基于非合作博弈的多属性云计算资源竞价算法</li>
+<li>时间约束感知的云计算资源联合采购博弈论方法</li>
+<li>基于博弈论的边缘计算任务卸载算法</li>
+</ol>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>用户在意的是QoS，最小成本和最大收益问题，比如响应时间、可靠性、任务的完成时间、资源定价等，</p>
+<p>云提供商的主要效益 需要考虑节约能耗、负载均衡等因素，这对减小开销、合理配置资源、提高资源利用率和服务质量有重要意义</p>
+<p>无论是云环境还是边环境，都存在资源配置和资源优化问题、尽最大努力改善用户的服务质量和用户体验，降低系统的运行成本问题。因此本文采用了博弈论方法来研究在云&#x2F;边环境下的计算资源的分配优化配置方法</p>
+<blockquote>
+<p>由于文章其他内容与我的研究点“算力网络的多方利益均衡”不同，所以没做记录</p>
+</blockquote>
+<h2 id="基于非合作博弈的多属性云计算资源竞价算法"><a href="#基于非合作博弈的多属性云计算资源竞价算法" class="headerlink" title="基于非合作博弈的多属性云计算资源竞价算法"></a>基于非合作博弈的多属性云计算资源竞价算法</h2><h3 id="主要贡献"><a href="#主要贡献" class="headerlink" title="主要贡献"></a>主要贡献</h3><p>针对云计算中多属性资源供应问题，提出一种<strong>基于非合作博弈关于云用户和提供商组成的利润最大化的价格竞价算法</strong>，提出一种新颖的关于服务质量和竞价的激励性资源购买模型。</p>
+<p>然后结合用户的资源购买模型，将提供商的价格竞价问题转化为一个博弈模型来为每个云提供商找到合适的价格。</p>
+<p>通过假设每个提供商提供的资源的数量函数是连续的，证明了针对已制定的博弈模型的纳什均衡解集的存在。</p>
+<p>为了找到纳什均衡解，提出了一种均衡迭代算法，该算法被证明可以收敛到纳什均衡。</p>
+<p>最后提出了一种近均衡价格竞价算法，对获得的纳什均衡解进行修正</p>
+<h3 id="多属性云资源价格竞价系统模型"><a href="#多属性云资源价格竞价系统模型" class="headerlink" title="多属性云资源价格竞价系统模型"></a>多属性云资源价格竞价系统模型</h3><h4 id="云资源供应的参与者"><a href="#云资源供应的参与者" class="headerlink" title="云资源供应的参与者"></a>云资源供应的参与者</h4><p>将多用户和多提供商的情况并行化为<strong>一个用户和多个提供商的情况</strong></p>
+<p>3个CPs（提供商）构成一个资源组，2的3次方个方案（这里的方案只是确定CPi是否提供资源，具体提供多少未知）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724155121067.png" alt="image-20220724155121067"></p>
+<h4 id="云用户对多属性云资源的评估"><a href="#云用户对多属性云资源的评估" class="headerlink" title="云用户对多属性云资源的评估"></a>云用户对多属性云资源的评估</h4><p>用户的属性偏好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724171032448.png" alt="image-20220724171032448"></p>
+<p>其中 用户的资源属性偏好</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724171333310.png" alt="image-20220724171333310"></p>
+<h4 id="云用户的云资源购买机制"><a href="#云用户的云资源购买机制" class="headerlink" title="云用户的云资源购买机制"></a>云用户的云资源购买机制</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724192555620.png" alt="image-20220724192555620"></p>
+<h2 id="文章题目：移动边缘计算中基于博弈论的资源分配技术研究"><a href="#文章题目：移动边缘计算中基于博弈论的资源分配技术研究" class="headerlink" title="文章题目：移动边缘计算中基于博弈论的资源分配技术研究"></a>文章题目：移动边缘计算中基于博弈论的资源分配技术研究</h2><h3 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h3><ol>
+<li>基于不完全合同的资源所有权分配算法设计<ol>
+<li>有关不同所有权分配下的最优投资，最大化运营商部门效用函数（针对运营商）</li>
+</ol>
+</li>
+<li>基于匹配理论的基站资源分配算法设计<ol>
+<li>添加考虑基站，将基站作为边缘节点，优化系统整体资源分配效益，用户希望选择损失最小的基站（基站分为欠载基站、满载基站、过载基站）。考虑了小基站网络中用户到基站的任务迁移以及基站共同协作处理任务量的模型</li>
+</ol>
+</li>
+<li>基于联合博弈的动态资源分配算法设计<ol>
+<li>针对边缘计算节点的租用（基于匹配理论）以及计算服务提供商与用户之间的节点拍卖问题（拍卖理论与强化学习理论结合）</li>
+<li>网络模型<ol>
+<li><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220726091144358.png" alt="image-20220726091144358"></li>
+<li></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="文章题目：基于任务特性的公有云资源交易机制"><a href="#文章题目：基于任务特性的公有云资源交易机制" class="headerlink" title="文章题目：基于任务特性的公有云资源交易机制"></a>文章题目：基于任务特性的公有云资源交易机制</h2><h3 id="算法-1"><a href="#算法-1" class="headerlink" title="算法"></a>算法</h3><ol>
+<li>缓解资源需求峰值的任务调度策略和计价机制<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+<h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><ul>
+<li>MEC中的资源分配问题主要有：<ol>
+<li>通信资源分配，根据无线系统环境，高效地分配通信资源，优化传输效率，降低用户间的干扰；</li>
+<li>计算资源分配，根据用户的任务需求，有效地分配计算资源，最小化任务时延和能耗，提高卸载效率；</li>
+<li>存储资源分配，根据用户的存储需求，分配对应的存储资源，避免用户存储空间不足引发的设备卡顿，提升用户 QoE。</li>
+</ol>
+</li>
+<li>当前对 MEC 资源分配方法的研究大致从两个方面进行：技术层面和经济层面<ul>
+<li>技术：计算卸载</li>
+<li>经济：而经济层面不仅需要考虑如何分配资源，更需要考虑市场竞争性。用户不仅需要评估资源出价，更需要考虑向哪个服务器购买资源，以使自身效益最大化。因此，经济层面的资源分配问题计算复杂度大，综合管理更加复杂。对此，研究者一般采用&#x3D;&#x3D;动态分布式算法、拍卖、博弈&#x3D;&#x3D;等经济分析方法求解</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2022/11/19/2022-07-22-%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" title="基于博弈论的云/边缘计算资源分配与优化算法及应用" target="_blank" rel="external">http://example.com/2022/11/19/2022-07-22-论文阅读/</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/cofess" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/cofess" target="_blank"><span class="text-dark">虫兑变</span><small class="ml-1x">Web Developer &amp; Designer</small></a></h3>
+        <div>个人简介。</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+    
+  <section id="comments">
+  	
+      <div id="vcomments"></div>
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/2022/11/19/2022-07-22-Partitioning%20Stateful%20Data%20Stream%20Applications%20in/" title="Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;Newer</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/2022/11/19/2022-07-24-Coding%20based%20Distributed%20Data%20Shuffling%20for%20Low%20Communication%20Cost%20in%20Data/" title="Coding based Distributed Data Shufflfling for Low Communication Cost in DataCenter Networks"><span>Older&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>$</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>Maybe you could buy me a cup of coffee.</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open alipay app scan this qrcode, buy me a coffee!</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="Scan Qrcode" title="Scan" />
+              </div>
+              <p class="text-muted mv">Scan this qrcode</p>
+              <p class="text-grey">Open wechat app scan this qrcode, buy me a coffee!</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> alipay</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> wechat payment</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</main>
+
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/cofess" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="http://weibo.com/cofess" target="_blank" title="Weibo" data-toggle=tooltip data-placement=top><i class="icon icon-weibo"></i></a></li>
+        
+        <li><a href="https://twitter.com/iwebued" target="_blank" title="Twitter" data-toggle=tooltip data-placement=top><i class="icon icon-twitter"></i></a></li>
+        
+        <li><a href="https://www.behance.net/cofess" target="_blank" title="Behance" data-toggle=tooltip data-placement=top><i class="icon icon-behance"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
+        </div>
+    </div>
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script>
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
+</script>
+
+<script src="/js/plugin.min.js"></script>
+
+
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+
+
+
+
+   
+
+
+
+
+   
+    
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
+  <script type="text/javascript">
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
+  </script>
+
+     
+
+
+
+
+
+
+
+</body>
+</html>
