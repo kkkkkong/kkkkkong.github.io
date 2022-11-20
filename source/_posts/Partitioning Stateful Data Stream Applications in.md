@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2022-07-22 12:00:00
 title: "Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments"
 author: "kong"
 tags: 论文阅读 算力网络 边缘博弈

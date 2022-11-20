@@ -5,9 +5,10 @@ menu:
   Categories: categories  # 分类
   Tags: tags  # 标签
   Repository: repository  # github repositories
-  Books: 书单  # 豆瓣书单
+  Books: books  # 豆瓣书单
   Links: links  # 友链
   About: about  # 关于
+
 
 # Enable/Disable menu icons
 menu_icons:
@@ -34,7 +35,7 @@ site:
   title: Hexo # 页面title
   favicon: /favicon.png
   board: <p>欢迎交流与分享经验!</p> # 站点公告
-  copyright: false # 底部版权信息
+  copyright: true # 底部版权信息
 
 # config
 config:
@@ -171,7 +172,7 @@ douban:
 # PV
 pv:
   busuanzi:
-    enable: false  # 不蒜子统计
+    enable: true  # 不蒜子统计
   leancloud:
     enable: false  # leancloud统计
     app_id: # leancloud <AppID>
@@ -179,7 +180,7 @@ pv:
         
 # wordcount
 postCount:
-  enable: false
+  enable: true
   wordcount: true  # 文章字数统计
   min2read: true  # 阅读时长预计 
 
@@ -211,29 +212,27 @@ profile:
   social:
     links:
       github: https://github.com/kkkkkong
-      weibo: http://weibo.com/kkkkkong
-      twitter: https://twitter.com/iwebued
+      # weibo: http://weibo.com/kkkkkong
+      # twitter: https://twitter.com/iwebued
       # facebook: /
       # dribbble: /
-      behance: https://www.behance.net/kkkkkong
+      # behance: https://www.behance.net/kkkkkong
       rss: atom.xml
     link_tooltip: true # enable the social link tooltip, options: true, false
   # My Skills 
   skills:
     Git: ★★★☆☆
-    Gulp: ★★★☆☆
+    Python: ★★★☆☆
     Javascript: ★★★☆☆
     HTML+CSS: ★★★☆☆
-    Bootstrap: ★★★☆☆
-    ThinkPHP: ★★★☆☆
-    平面设计: ★★★☆☆
+    Java: ★★★☆☆
   # My Personal Links
   links:
     Github: https://github.com/kkkkkong
-    Blog: http://blog.kkkkkong.com
-    微博: http://weibo.com/kkkkkong
-    花瓣: http://huaban.com/kkkkkong
-    Behance: https://www.behance.net/kkkkkong
+    # Blog: http://blog.kkkkkong.com
+    # 微博: http://weibo.com/kkkkkong
+    # 花瓣: http://huaban.com/kkkkkong
+    # Behance: https://www.behance.net/kkkkkong
   # My Personal Labels
   labels:
     - 前端

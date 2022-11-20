@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2021-10-08 12:00:00
 title: "鸟哥linux私房菜琐碎知识点"
 author: "kong"
 tags: linux

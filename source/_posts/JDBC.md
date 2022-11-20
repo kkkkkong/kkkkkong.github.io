@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2022-05-25 12:00:00
 title: "JDBC学习笔记"
 author: "kong"
 tags: java JDBC
@@ -490,7 +490,7 @@ public class JDBCUtils {
     
     - 执行DDL语句也会自动提交
       - 需要设置autocommit为false
-    
+  
 - 数据库连接关闭也会自动提交
 
 

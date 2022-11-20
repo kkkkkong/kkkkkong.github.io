@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2022-07-24 12:00:00
 title: "Coding based Distributed Data Shufflfling for Low Communication Cost in DataCenter Networks"
 author: "kong"
 tags: 论文阅读 算力网络 边缘博弈

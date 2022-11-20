@@ -1,8 +1,9 @@
 ---
-layout: post
+date: 2018-01-01 12:00:00
 title: "push项目遇到timeout"
 author: "kong"
 tags: github
+sidebar: none # 是否启用sidebar侧边栏，none：不启用
 ---
 
 

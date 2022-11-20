@@ -1,5 +1,5 @@
 ---
-layout: post
+date: 2022-07-18 12:00:00
 title: "git merge与git pull的区别"
 author: "kong"
 tags: git merge pull
