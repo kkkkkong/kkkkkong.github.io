@@ -2,7 +2,8 @@
 date: 2022-05-18 12:00:00
 title: "使用GitHubPages+jekyll搭建博客平台"
 author: "kong"
-tags: githubpags jekyll
+tags: [githubpags ,jekyll]
+categories: [学习]
 comments: true
 ---
 
