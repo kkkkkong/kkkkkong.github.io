@@ -1,3 +1,4 @@
+http://example.com/2022/11/26/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/
 http://example.com/2022/07/22/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/
 http://example.com/2022/07/24/Coding%20based%20Distributed%20Data%20Shuffling%20for%20Low%20Communication%20Cost%20in%20Data/
 http://example.com/2022/07/22/Partitioning%20Stateful%20Data%20Stream%20Applications%20in/
@@ -40,5 +41,7 @@ http://example.com/tags/pull/
 http://example.com/tags/typora/
 http://example.com/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/
 http://example.com/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/
+http://example.com/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/
+http://example.com/tags/Linux/
 http://example.com/categories/%E5%AD%A6%E4%B9%A0/
 http://example.com/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/
