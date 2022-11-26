@@ -27,15 +27,15 @@ http://example.com/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/
 http://example.com/tags/githubpags/
 http://example.com/tags/jekyll/
 http://example.com/tags/java/
-http://example.com/tags/JDBC/
 http://example.com/tags/%E6%8E%92%E5%BA%8F/
 http://example.com/tags/git/
 http://example.com/tags/merge/
 http://example.com/tags/pull/
+http://example.com/tags/JDBC/
 http://example.com/tags/github/
-http://example.com/tags/typora/
 http://example.com/tags/leetcode/
 http://example.com/tags/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6/
+http://example.com/tags/typora/
 http://example.com/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/
 http://example.com/tags/Linux/
 http://example.com/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/
