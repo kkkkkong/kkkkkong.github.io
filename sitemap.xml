@@ -209,6 +209,20 @@
 
   
   <url>
+    <loc>http://example.com/tags/githubpags/</loc>
+    <lastmod>2022-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/jekyll/</loc>
+    <lastmod>2022-11-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -230,20 +244,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/githubpags/</loc>
-    <lastmod>2022-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/jekyll/</loc>
-    <lastmod>2022-11-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/java/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -251,14 +251,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E6%8E%92%E5%BA%8F/</loc>
+    <loc>http://example.com/tags/JDBC/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/JDBC/</loc>
+    <loc>http://example.com/tags/%E6%8E%92%E5%BA%8F/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -358,14 +358,14 @@
 
   
   <url>
-    <loc>http://example.com/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
+    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://example.com/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/</loc>
     <lastmod>2022-11-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
