@@ -1,9 +1,11 @@
 ---
+title: JDBC学习笔记
+author: kong
+tags:
+  - java
+  - JDBC
+abbrlink: 60381
 date: 2022-05-25 12:00:00
-title: "JDBC学习笔记"
-author: "kong"
-tags: [java ,JDBC]
-
 ---
 
 ## JDBC

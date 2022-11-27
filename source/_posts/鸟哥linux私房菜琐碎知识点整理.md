@@ -1,8 +1,9 @@
 ---
-date: 2021-10-08 12:00:00
-title: "鸟哥linux私房菜琐碎知识点"
-author: "kong"
+title: 鸟哥linux私房菜琐碎知识点
+author: kong
 tags: linux
+abbrlink: 52308
+date: 2021-10-08 12:00:00
 ---
 
 # 鸟哥linux私房菜琐碎知识点

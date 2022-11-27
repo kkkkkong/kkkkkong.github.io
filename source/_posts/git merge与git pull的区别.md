@@ -1,8 +1,12 @@
 ---
+title: git merge与git pull的区别
+author: kong
+tags:
+  - git
+  - merge
+  - pull
+abbrlink: 23828
 date: 2022-07-18 12:00:00
-title: "git merge与git pull的区别"
-author: "kong"
-tags: [git ,merge ,pull]
 ---
 
 ### 使用GitHubPages+jekyll搭建博客平台

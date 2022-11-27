@@ -1,8 +1,11 @@
 ---
+title: 使用typora+github实现图床
+author: kong
+tags:
+  - typora
+  - github
+abbrlink: 20962
 date: 2021-10-18 12:00:00
-title: "使用typora+github实现图床"
-author: "kong"
-tags: [typora ,github]
 ---
 
 

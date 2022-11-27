@@ -1,7 +1,9 @@
 ---
 title: 自动部署hexo博客
+tags:
+  - hexo博客
+abbrlink: 32022
 date: 2022-11-26 21:30:25
-tags: [hexo博客]
 ---
 
 ## 懒人脚本

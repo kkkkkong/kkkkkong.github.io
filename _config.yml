@@ -14,8 +14,9 @@ timezone: ''
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: http://example.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
+# permalink: :year/:month/:day/:title/
+# 后面添加
+# permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -106,3 +107,8 @@ deploy:
   type: git
   repository: git@github.com:kkkkkong/kkkkkong.github.io.git
   branch: master
+
+permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使用 /:abbrlink.html
+abbrlink:
+    alg: crc16   #算法：crc16(default) and crc32
+    rep: dec     #进制：dec(default) and hex

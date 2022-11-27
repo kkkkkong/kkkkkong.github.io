@@ -1,8 +1,11 @@
 ---
-date: 12:00:00
-title: "Java 二维数组排序"
-author: "kong"
-tags: [java ,排序]
+date: 43200
+title: Java 二维数组排序
+author: kong
+tags:
+  - java
+  - 排序
+abbrlink: 1218
 ---
 
 ### Java 二维数组排序
