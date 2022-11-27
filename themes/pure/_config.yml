@@ -204,8 +204,8 @@ profile:
   avatar: images/avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
   author: 虫兑变
-  author_title: Web Developer & Designer
-  author_description: 个人简介。
+  author_title: Back-End Developer & Designer
+  author_description: 华工学生一枚
   location: GuangZhou, China
   follow: https://github.com/kkkkkong
   # Social Links
@@ -235,17 +235,17 @@ profile:
     # Behance: https://www.behance.net/kkkkkong
   # My Personal Labels
   labels:
-    - 前端
-    - 前端开发
-    - 前端重构
+    - 后端
+    - 后端开发
+    - 后端重构
     - Web前端
     - 网页重构
   # My Personal Works
   works:
     name:
       link: http://www.example.com
-      date: 2016
+      date: 暂无
   # My Personal Projects
   projects:
-    cofess/gulp-startpro: https://github.com/cofess/gulp-startpro
-    cofess/hexo-theme-pure: https://github.com/cofess/hexo-theme-pure
+    kkkkkong/Mall: https://github.com/kkkkkong/Mall
+    fslongjin/DragonOS: https://github.com/kkkkkong/DragonOS
