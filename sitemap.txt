@@ -1,3 +1,6 @@
+http://example.com/links/index.html
+http://example.com/books/index.html
+http://example.com/about/index.html
 http://example.com/2022/11/26/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2hexo%E5%8D%9A%E5%AE%A2/
 http://example.com/2022/11/26/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/
 http://example.com/2022/07/22/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/
@@ -16,10 +19,7 @@ http://example.com/2022/07/24/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81%E5%BF%AB%E9%8
 http://example.com/2018/01/01/git%20timeout%E9%97%AE%E9%A2%98/
 http://example.com/tags/index.html
 http://example.com/repository/index.html
-http://example.com/links/index.html
 http://example.com/categories/index.html
-http://example.com/books/index.html
-http://example.com/about/index.html
 http://example.com/404.html
 http://example.com/
 http://example.com/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/
@@ -37,10 +37,10 @@ http://example.com/tags/github/
 http://example.com/tags/leetcode/
 http://example.com/tags/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6/
 http://example.com/tags/typora/
-http://example.com/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/
-http://example.com/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/
 http://example.com/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/
 http://example.com/tags/linux/
+http://example.com/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/
+http://example.com/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/
 http://example.com/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/
 http://example.com/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/
 http://example.com/tags/hexo%E5%8D%9A%E5%AE%A2/
