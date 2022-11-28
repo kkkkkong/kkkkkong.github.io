@@ -25,8 +25,8 @@
 <meta property="og:site_name" content="虫兑变的博客">
 <meta property="og:description" content="Java 二维数组排序按照第一个元素升序排序，如果第一个元素相同，则按照第二个元素升序排序 12345678int [][]people&#x3D;new int[4][2];Arrays.sort(people, new Comparator&lt;int[]&gt;() &amp;#123;    @Override    public int compare(int[] o1, int[] o2) &amp;#123">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-05-18T04:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-27T12:58:16.842Z">
+<meta property="article:published_time" content="1970-01-01T00:00:43.200Z">
+<meta property="article:modified_time" content="2022-11-28T09:12:54.250Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="排序">
@@ -45,8 +45,6 @@
   
   
   
-  
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   
 <meta name="generator" content="Hexo 6.3.0"></head>
 
@@ -245,7 +243,7 @@
   <div class="widget">
     <h3 class="widget-title">归档</h3>
     <div class="widget-body">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1970/01/">一月 1970</a><span class="archive-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -361,7 +359,7 @@
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
 	<a href="/posts/1218.html" class="article-date">
-	  <time datetime="2020-05-18T04:00:00.000Z" itemprop="datePublished">2020-05-18</time>
+	  <time datetime="1970-01-01T00:00:43.200Z" itemprop="datePublished">1970-01-01</time>
 	</a>
 </span>
         
@@ -440,7 +438,7 @@
     
   <section id="comments">
   	
-           
+      <div id="vcomments"></div>
     
   </section>
 
@@ -454,13 +452,9 @@
   <ul class="pager pull-left">
     
     <li class="prev">
-      <a href="/posts/52308.html" title="鸟哥linux私房菜琐碎知识点"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+      <a href="/posts/18120.html" title="push项目遇到timeout"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
     </li>
     
-    
-    <li class="next">
-      <a href="/posts/18120.html" title="push项目遇到timeout"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
-    </li>
     
     
   </ul>
@@ -591,24 +585,29 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
    
     
-  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
-  <script src="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/valine"></script>
   <script type="text/javascript">
-  var gitalk = new Gitalk({
-    clientID: 'c3b604ec3834efb5c5fa',
-    clientSecret: 'e68f97b8ec9bb617527d18123bd4630e8cc1b98a',
-    repo: 'my-gitalk',
-    owner: 'kkkkkong',
-    admin: ['kkkkkong'],
-    id: md5(location.pathname),
-    distractionFreeMode: true,
-    language: 'zh-CN',
-    enableHotKey: 'true'
-  })
-  gitalk.render('comments')
+  var GUEST = ['nick', 'mail', 'link'];
+  var meta = 'nick,mail,link';
+  meta = meta.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#vcomments',
+    verify: false,
+    notify: false,
+    appId: '',
+    appKey: '',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: meta,
+    pageSize: '10' || 10,
+    visitor: false
+  });
   </script>
-      
+
+     
 
 
 
