@@ -112,3 +112,9 @@ permalink: posts/:abbrlink.html  # 此处可以自己设置，也可以直接使
 abbrlink:
     alg: crc16   #算法：crc16(default) and crc32
     rep: dec     #进制：dec(default) and hex
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml

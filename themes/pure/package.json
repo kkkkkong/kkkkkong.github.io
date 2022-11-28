@@ -2,7 +2,8 @@
   "name": "hexo-theme-pure",
   "version": "0.0.1",
   "private": true,
-  "devDependencies": {
-
+  "dependencies": {
+    "hexo-generator-baidu-sitemap": "^0.1.9",
+    "hexo-generator-sitemap": "^3.0.1"
   }
 }
