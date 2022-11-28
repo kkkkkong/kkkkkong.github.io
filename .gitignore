@@ -6,6 +6,4 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
-themes/pure/key.yml
-themes/pure/key2.yml
 themes/pure/_config.yml
