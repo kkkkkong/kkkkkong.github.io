@@ -350,20 +350,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/</loc>
-    <lastmod>2022-11-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2022-11-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/</loc>
     <lastmod>2022-11-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -372,6 +358,20 @@
   
   <url>
     <loc>http://example.com/tags/linux/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/</loc>
+    <lastmod>2022-11-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2022-11-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
