@@ -132,15 +132,16 @@ comment:
     ClientID: 
     ClientSecret: 
     lazy: false
+  # 这里的代码应该是要加引号，有时间可以测试一下
   gitalk: # gitalk. https://gitalk.github.io/
-    owner:  #必须. GitHub repository 所有者，可以是个人或者组织。
-    admin:  #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
-    repo:  #必须. GitHub repository.
+    owner: 'kkkkkong' #必须. GitHub repository 所有者，可以是个人或者组织。
+    admin: ['kkkkkong'] #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+    repo: 'my-gitalk' #必须. GitHub repository.
     ClientID:  #必须. GitHub Application Client ID.
     ClientSecret:  #必须. GitHub Application Client Secret.
     enableHotKey: true
     language: zh-CN
-    
+    id: location.pathname
   valine: # Valine. https://valine.js.org
     appid:  # your leancloud application appid
     appkey:  # your leancloud application appkey
