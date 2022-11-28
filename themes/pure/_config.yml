@@ -137,7 +137,7 @@ comment:
     owner: 'kkkkkong' #必须. GitHub repository 所有者，可以是个人或者组织。
     admin: ['kkkkkong'] #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
     repo: 'my-gitalk' #必须. GitHub repository.
-    ClientID:  #必须. GitHub Application Client ID.
+    ClientID: !include ./key.yml #必须. GitHub Application Client ID.
     ClientSecret:  #必须. GitHub Application Client Secret.
     enableHotKey: true
     language: zh-CN
