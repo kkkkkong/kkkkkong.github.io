@@ -17,16 +17,16 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>归档: 2022 | 虫兑变的博客</title>
+  <title>虫兑变的博客</title>
   <meta property="og:type" content="website">
 <meta property="og:title" content="虫兑变的博客">
-<meta property="og:url" content="https://kkkkkong.github.io/archives/2022/page/2/index.html">
+<meta property="og:url" content="https://kkkkkong.github.io/page/3/index.html">
 <meta property="og:site_name" content="虫兑变的博客">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="Kong Weichao">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/archives/2022/page/2/index.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/page/3/index.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -336,107 +336,129 @@
 </aside>
 
   
-  
-<main class="main" role="main">
-  	<article class="content article article-archives article-type-list" itemscope="">
-	    <header class="article-header">
-	      <h1 itemprop="title">归档: 2022</h1>
-	      <p class="text-muted">共 21 篇文章</p>
-	    </header>
-	    <div class="article-body">
-	      
+  <main class="main" role="main">
   
   
+    <div class="content">
+  <article id="post-git timeout问题" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-    
+    <div class="article-header">
       
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/posts/18120.html">push项目遇到timeout</a>
+    </h1>
+  
+
       
-      <section class="panel panel-default b-no">
-        <div class="panel-heading" role="tab">
-          <h3 class="panel-title">
-            <a data-toggle="collapse" href="#collapse2022" aria-expanded="true">
-              <i class="icon icon-calendar-plus text-active"></i><i class="icon icon-calendar-minus text"></i>
-              2022
-            </a>
-            <!-- <a href="/archives/2022" class="archive-year">2022</a> -->
-          </h3>
-        </div>
-        <div id="collapse2022" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading2022">
-        <div class="panel-body">
-          <div class="collection">
-    
-    
-<a href="/posts/37834.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-07-22T04:00:00.000Z" itemprop="datePublished">2022-07-22</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments
-</a>
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/18120.html" class="article-date">
+	  <time datetime="2018-01-01T04:00:00.000Z" itemprop="datePublished">2018-01-01</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/github/" rel="tag">github</a>
+  </span>
 
+
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/18120.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 222(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+	
+
+      </div>
+    </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h3 id="今天push项目遇到timeout"><a href="#今天push项目遇到timeout" class="headerlink" title="今天push项目遇到timeout"></a>今天push项目遇到timeout</h3><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20211014223237685.png" alt="image-20211014223237685"></p>
+<p>不知为何遇到了这个问题，仿佛不是第一次了</p>
+<p>经过一番百度，找到了解决方案</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20211014223326834.png" alt="image-20211014223326834"></p>
+<p>但不知道为什么，其中的端口号是clash使用的端口号，猜测与其有关</p>
+<h3 id="具体操作"><a href="#具体操作" class="headerlink" title="具体操作"></a>具体操作</h3><p>查看全局配置参数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --list</span><br></pre></td></tr></table></figure>
+
+<p>在开启shadowsock的前提下，手动配置git的代理。git客户端输入如下两个命令就可以了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:7890</span><br><span class="line">git config --global https.proxy http://127.0.0.1:7890</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 其中的7890改成你的ssh端口号</p>
+<p>http:&#x2F;&#x2F;也可以改成sockets5:&#x2F;&#x2F;,但是区别在于：socks5不支持通过pubkey免密登录github，每次提交代码只能输入用户名和密码。http可以支持免密登录。 </p>
+</blockquote>
+<p><strong>取消代理：</strong> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.proxy  </span><br><span class="line">git config --global --unset https.proxy </span><br></pre></td></tr></table></figure>
+
+<p>然后就可以使用了</p>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://kkkkkong.github.io/posts/18120.html" title="push项目遇到timeout" target="_blank" rel="external">https://kkkkkong.github.io/posts/18120.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/kkkkkong" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/kkkkkong" target="_blank"><span class="text-dark">虫兑变</span><small class="ml-1x">Back-End Developer &amp; Designer</small></a></h3>
+        <div>华工学生一枚</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
+  </article>
+  
+</div>
 
   
-    
-    
-    
-<a href="/posts/23505.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-07-22T04:00:00.000Z" itemprop="datePublished">2022-07-22</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 基于博弈论的云/边缘计算资源分配与优化算法及应用
-</a>
-
 
   
-    
-    
-    
-<a href="/posts/23828.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-07-18T04:00:00.000Z" itemprop="datePublished">2022-07-18</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> git merge与git pull的区别
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/60381.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-05-25T04:00:00.000Z" itemprop="datePublished">2022-05-25</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> JDBC学习笔记
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/42691.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-05-22T04:00:00.000Z" itemprop="datePublished">2022-05-22</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 5.22leetcode周赛
-</a>
-
-
-  
-    
-    
-    
-<a href="/posts/61277.html" class="collection-item"   itemprop="url">
-  <time datetime="2022-05-18T04:00:00.000Z" itemprop="datePublished">2022-05-18</time>
-  <span>&nbsp;&nbsp;&nbsp;</span> 使用GitHubPages+jekyll搭建博客平台
-</a>
-
-
-  
-  
-    </div></div></div></section>
-  
-
-	    </div>
-  	</article>
-  	
     
     <nav class="bar bar-footer clearfix" data-stick-bottom>
         <div class="bar-inner">
         <ul class="pager pull-left">
             
             <li class="prev">
-                <a href="/archives/2022/">
+                <a href="/page/2/">
                     <i class="icon icon-angle-left"></i>
                     上一页
                 </a>
@@ -451,11 +473,11 @@
             </li>
             
         </ul>
-            <div class="total-article bar-right">Page 2 of 2</div>
+            <div class="total-article bar-right">Page 3 of 3</div>
         </div>
     </nav>
     
- 	
+ 
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -509,6 +531,12 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 <script src="/js/insight.js"></script>
 
 
+
+
+
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
