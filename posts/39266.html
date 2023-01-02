@@ -17,27 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>实时调度器 | 虫兑变的博客</title>
-  <meta name="description" content="LINUX调度器关系图 所谓调度，就是按照某种调度的算法，从进程的就绪队列中选取进程分配CPU，主要是协调对CPU等的资源使用。进程调度的目标是最大限度利用CPU时间    linux里的调度器 RT调度器， rt_sched_class：实时调度器，为每个优先级维护一个队列 CFS调度器， cfs_sched_class：完全公平调度器，采用完全公平调度算法，引入虚拟运行时间概念，采用红黑树实现">
+  <title>leetcode 20 | 虫兑变的博客</title>
+  <meta name="description" content="题目描述给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串 s ，判断字符串是否有效。 有效字符串需满足： 左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。每个右括号都有一个对应的相同类型的左括号。 20. 有效的括号 - 力扣（LeetCode） 解题思路使用栈辅助存储左括号，来进行匹配 123456789101112131415161718192021222">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实时调度器">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/46423.html">
+<meta property="og:title" content="leetcode 20">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/39266.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="LINUX调度器关系图 所谓调度，就是按照某种调度的算法，从进程的就绪队列中选取进程分配CPU，主要是协调对CPU等的资源使用。进程调度的目标是最大限度利用CPU时间    linux里的调度器 RT调度器， rt_sched_class：实时调度器，为每个优先级维护一个队列 CFS调度器， cfs_sched_class：完全公平调度器，采用完全公平调度算法，引入虚拟运行时间概念，采用红黑树实现">
+<meta property="og:description" content="题目描述给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串 s ，判断字符串是否有效。 有效字符串需满足： 左括号必须用相同类型的右括号闭合。左括号必须以正确的顺序闭合。每个右括号都有一个对应的相同类型的左括号。 20. 有效的括号 - 力扣（LeetCode） 解题思路使用栈辅助存储左括号，来进行匹配 123456789101112131415161718192021222">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111427338.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/asynccode">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111507059.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111532683.png">
-<meta property="article:published_time" content="2022-11-26T12:30:23.000Z">
-<meta property="article:modified_time" content="2022-11-27T03:16:04.046Z">
+<meta property="article:published_time" content="2023-01-02T12:29:57.000Z">
+<meta property="article:modified_time" content="2023-01-02T12:32:05.807Z">
 <meta property="article:author" content="Kong Weichao">
-<meta property="article:tag" content="实时调度器">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111427338.png">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/posts/46423.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/39266.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -350,14 +344,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-实时调度器" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-leetcode-20" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      实时调度器
+      leetcode 20
     </h1>
   
 
@@ -365,15 +359,15 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/46423.html" class="article-date">
-	  <time datetime="2022-11-26T12:30:23.000Z" itemprop="datePublished">2022-11-26</time>
+	<a href="/posts/39266.html" class="article-date">
+	  <time datetime="2023-01-02T12:29:57.000Z" itemprop="datePublished">2023-01-02</time>
 	</a>
 </span>
         
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
-	<a class="article-tag-link-link" href="/tags/linux/" rel="tag">linux</a>, <a class="article-tag-link-link" href="/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/" rel="tag">实时调度器</a>
+	<a class="article-tag-link-link" href="/tags/%E5%88%B7%E9%A2%98/" rel="tag">刷题</a>
   </span>
 
 
@@ -386,84 +380,29 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/46423.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/39266.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 663(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 323(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="LINUX调度器关系图"><a href="#LINUX调度器关系图" class="headerlink" title="LINUX调度器关系图"></a>LINUX调度器关系图</h2><blockquote>
-<p>所谓调度，就是按照某种调度的算法，从<strong>进程的就绪队列中选取进程分配CPU</strong>，主要是协调对CPU等的资源使用。进程调度的目标是最大限度利用CPU时间</p>
-</blockquote>
-<img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111427338.png" alt="image-20221127111427338" style="zoom: 33%;" />
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串 s ，判断字符串是否有效。</p>
+<p>有效字符串需满足：</p>
+<p>左括号必须用相同类型的右括号闭合。<br>左括号必须以正确的顺序闭合。<br>每个右括号都有一个对应的相同类型的左括号。</p>
+<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">20. 有效的括号 - 力扣（LeetCode）</a></p>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><p>使用栈辅助存储左括号，来进行匹配</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length()%<span class="number">2</span>!=<span class="number">0</span>)<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        Stack&lt;Character&gt; stack=<span class="keyword">new</span> <span class="title class_">Stack</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="type">char</span> a=s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(a==<span class="string">&#x27;&#123;&#x27;</span>||a==<span class="string">&#x27;[&#x27;</span>||a==<span class="string">&#x27;(&#x27;</span>)&#123;</span><br><span class="line">                stack.push(a);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(stack.isEmpty())&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(a==<span class="string">&#x27;&#125;&#x27;</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(stack.pop()!=<span class="string">&#x27;&#123;&#x27;</span>)&#123;</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="string">&#x27;]&#x27;</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(stack.pop()!=<span class="string">&#x27;[&#x27;</span>)&#123;</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(a==<span class="string">&#x27;)&#x27;</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(stack.pop()!=<span class="string">&#x27;(&#x27;</span>)&#123;</span><br><span class="line">                        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(!stack.isEmpty())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>linux里的调度器</p>
-<p><code>RT调度器， rt_sched_class</code>：实时调度器，为每个优先级维护一个队列</p>
-<p><code>CFS调度器， cfs_sched_class</code>：完全公平调度器，采用完全公平调度算法，引入虚拟运行时间概念，采用红黑树实现进程实体的存放；</p>
-<h2 id="调度策略FIFO、RR"><a href="#调度策略FIFO、RR" class="headerlink" title="调度策略FIFO、RR"></a>调度策略FIFO、RR</h2><p>linux的进程分为两大类：<strong>实施进程和普通进程</strong></p>
-<p>二者的根本不同在于：如果系统中有一个实时进程可以运行，那么调度器总是会选择它，除非另有一个优先级更高的实时进程</p>
-<p><strong>实时进程</strong>分为两种策略进行调度：</p>
-<p><strong>SCHED_FIFO：</strong>没有时间片，在被调度器选择之后，可以运行任意长时间。</p>
-<p><strong>SCHED_RR：</strong>有时间片，其值在进程运行时会减少。在所有的时间段都到期后，则该值重置为初始值，而进程则置于队列末尾。这确保了在有几个优先级相同的SCHED_RR进程的情况下，它们总是依次执行。</p>
-<h2 id="runqueue-运行队列"><a href="#runqueue-运行队列" class="headerlink" title="runqueue 运行队列"></a>runqueue 运行队列</h2><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/asynccode" alt="img" style="zoom:50%;" />
+<p>写完通过后，看了别人的解法，可以说是相当简洁</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isValid</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        Stack&lt;Character&gt;stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;Character&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">char</span> c: s.toCharArray())&#123;</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27;(&#x27;</span>)stack.push(<span class="string">&#x27;)&#x27;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;[&#x27;</span>)stack.push(<span class="string">&#x27;]&#x27;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;&#123;&#x27;</span>)stack.push(<span class="string">&#x27;&#125;&#x27;</span>);</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(stack.isEmpty()||c!=stack.pop())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li><p>每个CPU都有一个运行队列，每个调度器都作用于运行队列；</p>
-</li>
-<li><p>分配给CPU的task，作为调度实体加入到运行队列中；</p>
-</li>
-</ul>
-<p><strong>rt_rq的结构</strong></p>
-<img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111507059.png" alt="image-20221127111507059" style="zoom: 33%;" />
-
-<blockquote>
-<p>这里每一个CPU的运行队列rq内都有一个实时进程运行队列rt_rq，制定了优先级链表，链表个数为优先级个数，每个链表存放对应就绪状态的进程实体</p>
-</blockquote>
-<h2 id="调度程序"><a href="#调度程序" class="headerlink" title="调度程序"></a>调度程序</h2><ol>
-<li>enqueue_task_rt(struct rq *rq, struct process_control_block *p, int flags)</li>
-</ol>
-<blockquote>
-<p>将进程添加到对应rt_rq的优先级的队列中去</p>
-</blockquote>
-<ol>
-<li>dequeue_task_rt(struct rq *rq, struct process_control_block *p, int flags)</li>
-</ol>
-<blockquote>
-<p>从rt_rq的优先级队列中取出某一个进程</p>
-</blockquote>
-<ol>
-<li>pick_next_task_rt()</li>
-</ol>
-<blockquote>
-<p>从优先级队列中取出当前优先级最高的进程</p>
-</blockquote>
-<ol>
-<li>sched_rt()</li>
-</ol>
-<blockquote>
-<ul>
-<li><p>此函数是进程调度的核心函数</p>
-</li>
-<li><p>核心逻辑：选择另一个进程来替换掉当前的运行进程。具体替换进程的选择是通过pick_next_task_rt()函数来实现的</p>
-</li>
-</ul>
-</blockquote>
-<img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20221127111532683.png" alt="image-20221127111532683" style="zoom: 67%;" />
-
-
-
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://www.man7.org/linux/man-pages/man7/sched.7.html">sched(7) - Linux manual page (man7.org)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LoyenWang/p/12249106.html">【原创】（一）Linux进程调度器-基础 - LoyenWang - 博客园 (cnblogs.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/arnoldlu/p/9025981.html">Linux进程管理 (9)实时调度类分析，以及FIFO和RR对比实验 - ArnoldLu - 博客园 (cnblogs.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hellokitty2/p/14199741.html">RT调度学习笔记（1） - Hello-World3 - 博客园 (cnblogs.com)</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sucjhwaxp/article/details/106602613">(15条消息) Kernel Scheduler学习之五：RT 调度器_sucjhwaxp的博客-CSDN博客</a></p>
 
       
     </div>
@@ -473,7 +412,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://kkkkkong.github.io/posts/46423.html" title="实时调度器" target="_blank" rel="external">https://kkkkkong.github.io/posts/46423.html</a>
+      <a href="https://kkkkkong.github.io/posts/39266.html" title="leetcode 20" target="_blank" rel="external">https://kkkkkong.github.io/posts/39266.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -519,13 +458,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/32022.html" title="自动部署hexo博客"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/25422.html" title="市场体制下企业定价方法"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/22717.html" title="leetcode 1801"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
