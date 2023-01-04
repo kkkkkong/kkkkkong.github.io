@@ -2,7 +2,9 @@
 title: leetcode 283
 abbrlink: 15455
 date: 2023-01-04 10:36:12
-tags:
+tags: 刷题
+categories:
+  - leetcode
 ---
 
 ## 题目描述
