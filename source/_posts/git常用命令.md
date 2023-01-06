@@ -28,6 +28,8 @@ date: 2022-11-28 19:21:24
 - git branch -d branchname)：删除某个分支
 - git remote add urlname urllink：添加新的远程仓库地址，一般一个项目托管到不同平台用得到
 - git remote：查看当前的远程仓库
+- git merge --abort ：取消merging状态
+- git checkout -b newbranch origin/abranch ：从远程分支abranch创建本地新分支newbranch
 
 
 
