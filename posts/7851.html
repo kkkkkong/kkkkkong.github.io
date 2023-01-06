@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>leetcode 1802 | 虫兑变的博客</title>
-  <meta name="description" content="题目描述给你三个正整数 n、index 和 maxSum 。你需要构造一个同时满足下述所有条件的数组 nums（下标 从 0 开始 计数）： nums.length &#x3D;&#x3D; nnums[i] 是 正整数 ，其中 0 &lt;&#x3D; i &lt; nabs(nums[i] - nums[i+1]) &lt;&#x3D; 1 ，其中 0 &lt;&#x3D; i &lt; n-">
+  <title>leetcode 2180 | 虫兑变的博客</title>
+  <meta name="description" content="题目描述2180. 统计各位数字之和为偶数的整数个数给你一个正整数 num ，请你统计并返回 小于或等于 num 且各位数字之和为 偶数 的正整数的数目。 正整数的 各位数字之和 是其所有位上的对应数字相加的结果。 解题思路 暴力求解，依次判断每个数字是否符合要求   执行用时：1 ms, 在所有 Java 提交中击败了83.26%的用户 内存消耗：38.4 MB, 在所有 Java 提交中击败了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 1802">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/23037.html">
+<meta property="og:title" content="leetcode 2180">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/7851.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="题目描述给你三个正整数 n、index 和 maxSum 。你需要构造一个同时满足下述所有条件的数组 nums（下标 从 0 开始 计数）： nums.length &#x3D;&#x3D; nnums[i] 是 正整数 ，其中 0 &lt;&#x3D; i &lt; nabs(nums[i] - nums[i+1]) &lt;&#x3D; 1 ，其中 0 &lt;&#x3D; i &lt; n-">
+<meta property="og:description" content="题目描述2180. 统计各位数字之和为偶数的整数个数给你一个正整数 num ，请你统计并返回 小于或等于 num 且各位数字之和为 偶数 的正整数的数目。 正整数的 各位数字之和 是其所有位上的对应数字相加的结果。 解题思路 暴力求解，依次判断每个数字是否符合要求   执行用时：1 ms, 在所有 Java 提交中击败了83.26%的用户 内存消耗：38.4 MB, 在所有 Java 提交中击败了">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-04T02:11:30.000Z">
-<meta property="article:modified_time" content="2023-01-04T06:09:53.306Z">
+<meta property="article:published_time" content="2023-01-06T02:26:25.000Z">
+<meta property="article:modified_time" content="2023-01-06T03:24:01.020Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/posts/23037.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/7851.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -344,14 +344,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-leetcode-1802" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-leetcode-2180" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode 1802
+      leetcode 2180
     </h1>
   
 
@@ -359,11 +359,16 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/23037.html" class="article-date">
-	  <time datetime="2023-01-04T02:11:30.000Z" itemprop="datePublished">2023-01-04</time>
+	<a href="/posts/7851.html" class="article-date">
+	  <time datetime="2023-01-06T02:26:25.000Z" itemprop="datePublished">2023-01-06</time>
 	</a>
 </span>
         
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/leetcode/">leetcode</a>
+  </span>
+
         
   <span class="article-tag">
     <i class="icon icon-tags"></i>
@@ -380,27 +385,59 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/23037.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/7851.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 325(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 593(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>给你三个正整数 n、index 和 maxSum 。你需要构造一个同时满足下述所有条件的数组 nums（下标 从 0 开始 计数）：</p>
-<p>nums.length &#x3D;&#x3D; n<br>nums[i] 是 正整数 ，其中 0 &lt;&#x3D; i &lt; n<br>abs(nums[i] - nums[i+1]) &lt;&#x3D; 1 ，其中 0 &lt;&#x3D; i &lt; n-1<br>nums 中所有元素之和不超过 maxSum<br>nums[index] 的值被 最大化<br>返回你所构造的数组中的 nums[index] 。</p>
-<p>注意：abs(x) 等于 x 的前提是 x &gt;&#x3D; 0 ；否则，abs(x) 等于 -x 。</p>
-<p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-value-at-a-given-index-in-a-bounded-array/">1802. 有界数组中指定下标处的最大值 - 力扣（LeetCode）</a></p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="2180-统计各位数字之和为偶数的整数个数"><a href="#2180-统计各位数字之和为偶数的整数个数" class="headerlink" title="2180. 统计各位数字之和为偶数的整数个数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/count-integers-with-even-digit-sum/">2180. 统计各位数字之和为偶数的整数个数</a></h4><p>给你一个正整数 <code>num</code> ，请你统计并返回 <strong>小于或等于</strong> <code>num</code> 且各位数字之和为 <strong>偶数</strong> 的正整数的数目。</p>
+<p>正整数的 <strong>各位数字之和</strong> 是其所有位上的对应数字相加的结果。</p>
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
-<li>自己想的，没有什么章法</li>
+<li>暴力求解，依次判断每个数字是否符合要求</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxValue</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> index, <span class="type">int</span> maxSum)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(n==maxSum)<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> res;</span><br><span class="line">        <span class="type">int</span> nowSum=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> num=<span class="number">1</span>;</span><br><span class="line">        <span class="comment">// 一个较小值，通过平均值计算，比平均值小n的数字一定是小于结果值的，因此设置所有数字都是rev</span></span><br><span class="line">        <span class="type">int</span> rev=maxSum/n-n;</span><br><span class="line">        <span class="keyword">if</span>(rev&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="comment">// 当maxsum较大时，设置一个基值，相当于剪枝</span></span><br><span class="line">            nowSum+=rev*n+<span class="number">1</span>;</span><br><span class="line">            res=rev+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// rev小于0，表示maxsum不是很大</span></span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            res=<span class="number">2</span>;</span><br><span class="line">            nowSum=n+<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(nowSum&lt;maxSum)&#123;</span><br><span class="line">            <span class="type">int</span> left=index&gt;num?num:index;</span><br><span class="line">            <span class="type">int</span> right=(index+num)&gt;(n-<span class="number">1</span>)?(n-<span class="number">1</span>-index):(num);</span><br><span class="line">            nowSum+=left+right+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(nowSum&gt;maxSum)&#123;</span><br><span class="line">                <span class="keyword">return</span> res;</span><br><span class="line">            &#125;</span><br><span class="line">            res++;</span><br><span class="line">            num++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>执行用时：1 ms, 在所有 Java 提交中击败了83.26%的用户</p>
+<p>内存消耗：38.4 MB, 在所有 Java 提交中击败了45.61%的用户</p>
+<p>通过测试用例：71 &#x2F; 71</p>
+<p>时间 O(n*logn)</p>
+<p>空间 O(1)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">countEven</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">        <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=num;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(isTrue(i))&#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isTrue</span><span class="params">(<span class="type">int</span> num)</span>&#123;</span><br><span class="line">        <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(num!=<span class="number">0</span>)&#123;</span><br><span class="line">            tmp=num%<span class="number">10</span>;</span><br><span class="line">            num=num/<span class="number">10</span>;</span><br><span class="line">            res+=tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(res%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>数学推导方法<ol>
+<li>将num分成10×y+x的表达形式，分成两个区间[0,10×y) 和[10×y+0,10×y+x]<ol>
+<li>在区间[10×y+0,10×y+x]区间内，符合条件的个数为（上下取整这里最开始理解错了，改了半天） ：<ol>
+<li>如果y是偶数，那么个数为 x&#x2F;2(向下取整)+1</li>
+<li>如果y是奇数，那么个数为 x&#x2F;2 (向上取整)</li>
+</ol>
+</li>
+<li>在区间[0,10×y+0) 内，符合条件的个数为5×y<ol>
+<li>因为从0开始，每个个位数都是0-9，对应的奇偶都是5个，因此无论<strong>非个位</strong>数字的是奇是偶，总体都是5个</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>最后由于计算时包含了0，因此返回结果将其 -1</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p>
+<p>内存消耗：38.5 MB, 在所有 Java 提交中击败了29.29%的用户</p>
+<p>通过测试用例：71 &#x2F; 71</p>
+<p>时间 O(logn)</p>
+<p>空间 O(1)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">countEven</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">        <span class="type">int</span> y=num/<span class="number">10</span>,x=num%<span class="number">10</span>;</span><br><span class="line">        <span class="type">int</span> res=y*<span class="number">5</span>;</span><br><span class="line">        <span class="keyword">if</span>(isTrue(y))&#123;</span><br><span class="line">            <span class="comment">// 查找有多少个偶数。包含0</span></span><br><span class="line">            res+=x/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="comment">// 查找有多少个奇数</span></span><br><span class="line">            <span class="keyword">if</span>(x%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">                res+=x/<span class="number">2</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                res+=x/<span class="number">2</span>+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isTrue</span><span class="params">(<span class="type">int</span> num)</span>&#123;</span><br><span class="line">        <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> tmp=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(num!=<span class="number">0</span>)&#123;</span><br><span class="line">            tmp=num%<span class="number">10</span>;</span><br><span class="line">            num=num/<span class="number">10</span>;</span><br><span class="line">            res+=tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(res%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -411,7 +448,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://kkkkkong.github.io/posts/23037.html" title="leetcode 1802" target="_blank" rel="external">https://kkkkkong.github.io/posts/23037.html</a>
+      <a href="https://kkkkkong.github.io/posts/7851.html" title="leetcode 2180" target="_blank" rel="external">https://kkkkkong.github.io/posts/7851.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -457,13 +494,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/15455.html" title="leetcode 283"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/3944.html" title="leetcode 136"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/64251.html" title="leetcode 448"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
