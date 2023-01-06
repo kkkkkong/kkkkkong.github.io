@@ -6,7 +6,7 @@
   <link href="https://kkkkkong.github.io/atom.xml" rel="self"/>
   
   <link href="https://kkkkkong.github.io/"/>
-  <updated>2023-01-06T03:24:12.176Z</updated>
+  <updated>2023-01-06T12:50:26.445Z</updated>
   <id>https://kkkkkong.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 617</title>
+    <link href="https://kkkkkong.github.io/posts/28185.html"/>
+    <id>https://kkkkkong.github.io/posts/28185.html</id>
+    <published>2023-01-06T12:38:05.000Z</published>
+    <updated>2023-01-06T12:50:26.445Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="617-合并二叉树"><a href="#617-合并二叉树" class="headerlink" title="617. 合并二叉树"></a><a href="https://leetcode.cn/problems/merge-two-binary-trees/">617. 合并二叉树</a></h4><p>给你两棵二叉树： <code>root1</code> 和 <code>root2</code> 。</p><p>想象一下，当你将其中一棵覆盖到另一棵之上时，两棵树上的一些节点将会重叠（而另一些不会）。你需要将这两棵树合并成一棵新二叉树。合并的规则是：如果两个节点重叠，那么将这两个节点的值相加作为合并后节点的新值；否则，<strong>不为</strong> null 的节点将直接作为新二叉树的节点。</p><p>返回合并后的二叉树。</p><p><strong>注意:</strong> 合并过程必须从两个树的根节点开始。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>深度优先搜索，从根节点开始，依次合并两个树的节点，将合并后的节点存在root1中，合并时有几种情况：<ol><li>两个节点都为null，那么返回null</li><li>两个节点有一个为null，返回非空节点</li><li>两个节点都不为空，合并两个节点，并将左右孩子节点递归调用合并</li></ol></li></ol><blockquote><p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p><p>内存消耗：41.4 MB, 在所有 Java 提交中击败了73.39%的用户</p><p>通过测试用例：182 &#x2F; 182</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span></span><br><span class="line"><span class="comment"> *         this.val = val;</span></span><br><span class="line"><span class="comment"> *         this.left = left;</span></span><br><span class="line"><span class="comment"> *         this.right = right;</span></span><br><span class="line"><span class="comment"> *     &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">mergeTrees</span><span class="params">(TreeNode root1, TreeNode root2)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(root1!=<span class="literal">null</span>&amp;&amp;root2!=<span class="literal">null</span>)&#123;</span><br><span class="line">            root1.val+=root2.val;</span><br><span class="line">            root1.left=mergeTrees(root1.left,root2.left);</span><br><span class="line">            root1.right=mergeTrees(root1.right,root2.right);</span><br><span class="line">            <span class="keyword">return</span> root1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(root1!=<span class="literal">null</span>||root2!=<span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> root1==<span class="literal">null</span>?root2:root1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>官方题解更优雅</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">mergeTrees</span><span class="params">(TreeNode t1, TreeNode t2)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (t1 == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t2 == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">merged</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TreeNode</span>(t1.val + t2.val);</span><br><span class="line">        merged.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">        merged.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">        <span class="keyword">return</span> merged;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;617-合并二叉树&quot;&gt;&lt;a href=&quot;#617-合并二叉树&quot; class=&quot;headerlink&quot; title=</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="https://kkkkkong.github.io/categories/leetcode/"/>
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 2180</title>
@@ -461,34 +485,6 @@
     
     
     <category term="摩斯电码" scheme="https://kkkkkong.github.io/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments</title>
-    <link href="https://kkkkkong.github.io/posts/37834.html"/>
-    <id>https://kkkkkong.github.io/posts/37834.html</id>
-    <published>2022-07-22T04:00:00.000Z</published>
-    <updated>2022-11-27T03:06:05.176Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Partitioning-Stateful-Data-Stream-Applications-in-Dynamic-Edge-Cloud-Environments"><a href="#Partitioning-Stateful-Data-Stream-Applications-in-Dynamic-Edge-Cloud-Environments" class="headerlink" title="Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments"></a>Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments</h3><h3 id="动态边缘云环境下的有状态数据流应用的划分"><a href="#动态边缘云环境下的有状态数据流应用的划分" class="headerlink" title="动态边缘云环境下的有状态数据流应用的划分"></a>动态边缘云环境下的有状态数据流应用的划分</h3><h4 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h4><p>计算分区是一种通过选择性地将一些计算从移动设备卸载到附近的边缘云来提高应用程序性能的重要技术。在动态环境中，边缘云的网络带宽可能会频繁变化，计算的划分需要相应地更新。分区的频繁更新导致了移动端和边缘云之间的高状态迁移成本。但是，现有的工作没有考虑状态迁移开销。因此，分区决策可能会导致重大的拥塞控制，并极大地增加整体完成时间。本文在考虑状态迁移开销的基础上，提出了一套基于网络带宽变化的分区更新算法。据我们所知，<strong>这是第一个针对动态环境中的有状态数据流应用程序进行计算分区的工作。这些算法旨在通过在动态边缘云环境中选择性迁移状态来减轻拥塞控制和最小化制造跨度</strong>。大量的仿真结果表明，该算法不仅可以选择性地迁移状态，而且在生成时间方面优于其他经典的基准算法。所提出的模型和算法将丰富有状态任务的调度理论，这是以前从未有过的研究。</p><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><p>边缘计算是使云计算技术能够从传统的互联网数据中心到网络边缘进行低延迟数据访问和实时数据处理[7]。作为边缘计算资源的抽象，边缘云通常分布在离终端用户较近的地方，如蜂窝基站和无线局域网。边缘计算的一般形式包括 Cloudlets [9]和 Foglets [10] ，甚至还有一小群有限的设备[8]。与传统的云数据中心相比，边缘云更轻量级，资源受限[11]。随着边缘云在当今网络基础设施中的部署越来越多，计算分区被认为是一种有效的技术，通过选择性地将一些计算从移动设备卸载到附近的边缘云[4][12][18]来提高移动应用程序的性能</p><p>为了达到不同的目的，在计算分区方面存在许多相关的工作，比如减少执行时间，节省终端设备的能源消耗，以及云的数据传输开销。这些工作对应用程序有不同的建模方法。典型的应用程序模型包括面向过程程序的方法调用树、面向服务应用程序的服务调用图和面向数据流应用程序的数据流图。&#x2F;n在这些类型的应用程序中，数据流应用程序越来越受到关注，例如扩增实境和目标跟踪。应用程序由一组功能模块组成，数据流通过这些模块。数据流应用程序的分区旨在为每个传入的数据帧决定哪些函数在本地执行，哪些函数在边缘云中执行[4][12]。但是，现有的工作不考虑有状态数据流应用程序的分区。如果数据流应用程序包含有状态函数模块，我们将其定义为有状态应用程序。通过状态函数模块，如果一个数据帧流经它，那么在处理该模块的设备上将留下一个“足迹”。这个“内存占用”(也由状态命名)是下一个数据帧的处理所需要的。许多应用程序(如对象跟踪)都属于有状态应用程序。</p><p>对有状态数据流应用程序进行分区非常具有挑战性，尤其是在动态边缘云环境中，在这种环境中，到边缘云的网络连接经常发生变化，甚至可能发生断开连接。由于网络连接的动态性，应用程序的划分需要相应地更新，这将导致移动设备和边缘云之间的状态迁移。因此，我们需要通过选择性迁移状态来划分计算，以减轻网络拥塞。现有的计算划分工作考虑了应用程序的无状态功能模块。当它们应用于有状态应用程序的分区时，网络中会出现较高的状态迁移开销，这可能导致拥塞控制和应用程序的长时间完成。这就是为什么我们需要为有状态应用程序的分区特别设计新的方法，旨在平衡良好的分区和低完成时间以及网络上额外的状态迁移时间。</p><p>在本文中，我们开发了一套有效的算法来解决有状态数据流应用程序的划分问题，目的是通过选择性迁移 ing 状态来减少拥塞控制和最小化使用时间。特别地，我们设计了一种新的算法，即基于得分矩阵的启发式算法(SM-H)来解决一次性问题，该算法在边缘网络环境改变时更新当前到达数据帧的划分。SM-H 采用矩阵形式记录调整各模块执行位置的效益得分，然后始终选择得分最大的模块进行调整。调整是迭代进行的，直到没有一个模块得到正分，这意味着调整任何一个模块将导致完成时间的增加。在一次性 SM-H 算法的基础上，进一步推广到解决多步骤的分区问题。</p><p>我们通过大量的仿真对提出的算法进行评估，并将它们与几种基准方法进行比较，包括顺序调整(一种幼稚的贪婪启发式方法)、列表调度(一种经典的并行和分布式计算调度方法)、遗传算法等。结果表明，所提出的算法在制作跨度方面优于基准算法。我们将本文的贡献总结如下。</p><p>•据我们所知，我们是第一个研究有状态数据流应用程序分区问题的人。这些问题模型可以推广到分布式处理器上的有状态任务调度，这是目前在任务调度领域尚未研究的问题。&#x2F;n</p><p>•我们开发了一种新算法来划分有状态数据流应用程序。该算法丰富了有状态应用任务的调度理论和方法。&#x2F;n</p><p>•我们通过广泛的仿真对提出的算法进行了评估，结果表明，提出的 SM-H 算法在制作跨度方面优于基准算法。</p><h4 id="系统模型和问题制定"><a href="#系统模型和问题制定" class="headerlink" title="系统模型和问题制定"></a>系统模型和问题制定</h4><p>定义决策变量表示分配给状态迁移、网络传输的网络带宽，将最小化make-span制定为目标并表示，限制模块之间的依赖性定义，从而定义对状态迁移的限制、对网络带宽的限制</p><p>最终形成有状态的数据流应用程序计算分区问题(SCPP)，</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;Partitioning-Stateful-Data-Stream-Applications-in-Dynamic-Edge-Cloud-Environments&quot;&gt;&lt;a href=&quot;#Partitioning-Stateful-Data-Stream-Appli</summary>
-      
-    
-    
-    
-    <category term="论文阅读" scheme="https://kkkkkong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    
-    <category term="论文阅读" scheme="https://kkkkkong.github.io/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    <category term="算力网络" scheme="https://kkkkkong.github.io/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="边缘博弈" scheme="https://kkkkkong.github.io/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/"/>
     
   </entry>
   
