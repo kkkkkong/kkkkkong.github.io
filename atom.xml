@@ -6,7 +6,7 @@
   <link href="https://kkkkkong.github.io/atom.xml" rel="self"/>
   
   <link href="https://kkkkkong.github.io/"/>
-  <updated>2023-01-06T12:56:03.236Z</updated>
+  <updated>2023-01-07T11:21:09.714Z</updated>
   <id>https://kkkkkong.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 1658</title>
+    <link href="https://kkkkkong.github.io/posts/52511.html"/>
+    <id>https://kkkkkong.github.io/posts/52511.html</id>
+    <published>2023-01-07T11:14:27.000Z</published>
+    <updated>2023-01-07T11:21:09.714Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="1658-将-x-减到-0-的最小操作数"><a href="#1658-将-x-减到-0-的最小操作数" class="headerlink" title="1658. 将 x 减到 0 的最小操作数"></a><a href="https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/">1658. 将 x 减到 0 的最小操作数</a></h4><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>x</code> 。每一次操作时，你应当移除数组 <code>nums</code> 最左边或最右边的元素，然后从 <code>x</code> 中减去该元素的值。请注意，需要 <strong>修改</strong> 数组以供接下来的操作使用。</p><p>如果可以将 <code>x</code> <strong>恰好</strong> 减到 <code>0</code> ，返回 <strong>最小操作数</strong> ；否则，返回 <code>-1</code> 。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>滑动窗口：前后指针分别表示前缀和和后缀和，后缀和从整个数组开始，前缀和从-1开始，<ol><li>如果lsum+rsum&#x3D;x，说明找到了一组答案</li><li>如果lsum+rsum&gt;x，说明过大，把right向右移动</li><li>如果lsum+rsum&lt;x，说明过小，把left向左移动</li></ol></li></ol><blockquote><p>执行用时：11 ms, 在所有 Java 提交中击败了27.04%的用户</p><p>内存消耗：50.3 MB, 在所有 Java 提交中击败了85.29%的用户</p><p>通过测试用例：94 &#x2F; 94</p><p>时间：O(n)</p><p>空间：O(1)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minOperations</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> x)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n=nums.length;</span><br><span class="line">        <span class="type">int</span> res=n+<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> right=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> lsum=<span class="number">0</span>,rsum=Arrays.stream(nums).sum();</span><br><span class="line">        <span class="keyword">if</span>(rsum&lt;x)<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> left=-<span class="number">1</span>;left&lt;n;left++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(left!=-<span class="number">1</span>)&#123;</span><br><span class="line">                lsum+=nums[left];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 和大于n时，r向右移动</span></span><br><span class="line">            <span class="keyword">while</span>(lsum+rsum&gt;x&amp;&amp;right&lt;n)&#123;</span><br><span class="line">                rsum-=nums[right];</span><br><span class="line">                right++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lsum+rsum==x)&#123;</span><br><span class="line">                res=Math.min(res,left+<span class="number">1</span>+n-right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res&gt;n?-<span class="number">1</span>:res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>逆向思维，考虑找到一个最长的子数组，使得子数组的和为sum-x</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;1658-将-x-减到-0-的最小操作数&quot;&gt;&lt;a href=&quot;#1658-将-x-减到-0-的最小操作数&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode 617</title>
@@ -461,30 +483,6 @@
     <category term="算力网络" scheme="https://kkkkkong.github.io/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/"/>
     
     <category term="边缘博弈" scheme="https://kkkkkong.github.io/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>摩斯电码快速记忆</title>
-    <link href="https://kkkkkong.github.io/posts/58667.html"/>
-    <id>https://kkkkkong.github.io/posts/58667.html</id>
-    <published>2022-07-24T04:00:00.000Z</published>
-    <updated>2022-11-27T03:06:05.183Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="摩斯电码快速记忆"><a href="#摩斯电码快速记忆" class="headerlink" title="摩斯电码快速记忆"></a>摩斯电码快速记忆</h3><p>之前无聊的时候翻知乎，看到一个有关摩斯电码的讨论，感觉其中一个回答对记忆莫斯电码十分有帮助，在这里分享下</p><h4 id="原电码表"><a href="#原电码表" class="headerlink" title="原电码表"></a>原电码表</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724150944205.png" alt="image-20220724150944205"></p><h4 id="通过图像记忆"><a href="#通过图像记忆" class="headerlink" title="通过图像记忆"></a>通过图像记忆</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724151014928.png" alt="image-20220724151014928"></p><p>有那么两天我甚至感觉自己精通了，勤加练习不难</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;摩斯电码快速记忆&quot;&gt;&lt;a href=&quot;#摩斯电码快速记忆&quot; class=&quot;headerlink&quot; title=&quot;摩斯电码快速记忆&quot;&gt;&lt;/a&gt;摩斯电码快速记忆&lt;/h3&gt;&lt;p&gt;之前无聊的时候翻知乎，看到一个有关摩斯电码的讨论，感觉其中一个回答对记忆莫斯电码十分有帮助，</summary>
-      
-    
-    
-    
-    <category term="学习" scheme="https://kkkkkong.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-    <category term="摩斯电码" scheme="https://kkkkkong.github.io/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/"/>
     
   </entry>
   
