@@ -6,7 +6,7 @@
   <link href="https://kkkkkong.github.io/atom.xml" rel="self"/>
   
   <link href="https://kkkkkong.github.io/"/>
-  <updated>2023-01-07T11:21:09.714Z</updated>
+  <updated>2023-01-08T10:21:47.209Z</updated>
   <id>https://kkkkkong.github.io/</id>
   
   <author>
@@ -17,11 +17,77 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>leetcode 206</title>
+    <link href="https://kkkkkong.github.io/posts/65432.html"/>
+    <id>https://kkkkkong.github.io/posts/65432.html</id>
+    <published>2023-01-08T10:17:01.000Z</published>
+    <updated>2023-01-08T10:21:47.209Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206. 反转链表"></a><a href="https://leetcode.cn/problems/reverse-linked-list/">206. 反转链表</a></h4><p>给你单链表的头节点 <code>head</code> ，请你反转链表，并返回反转后的链表。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>迭代，原地翻转，将待翻转链表头部的node摘出来；遍历链表时，将当前head.next存储起来，然后将head插入res和res.next 之间</li></ol><blockquote><p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p><p>内存消耗：41.6 MB, 在所有 Java 提交中击败了9.12%的用户</p><p>通过测试用例：28 &#x2F; 28</p><p>时间 O(n)</p><p>空间 O(1)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> ListNode <span class="title function_">reverseList</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">        ListNode res=<span class="keyword">new</span> <span class="title class_">ListNode</span>();</span><br><span class="line">        <span class="keyword">while</span>(head!=<span class="literal">null</span>)&#123;</span><br><span class="line">            ListNode tmp=head.next;</span><br><span class="line">            head.next=res.next;</span><br><span class="line">            res.next=head;</span><br><span class="line">            head=tmp;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>递归</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;206-反转链表&quot;&gt;&lt;a href=&quot;#206-反转链表&quot; class=&quot;headerlink&quot; title=&quot;2</summary>
+      
+    
+    
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 226</title>
+    <link href="https://kkkkkong.github.io/posts/40857.html"/>
+    <id>https://kkkkkong.github.io/posts/40857.html</id>
+    <published>2023-01-08T09:01:50.000Z</published>
+    <updated>2023-01-08T09:09:07.990Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="226-翻转二叉树"><a href="#226-翻转二叉树" class="headerlink" title="226. 翻转二叉树"></a><a href="https://leetcode.cn/problems/invert-binary-tree/">226. 翻转二叉树</a></h4><p>给你一棵二叉树的根节点 <code>root</code> ，翻转这棵二叉树，并返回其根节点。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>深度优先(递归)</li></ol><blockquote><p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p><p>内存消耗：39.4 MB, 在所有 Java 提交中击败了8.65%的用户</p><p>通过测试用例：77 &#x2F; 77</p><p>时间 O(n)</p><p>空间 O(h)，h是树的高度</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode() &#123;&#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span></span><br><span class="line"><span class="comment"> *         this.val = val;</span></span><br><span class="line"><span class="comment"> *         this.left = left;</span></span><br><span class="line"><span class="comment"> *         this.right = right;</span></span><br><span class="line"><span class="comment"> *     &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> TreeNode <span class="title function_">invertTree</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(root==<span class="literal">null</span>)<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        TreeNode tmp=root.right;</span><br><span class="line">        root.right=invertTree(root.left);</span><br><span class="line">        root.left=invertTree(tmp);</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>广度优先（迭代），懒得写</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;226-翻转二叉树&quot;&gt;&lt;a href=&quot;#226-翻转二叉树&quot; class=&quot;headerlink&quot; title=</summary>
+      
+    
+    
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 2185</title>
+    <link href="https://kkkkkong.github.io/posts/7531.html"/>
+    <id>https://kkkkkong.github.io/posts/7531.html</id>
+    <published>2023-01-08T08:49:27.000Z</published>
+    <updated>2023-01-08T08:52:30.826Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="2185-统计包含给定前缀的字符串"><a href="#2185-统计包含给定前缀的字符串" class="headerlink" title="2185. 统计包含给定前缀的字符串"></a><a href="https://leetcode.cn/problems/counting-words-with-a-given-prefix/">2185. 统计包含给定前缀的字符串</a></h4><p>给你一个字符串数组 <code>words</code> 和一个字符串 <code>pref</code> 。</p><p>返回 <code>words</code> 中以 <code>pref</code> 作为 <strong>前缀</strong> 的字符串的数目。</p><p>字符串 <code>s</code> 的 <strong>前缀</strong> 就是 <code>s</code> 的任一前导连续字符串。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>直接模拟，从前到后判断</li></ol><blockquote><p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p><p>内存消耗：41.6 MB, 在所有 Java 提交中击败了20.10%的用户</p><p>通过测试用例：95 &#x2F; 95</p><p>时间 O(n)</p><p>空间 O(1)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">prefixCount</span><span class="params">(String[] words, String pref)</span> &#123;</span><br><span class="line">        <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;words.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(isTrue(words[i],pref))&#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isTrue</span><span class="params">(String words, String pref)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(words.length()&lt;pref.length())<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;pref.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(pref.charAt(i)!=words.charAt(i))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;2185-统计包含给定前缀的字符串&quot;&gt;&lt;a href=&quot;#2185-统计包含给定前缀的字符串&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>leetcode 1658</title>
     <link href="https://kkkkkong.github.io/posts/52511.html"/>
     <id>https://kkkkkong.github.io/posts/52511.html</id>
     <published>2023-01-07T11:14:27.000Z</published>
-    <updated>2023-01-07T11:21:09.714Z</updated>
+    <updated>2023-01-07T11:21:31.973Z</updated>
     
     <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="1658-将-x-减到-0-的最小操作数"><a href="#1658-将-x-减到-0-的最小操作数" class="headerlink" title="1658. 将 x 减到 0 的最小操作数"></a><a href="https://leetcode.cn/problems/minimum-operations-to-reduce-x-to-zero/">1658. 将 x 减到 0 的最小操作数</a></h4><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>x</code> 。每一次操作时，你应当移除数组 <code>nums</code> 最左边或最右边的元素，然后从 <code>x</code> 中减去该元素的值。请注意，需要 <strong>修改</strong> 数组以供接下来的操作使用。</p><p>如果可以将 <code>x</code> <strong>恰好</strong> 减到 <code>0</code> ，返回 <strong>最小操作数</strong> ；否则，返回 <code>-1</code> 。</p><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>滑动窗口：前后指针分别表示前缀和和后缀和，后缀和从整个数组开始，前缀和从-1开始，<ol><li>如果lsum+rsum&#x3D;x，说明找到了一组答案</li><li>如果lsum+rsum&gt;x，说明过大，把right向右移动</li><li>如果lsum+rsum&lt;x，说明过小，把left向左移动</li></ol></li></ol><blockquote><p>执行用时：11 ms, 在所有 Java 提交中击败了27.04%的用户</p><p>内存消耗：50.3 MB, 在所有 Java 提交中击败了85.29%的用户</p><p>通过测试用例：94 &#x2F; 94</p><p>时间：O(n)</p><p>空间：O(1)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minOperations</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> x)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n=nums.length;</span><br><span class="line">        <span class="type">int</span> res=n+<span class="number">1</span>;</span><br><span class="line">        <span class="type">int</span> right=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> lsum=<span class="number">0</span>,rsum=Arrays.stream(nums).sum();</span><br><span class="line">        <span class="keyword">if</span>(rsum&lt;x)<span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> left=-<span class="number">1</span>;left&lt;n;left++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(left!=-<span class="number">1</span>)&#123;</span><br><span class="line">                lsum+=nums[left];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 和大于n时，r向右移动</span></span><br><span class="line">            <span class="keyword">while</span>(lsum+rsum&gt;x&amp;&amp;right&lt;n)&#123;</span><br><span class="line">                rsum-=nums[right];</span><br><span class="line">                right++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(lsum+rsum==x)&#123;</span><br><span class="line">                res=Math.min(res,left+<span class="number">1</span>+n-right);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res&gt;n?-<span class="number">1</span>:res;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>逆向思维，考虑找到一个最长的子数组，使得子数组的和为sum-x</li></ol>]]></content>
     
@@ -404,85 +470,6 @@
     <category term="实时调度器" scheme="https://kkkkkong.github.io/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/"/>
     
     <category term="linux" scheme="https://kkkkkong.github.io/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>市场体制下企业定价方法</title>
-    <link href="https://kkkkkong.github.io/posts/25422.html"/>
-    <id>https://kkkkkong.github.io/posts/25422.html</id>
-    <published>2022-11-23T11:01:59.000Z</published>
-    <updated>2022-11-27T03:06:05.187Z</updated>
-    
-    <content type="html"><![CDATA[<p>在市场经济中，卖方才有定价权，因此需要考虑主要价格制定与变动的是卖方</p><p>现有的企业定价方式有三类：成本导向、需求导向和竞争导向</p><h3 id="一、成本导向定价法"><a href="#一、成本导向定价法" class="headerlink" title="一、成本导向定价法"></a><strong>一、成本导向定价法</strong></h3><blockquote><p>以营销产品的成本为主要依据制定价格的方法统称为成本导向定价法,这是最简单、应用相当广泛的一种定价方法。</p></blockquote><ol><li><p>**总成本定价法:**成本加成,目标利润</p><ol><li>成本加成定价法（cost-plus pricing），即按产品单位成本加上一定比例的毛利定出销售价。 　其计算公式为：P&#x3D;c×(1+r) 　P—商品的单价 　c—商品的单位总成本 　r—商品的加成率</li><li>目标利润定价法，是根据企业总成本和预期销售量，确定一个目标利润率，并以次作为定价的标准。 　其计算公式为：单位商品价格&#x3D;总成本×（1+目标利润率）&#x2F; 预计销量</li></ol><p> 　　</p></li><li><p><strong>边际成本定价法：</strong>边际成本是企业每增以单位产品所必须支付的成本，采用这种方式暂不考虑固定成本，以边际成本加一定的利润作为最终价格，可以帮助企业迅速打开市场。</p></li><li><p><strong>盈亏平衡定价</strong>：考虑到销售额变化后，成本也在发生变化，这种方法是运用损益平衡原理实行的一种保本定价法。 　其公式是： 　盈亏平衡点销售量&#x3D;固定成本&#x2F;单位—单位变动成本 　盈亏平衡点销售额&#x3D;固定成本&#x2F;1—单位变动成本率</p></li></ol><h3 id="二、需求导向定价法"><a href="#二、需求导向定价法" class="headerlink" title="二、需求导向定价法"></a><strong>二、需求导向定价法</strong></h3><blockquote><p>需求导向定价法是指根据市场需求状况和消费者对产品的感觉差异来确定价格的定价方法。 它包括以下三种</p></blockquote><ol><li><p><strong>认知导向定价法：</strong>是根据消费者对企业提供的产品价值的主观评判来制定价格的一种定价方法。</p></li><li><p><strong>逆向定价法：</strong>它是指依据消费者能够接受的最终销售价格，考虑中间商的成本及正常利润后，逆向推算出中间商的批发价和生产企业的出产价格。 　可通过公式计算价格：出厂价格&#x3D;市场可零售价格×（1—批零差率）×（1—进销差率）</p></li><li><p><strong>习惯定价法：</strong>是按照市场长期以来行成的习惯价格定价。</p></li></ol><h3 id="三、竞争导向定价法"><a href="#三、竞争导向定价法" class="headerlink" title="三、竞争导向定价法"></a><strong>三、竞争导向定价法</strong></h3><blockquote><p>竞争导向定价法是企业通过研究竞争对手的生产条件、服务状况、价格水平等因素，依据自身的竞争实力，参考成本和供求状况来确定商品价格。以市场上竞争者的类似产品的价格作为本企业产品定价的参照系的一种定价方法 这种定价方法主要有3方面特点。竞争导向定价主要包括随行就市定价法、产品差别定价法和密封投标定价法。</p></blockquote><ol><li><p>**随行就市定价法:**在垄断竞争和完全竞争的市场结构条件下，任何一家企业都无法凭借自己的实力而在市场上取得绝对的优势，为了避免竞争特别是价格竞争带来的损失，大多数企业都采用随行就市定价法，即将本企业某产品价格保持在市场平均价格水平上，利用这样的价格来获得平均报酬。此外，采用随行就市定价法，企业就不必去全面了解消费者对不同价差的反应，也不会引起价格波动。</p></li><li><p>**产品差别定价法:**产品差别定价法是指企业通过不同营销努力，使同种同质的产品在消费者心目中树立起不同的产品形象，进而根据自身特点，选取低于或高于竞争者的价格作为本企业产品价格。因此，产品差别定价法是一种进攻性的定价方法。</p></li><li><p>**密封投标定价法:**在国内外，许多大宗商品、原材料、成套设备和建筑工程项目的买卖和承包、以及出售小型企业等，往往采用发包人招标、承包人投标的方式来选择承包者，确定最终承包价格。一般来说，招标方只有一个，处于相对垄断地位，而投标方有多个，处于相互竞争地位。标的物的价格由参与投标的各个企业在相互独立的条件下来确定。在买方招标的所有投标者中，报价最低的投标者通常中标，它的报价就是承包价格。这样一种竞争性的定价方法就称密封投标定价法。</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在市场经济中，卖方才有定价权，因此需要考虑主要价格制定与变动的是卖方&lt;/p&gt;
-&lt;p&gt;现有的企业定价方式有三类：成本导向、需求导向和竞争导向&lt;/p&gt;
-&lt;h3 id=&quot;一、成本导向定价法&quot;&gt;&lt;a href=&quot;#一、成本导向定价法&quot; class=&quot;headerlink&quot; titl</summary>
-      
-    
-    
-    
-    <category term="论文阅读" scheme="https://kkkkkong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    
-    <category term="市场经济" scheme="https://kkkkkong.github.io/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/"/>
-    
-    <category term="定价方法" scheme="https://kkkkkong.github.io/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最优化问题</title>
-    <link href="https://kkkkkong.github.io/posts/31098.html"/>
-    <id>https://kkkkkong.github.io/posts/31098.html</id>
-    <published>2022-11-21T01:05:25.000Z</published>
-    <updated>2022-11-27T03:06:05.184Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="最优化问题"><a href="#最优化问题" class="headerlink" title="最优化问题"></a>最优化问题</h1><p>定义：在给定的约束条件下，选择最优的参数和方案，使得目标函数最大化&#x2F;最小化的问题</p><p>分类：</p><ul><li>根据约束条件不同，分为<ul><li>无约束问题</li><li>约束最优问题<ul><li>等式约束最优问题</li><li>不等式约束最优问题</li><li>混合约束优化问题</li></ul></li></ul></li><li>根据目标函数的状态，分为<ul><li>连续最优化问题：决策变量取值连续<ul><li>光滑最优化问题：函数连续可微<ul><li>线性规划</li><li>非线性规划</li></ul></li><li>非光滑优化</li></ul></li><li>离散最优化问题：决策标量取值离散<ul><li>整数规划、资源配置、油路问题生产安排等</li></ul></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;最优化问题&quot;&gt;&lt;a href=&quot;#最优化问题&quot; class=&quot;headerlink&quot; title=&quot;最优化问题&quot;&gt;&lt;/a&gt;最优化问题&lt;/h1&gt;&lt;p&gt;定义：在给定的约束条件下，选择最优的参数和方案，使得目标函数最大化&amp;#x2F;最小化的问题&lt;/p&gt;
-&lt;p&gt;分类：&lt;/</summary>
-      
-    
-    
-    
-    
-    <category term="最优化问题" scheme="https://kkkkkong.github.io/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coding based Distributed Data Shufflfling for Low Communication Cost in DataCenter Networks</title>
-    <link href="https://kkkkkong.github.io/posts/40422.html"/>
-    <id>https://kkkkkong.github.io/posts/40422.html</id>
-    <published>2022-07-24T04:00:00.000Z</published>
-    <updated>2022-11-27T03:06:05.169Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Coding-based-Distributed-Data-Shufflfling-for-Low-Communication-Cost-in-DataCenter-Networks"><a href="#Coding-based-Distributed-Data-Shufflfling-for-Low-Communication-Cost-in-DataCenter-Networks" class="headerlink" title="Coding based Distributed Data Shufflfling for Low Communication Cost in DataCenter Networks"></a>Coding based Distributed Data Shufflfling for Low Communication Cost in DataCenter Networks</h3><h3 id="基于编码的在数据中心网络中实现低通信成本的分布式数据洗牌"><a href="#基于编码的在数据中心网络中实现低通信成本的分布式数据洗牌" class="headerlink" title="基于编码的在数据中心网络中实现低通信成本的分布式数据洗牌"></a>基于编码的在数据中心网络中实现低通信成本的分布式数据洗牌</h3><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><p>分布式机器学习框架在实际使用中依然存在许多挑战与问题，训练数据样本分布和训练数据样本输入顺序是影响机器学习模型收敛效果的重要因素。全局数据重排能够为分布式机器学习提供更接近于单机的机器学习的数据重排效果。然而其会带来巨大的网络开销</p><p>为了让全局数据重排能够应用到实际的分布式机器学习中，目前存在一些使用编码的方法来降低其网络资源开销。</p><p>但目前的基于编码的网络传输优化方法都假设存在一台拥有无限存储能力的机器<br>存储了整个训练样本集中的所有样本，并且由这台机器负责所有样本数据的发送工作，<br>而其他机器不具备发送数据的功能。</p><h3 id="系统模型和问题制定"><a href="#系统模型和问题制定" class="headerlink" title="系统模型和问题制定"></a>系统模型和问题制定</h3><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195221509.png" alt="image-20220724195221509"></p><p>基于上述模型优化</p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195252224.png" alt="image-20220724195252224"></p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195300494.png" alt="image-20220724195300494"></p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195308972.png" alt="image-20220724195308972"></p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195316646.png" alt="image-20220724195316646"></p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195326229.png" alt="image-20220724195326229"></p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195336124.png" alt="image-20220724195336124"></p><h3 id="方法制定"><a href="#方法制定" class="headerlink" title="方法制定"></a>方法制定</h3><p>Distributed Coded Shuffling（DCS算法）</p><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20220724195407995.png" alt="image-20220724195407995"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;Coding-based-Distributed-Data-Shufflfling-for-Low-Communication-Cost-in-DataCenter-Networks&quot;&gt;&lt;a href=&quot;#Coding-based-Distributed-Data</summary>
-      
-    
-    
-    
-    <category term="论文阅读" scheme="https://kkkkkong.github.io/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    
-    <category term="论文阅读" scheme="https://kkkkkong.github.io/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/"/>
-    
-    <category term="算力网络" scheme="https://kkkkkong.github.io/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/"/>
-    
-    <category term="边缘博弈" scheme="https://kkkkkong.github.io/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/"/>
     
   </entry>
   
