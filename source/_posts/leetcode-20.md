@@ -1,6 +1,7 @@
 ---
 title: leetcode 20
 tags: 刷题
+category: leetcode
 abbrlink: 39266
 date: 2023-01-02 20:29:57
 ---

@@ -1,6 +1,7 @@
 ---
 title: leetcode 226
 tags: 刷题
+category: leetcode
 abbrlink: 40857
 date: 2023-01-08 17:01:50
 ---

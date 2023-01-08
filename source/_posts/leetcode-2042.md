@@ -1,6 +1,7 @@
 ---
 title: leetcode 2042
 tags: 刷题
+category: leetcode
 abbrlink: 8062
 date: 2023-01-03 18:39:19
 ---

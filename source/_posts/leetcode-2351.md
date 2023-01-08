@@ -1,6 +1,7 @@
 ---
 title: leetcode 2351
 tags: 刷题
+category: leetcode
 abbrlink: 36559
 date: 2023-01-01 08:52:11
 ---

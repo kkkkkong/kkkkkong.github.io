@@ -1,6 +1,7 @@
 ---
 title: leetcode 1801
 tags: 刷题
+category: leetcode
 abbrlink: 22717
 date: 2023-01-02 20:01:58
 ---

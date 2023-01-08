@@ -1,6 +1,7 @@
 ---
 title: leetcode 2185
 tags: 刷题
+category: leetcode
 abbrlink: 7531
 date: 2023-01-08 16:49:27
 ---

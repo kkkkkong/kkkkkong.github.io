@@ -1,6 +1,7 @@
 ---
 title: leetcode 206
 tags: 刷题
+category: leetcode
 abbrlink: 65432
 date: 2023-01-08 18:17:01
 ---
