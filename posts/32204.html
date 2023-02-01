@@ -17,21 +17,23 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>leetcode 2303 | 虫兑变的博客</title>
-  <meta name="description" content="题目描述2303. 计算应缴税款总额给你一个下标从 0 开始的二维整数数组 brackets ，其中 brackets[i] &#x3D; [upperi, percenti] ，表示第 i 个税级的上限是 upperi ，征收的税率为 percenti 。税级按上限 从低到高排序（在满足 0 &lt; i &lt; brackets.length 的前提下，upperi-1 &lt; upperi）。 税">
+  <title>leetcode 2325 | 虫兑变的博客</title>
+  <meta name="description" content="题目描述2325. 解密消息给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下：  使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 &#39; &#39; 保持不变。   例如，key &#x3D; &quot;*">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 2303">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/8013.html">
+<meta property="og:title" content="leetcode 2325">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/32204.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="题目描述2303. 计算应缴税款总额给你一个下标从 0 开始的二维整数数组 brackets ，其中 brackets[i] &#x3D; [upperi, percenti] ，表示第 i 个税级的上限是 upperi ，征收的税率为 percenti 。税级按上限 从低到高排序（在满足 0 &lt; i &lt; brackets.length 的前提下，upperi-1 &lt; upperi）。 税">
+<meta property="og:description" content="题目描述2325. 解密消息给你字符串 key 和 message ，分别表示一个加密密钥和一段加密消息。解密 message 的步骤如下：  使用 key 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 顺序 。 将替换表与普通英文字母表对齐，形成对照表。 按照对照表 替换 message 中的每个字母。 空格 &#39; &#39; 保持不变。   例如，key &#x3D; &quot;*">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-23T05:39:22.000Z">
-<meta property="article:modified_time" content="2023-01-23T05:45:51.135Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/ex1new4.jpg">
+<meta property="article:published_time" content="2023-02-01T01:50:55.000Z">
+<meta property="article:modified_time" content="2023-02-01T11:33:03.201Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/ex1new4.jpg">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/posts/8013.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/32204.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -344,14 +346,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-leetcode-2303" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-leetcode-2325" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode 2303
+      leetcode 2325
     </h1>
   
 
@@ -359,8 +361,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/8013.html" class="article-date">
-	  <time datetime="2023-01-23T05:39:22.000Z" itemprop="datePublished">2023-01-23</time>
+	<a href="/posts/32204.html" class="article-date">
+	  <time datetime="2023-02-01T01:50:55.000Z" itemprop="datePublished">2023-02-01</time>
 	</a>
 </span>
         
@@ -385,44 +387,57 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/8013.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/32204.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 441(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 720(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="2303-计算应缴税款总额"><a href="#2303-计算应缴税款总额" class="headerlink" title="2303. 计算应缴税款总额"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/calculate-amount-paid-in-taxes/">2303. 计算应缴税款总额</a></h4><p>给你一个下标从 <strong>0</strong> 开始的二维整数数组 <code>brackets</code> ，其中 <code>brackets[i] = [upperi, percenti]</code> ，表示第 <code>i</code> 个税级的上限是 <code>upperi</code> ，征收的税率为 <code>percenti</code> 。税级按上限 <strong>从低到高排序</strong>（在满足 <code>0 &lt; i &lt; brackets.length</code> 的前提下，<code>upperi-1 &lt; upperi</code>）。</p>
-<p>税款计算方式如下：</p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="2325-解密消息"><a href="#2325-解密消息" class="headerlink" title="2325. 解密消息"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/decode-the-message/">2325. 解密消息</a></h4><p>给你字符串 <code>key</code> 和 <code>message</code> ，分别表示一个加密密钥和一段加密消息。解密 <code>message</code> 的步骤如下：</p>
+<ol>
+<li>使用 <code>key</code> 中 26 个英文小写字母第一次出现的顺序作为替换表中的字母 <strong>顺序</strong> 。</li>
+<li>将替换表与普通英文字母表对齐，形成对照表。</li>
+<li>按照对照表 <strong>替换</strong> <code>message</code> 中的每个字母。</li>
+<li>空格 <code>&#39; &#39;</code> 保持不变。</li>
+</ol>
 <ul>
-<li>不超过 <code>upper0</code> 的收入按税率 <code>percent0</code> 缴纳</li>
-<li>接着 <code>upper1 - upper0</code> 的部分按税率 <code>percent1</code> 缴纳</li>
-<li>然后 <code>upper2 - upper1</code> 的部分按税率 <code>percent2</code> 缴纳</li>
-<li>以此类推</li>
+<li>例如，<code>key = &quot;***hap***p***y*** ***bo***y&quot;</code>（实际的加密密钥会包含字母表中每个字母 <strong>至少一次</strong>），据此，可以得到部分对照表（<code>&#39;h&#39; -&gt; &#39;a&#39;</code>、<code>&#39;a&#39; -&gt; &#39;b&#39;</code>、<code>&#39;p&#39; -&gt; &#39;c&#39;</code>、<code>&#39;y&#39; -&gt; &#39;d&#39;</code>、<code>&#39;b&#39; -&gt; &#39;e&#39;</code>、<code>&#39;o&#39; -&gt; &#39;f&#39;</code>）。</li>
 </ul>
-<p>给你一个整数 <code>income</code> 表示你的总收入。返回你需要缴纳的税款总额。与标准答案误差不超 <code>10-5</code> 的结果将被视作正确答案。</p>
+<p>返回解密后的消息。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：brackets = [[3,50],[7,10],[12,25]], income = 10</span><br><span class="line">输出：2.65000</span><br><span class="line">解释：</span><br><span class="line">前 $3 的税率为 50% 。需要支付税款 $3 * 50% = $1.50 。</span><br><span class="line">接下来 $7 - $3 = $4 的税率为 10% 。需要支付税款 $4 * 10% = $0.40 。</span><br><span class="line">最后 $10 - $7 = $3 的税率为 25% 。需要支付税款 $3 * 25% = $0.75 。</span><br><span class="line">需要支付的税款总计 $1.50 + $0.40 + $0.75 = $2.65 。</span><br></pre></td></tr></table></figure>
-
-
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/ex1new4.jpg" alt="img"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：key = &quot;the quick brown fox jumps over the lazy dog&quot;, message = &quot;vkbs bs t suepuv&quot;</span><br><span class="line">输出：&quot;this is a secret&quot;</span><br><span class="line">解释：对照表如上图所示。</span><br><span class="line">提取 &quot;the quick brown fox jumps over the lazy dog&quot; 中每个字母的首次出现可以得到替换表。</span><br></pre></td></tr></table></figure>
 
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
-<li>模拟，从前到后遍历数组，如果income大于upper，计算upper以前的税收；否则，income小于等于upper，计算income以前的税收，遍历终止</li>
+<li>哈希表</li>
 </ol>
 <blockquote>
-<p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p>
-<p>内存消耗：41.6 MB, 在所有 Java 提交中击败了22.05%的用户</p>
-<p>通过测试用例：227 &#x2F; 227</p>
+<p>执行用时：6 ms, 在所有 Java 提交中击败了50.73%的用户</p>
+<p>内存消耗：41.3 MB, 在所有 Java 提交中击败了62.04%的用户</p>
+<p>通过测试用例：69 &#x2F; 69</p>
 <p>时间 O(n)</p>
-<p>空间 O(1)</p>
+<p>空间 O(n)</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">calculateTax</span><span class="params">(<span class="type">int</span>[][] brackets, <span class="type">int</span> income)</span> &#123;</span><br><span class="line">        <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">        <span class="type">double</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> []get:brackets)&#123;</span><br><span class="line">            <span class="keyword">if</span>(income&gt;get[<span class="number">0</span>])&#123;</span><br><span class="line">                res+=((get[<span class="number">0</span>]-pre)*get[<span class="number">1</span>])/<span class="number">100.0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                res+=((income-pre)*get[<span class="number">1</span>])/<span class="number">100.0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            pre=get[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">decodeMessage</span><span class="params">(String key, String message)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用HashMap存储密码的对应值</span></span><br><span class="line">        Map&lt;Character,Character&gt; map=<span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        <span class="type">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;key.length();i++)&#123;</span><br><span class="line">            <span class="type">char</span> c=key.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(!map.containsKey(c))&#123;</span><br><span class="line">                map.put(c,(<span class="type">char</span>)(<span class="string">&#x27;a&#x27;</span>+num));</span><br><span class="line">                num++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 遍历message翻译</span></span><br><span class="line">        <span class="type">char</span>[] res=<span class="keyword">new</span> <span class="title class_">char</span>[message.length()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;message.length();i++)&#123;</span><br><span class="line">            <span class="type">char</span> c=message.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                res[i]=<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                res[i]=map.get(c);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用数组代替哈希表，<em>对于以字母作为索引的操作，能用定长数组就不要用哈希，因为映射本身需要资源，而且无论分配空间还是寻址，堆区都不如栈区</em></li>
+</ol>
+<blockquote>
+<p>执行用时：3 ms, 在所有 Java 提交中击败了77.37%的用户</p>
+<p>内存消耗：40.2 MB, 在所有 Java 提交中击败了95.62%的用户</p>
+<p>通过测试用例：69 &#x2F; 69</p>
+<p>时间 O(n)</p>
+<p>空间 O(n)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">decodeMessage</span><span class="params">(String key, String message)</span> &#123;</span><br><span class="line">        <span class="comment">// 使用数组存储字典值</span></span><br><span class="line">        <span class="type">char</span>[] map=<span class="keyword">new</span> <span class="title class_">char</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="type">int</span> num=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 遍历key，存储密码值</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;key.length();i++)&#123;</span><br><span class="line">            <span class="type">char</span> c=key.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27; &#x27;</span>)<span class="keyword">continue</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span>(!Character.isLowerCase(map[c-<span class="string">&#x27;a&#x27;</span>]))&#123;</span><br><span class="line">                map[c-<span class="string">&#x27;a&#x27;</span>]=(<span class="type">char</span>)(<span class="string">&#x27;a&#x27;</span>+num);</span><br><span class="line">                num++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 翻译</span></span><br><span class="line">        <span class="type">char</span>[] res=<span class="keyword">new</span> <span class="title class_">char</span>[message.length()];</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;message.length();i++)&#123;</span><br><span class="line">            <span class="type">char</span> c=message.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27; &#x27;</span>)&#123;</span><br><span class="line">                res[i]=<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                res[i]=map[c-<span class="string">&#x27;a&#x27;</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">String</span>(res);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -433,7 +448,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://kkkkkong.github.io/posts/8013.html" title="leetcode 2303" target="_blank" rel="external">https://kkkkkong.github.io/posts/8013.html</a>
+      <a href="https://kkkkkong.github.io/posts/32204.html" title="leetcode 2325" target="_blank" rel="external">https://kkkkkong.github.io/posts/32204.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -479,13 +494,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/15996.html" title="leetcode 1828"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/51772.html" title="leetcode 1817"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/52549.html" title="leetcode  1669"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
