@@ -13,6 +13,8 @@ date: 2022-11-28 19:21:24
 
 - git add ：添加文件到缓存，常用git add . 添加所有文件夹
 - git status ：查看项目内文件的状态
+- git stash : 暂存当前的修改（不能保存为追踪文件，如新建文件）
+- git stash pop : 将暂存文件恢复，与git stash 配合使用
 - git diff ：查看未缓存的更改
 - git commit ：提交命令，
   - 常用git commit -m “update内容”
