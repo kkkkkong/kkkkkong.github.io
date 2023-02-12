@@ -17,16 +17,22 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签: 算力网络 | 虫兑变的博客</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="虫兑变的博客">
-<meta property="og:url" content="https://kkkkkong.github.io/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/index.html">
+  <title>DragonOS 实时调度器相关API | 虫兑变的博客</title>
+  <meta name="description" content="实时进程调度器相关的api&amp;emsp;&amp;emsp; RT（realtime scheduler），实时调度器。实时调度是为了完成实时处理任务而分配CPU的调度方法。 &amp;emsp;&amp;emsp;DragonOS的进程分为“实时进程”和“普通进程”两类；实时进程的优先级高于普通进程，如果当前的系统的执行队列中有“实时进程”，RT调度器会优先选择实时进程；如果队列中会有多个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DragonOS 实时调度器相关API">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/56746.html">
 <meta property="og:site_name" content="虫兑变的博客">
+<meta property="og:description" content="实时进程调度器相关的api&amp;emsp;&amp;emsp; RT（realtime scheduler），实时调度器。实时调度是为了完成实时处理任务而分配CPU的调度方法。 &amp;emsp;&amp;emsp;DragonOS的进程分为“实时进程”和“普通进程”两类；实时进程的优先级高于普通进程，如果当前的系统的执行队列中有“实时进程”，RT调度器会优先选择实时进程；如果队列中会有多个">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-12T01:55:50.000Z">
+<meta property="article:modified_time" content="2023-02-12T09:08:04.620Z">
 <meta property="article:author" content="Kong Weichao">
+<meta property="article:tag" content="学习">
+<meta property="article:tag" content="实时调度器">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/index.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/56746.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -336,162 +342,249 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签: 算力网络</h1>
-      <p class="text-muted hidden-xs">共 3 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/论文阅读/">论文阅读</a></li>
-          
-          <li><a href="/tags/算力网络/">算力网络</a></li>
-          
-          <li><a href="/tags/边缘博弈/">边缘博弈</a></li>
-          
-          <li><a href="/tags/学习/">学习</a></li>
-          
-          <li><a href="/tags/实时调度器/">实时调度器</a></li>
-          
-          <li><a href="/tags/githubpags/">githubpags</a></li>
-          
-          <li><a href="/tags/jekyll/">jekyll</a></li>
-          
-          <li><a href="/tags/java/">java</a></li>
-          
-          <li><a href="/tags/JDBC/">JDBC</a></li>
-          
-          <li><a href="/tags/排序/">排序</a></li>
-          
-          <li><a href="/tags/git/">git</a></li>
-          
-          <li><a href="/tags/merge/">merge</a></li>
-          
-          <li><a href="/tags/pull/">pull</a></li>
-          
-          <li><a href="/tags/github/">github</a></li>
-          
-          <li><a href="/tags/刷题/">刷题</a></li>
-          
-          <li><a href="/tags/typora/">typora</a></li>
-          
-          <li><a href="/tags/leetcode/">leetcode</a></li>
-          
-          <li><a href="/tags/浮点数精度/">浮点数精度</a></li>
-          
-          <li><a href="/tags/小说/">小说</a></li>
-          
-          <li><a href="/tags/linux/">linux</a></li>
-          
-          <li><a href="/tags/市场经济/">市场经济</a></li>
-          
-          <li><a href="/tags/定价方法/">定价方法</a></li>
-          
-          <li><a href="/tags/hexo博客/">hexo博客</a></li>
-          
-          <li><a href="/tags/摩斯电码/">摩斯电码</a></li>
-          
-          <li><a href="/tags/最优化问题/">最优化问题</a></li>
-          
-          <li><a href="/tags/非技术/">非技术</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-DragonOS-实时调度器相关API" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
         
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2022-07-24T04:00:00.000Z" itemprop="datePublished">2022-07-24</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/posts/40422.html">Coding based Distributed Data Shufflfling for Low Communication Cost in DataCenter Networks</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="label label-default mb">论文阅读</a>
-     
-      <a href="/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/" class="label label-default mb">算力网络</a>
-     
-      <a href="/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" class="label label-default mb">边缘博弈</a>
-     
-     
-   </div>
-   
-</article>
+  
+    <h1 class="article-title" itemprop="name">
+      DragonOS 实时调度器相关API
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/56746.html" class="article-date">
+	  <time datetime="2023-02-12T01:55:50.000Z" itemprop="datePublished">2023-02-12</time>
+	</a>
+</span>
+        
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a>, <a class="article-tag-link-link" href="/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/" rel="tag">实时调度器</a>
+  </span>
 
 
-</div>
-
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2022-07-22T04:00:00.000Z" itemprop="datePublished">2022-07-22</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/posts/37834.html">Partitioning Stateful Data Stream Applications in Dynamic Edge Cloud Environments</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="label label-default mb">论文阅读</a>
-     
-      <a href="/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/" class="label label-default mb">算力网络</a>
-     
-      <a href="/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" class="label label-default mb">边缘博弈</a>
-     
-     
-   </div>
-   
-</article>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
 
-</div>
-
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2022-07-22T04:00:00.000Z" itemprop="datePublished">2022-07-22</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/posts/23505.html">基于博弈论的云/边缘计算资源分配与优化算法及应用</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" class="label label-default mb">论文阅读</a>
-     
-      <a href="/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/" class="label label-default mb">算力网络</a>
-     
-      <a href="/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" class="label label-default mb">边缘博弈</a>
-     
-     
-   </div>
-   
-</article>
-
-
-</div>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/56746.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.2k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
+	
 
       </div>
     </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h1 id="实时进程调度器相关的api"><a href="#实时进程调度器相关的api" class="headerlink" title="实时进程调度器相关的api"></a>实时进程调度器相关的api</h1><p>&amp;emsp;&amp;emsp; RT（realtime scheduler），实时调度器。实时调度是为了完成实时处理任务而分配CPU的调度方法。</p>
+<p>&amp;emsp;&amp;emsp;DragonOS的进程分为“实时进程”和“普通进程”两类；实时进程的优先级高于普通进程，如果当前的系统的执行队列中有“实时进程”，RT调度器会优先选择实时进程；如果队列中会有多个实时进程，调度器会选择优先级最高的实时进程来执行；</p>
+<h2 id="1-RTQueue-介绍"><a href="#1-RTQueue-介绍" class="headerlink" title="1. RTQueue 介绍"></a>1. RTQueue 介绍</h2><p>&amp;emsp;&amp;emsp; RTQueue是用来存放state为running的实时进程的调度队列，每个CPU维护一个RTQueue，主要使用Vec作为主要存储结构来实现。</p>
+<h3 id="1-1-主要函数"><a href="#1-1-主要函数" class="headerlink" title="1.1 主要函数"></a>1.1 主要函数</h3><ol>
+<li><p>enqueue(): 将pcb入队列</p>
+</li>
+<li><p>dequeue(): 将pcb出队列</p>
+</li>
+</ol>
+<h2 id="2-SchedulerRT-介绍"><a href="#2-SchedulerRT-介绍" class="headerlink" title="2. SchedulerRT 介绍"></a>2. SchedulerRT 介绍</h2><p>&amp;emsp;&amp;emsp; RT调度器类，主要实现了RT调度器类的初始化以及调度功能函数。</p>
+<h3 id="2-1-主要函数"><a href="#2-1-主要函数" class="headerlink" title="2.1 主要函数"></a>2.1 主要函数</h3><ol>
+<li><p>pick_next_task_rt(): 获取当前CPU中的第一个需要执行的RT pcb</p>
+</li>
+<li><p>sched(): 是对于Scheduler trait的sched()实现，是实时进程进行调度时的逻辑处理，该函数会返回接下来要执行的pcb，若没有符合要求的pcb，返回None</p>
+</li>
+<li><p>enqueue(): 同样是对于Scheduler trait的sched()实现，将一个pcb加入调度器的调度队列</p>
+</li>
+</ol>
+<h3 id="2-2-内核调度策略"><a href="#2-2-内核调度策略" class="headerlink" title="2.2 内核调度策略"></a>2.2 内核调度策略</h3><p>&amp;emsp;&amp;emsp; 目前在DragonOS中，主要的调度策略有SCHED_NORMAL 策略 | SCHED_FIFO 策略 | SCHED_RT 策略，具体的调度策略为：</p>
+<ol>
+<li><p>SCHED_NORMAL 策略：SCHED_NORMAL 是“绝对公平调度策略”，该策略的进程使用CFS进行调度。</p>
+</li>
+<li><p>SCHED_FIFO 策略：SCHED_FIFO是“实时进程调度策略”，这是一种先进先出的调度策略，该策略不涉及到CPU时间片机制，在没有更高优先级进程的前提下，只能等待其他进程主动释放CPU资源；在SCHED_FIFO策略中，被调度器调度运行的进程，其运行时长不受限制，可以运行任意长的时间。</p>
+</li>
+<li><p>SCHED_RR 策略：SCHED_RR是“实时进程调度策略”，使用的是时间片轮转机制，对应进程的time_slice会在运行时减少，进程使用完CPU时间片后，会加入该CPU的与该进程优先级相同的执行队列中。同时，释放CPU资源，CPU的使用权会被分配给下一个执行的进程</p>
+</li>
+</ol>
+<h2 id="3-Q-amp-A"><a href="#3-Q-amp-A" class="headerlink" title="3. Q&amp;A"></a>3. Q&amp;A</h2><ol>
+<li><p>如何创建实时进程</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">process_control_block</span> *<span class="title">pcb_name</span> =</span> kthread_run_rt(&amp;fn_name, <span class="literal">NULL</span>, <span class="string">&quot;test create rt pcb&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>  其中kthread_run_rt，是创建内核实时线程的宏</p>
+</li>
+<li><p>pcb中涉及到实时进程的字段含义</p>
+<ol>
+<li><p>policy：实时进程的策略，目前有：SCHED_FIFO与SCHED_RR</p>
+</li>
+<li><p>priority: 实时进程的优先级，范围为0-99，数字越大，表示优先级越高</p>
+</li>
+<li><p>rt_time_slice: 实时进程的时间片，默认为100，随着CPU运行而减少，在rt_time_slice为0时，将时间片赋初值并将该进程加入执行队列。</p>
+</li>
+</ol>
+</li>
+<li><p>如何实时进程存储队列</p>
+<ul>
+<li>目前是使用Vec来保存，因为具体实现的逻辑原因，目前的入队列和出队列都是对队尾的操作，因此会有如下现象：系统中有多个优先级相同的实时进程等待运行时，会出现饥饿现象，也即上一个因为时间片耗尽的进程会在下一个执行，造成同优先级等待的进程饥饿。</li>
+</ul>
+</li>
+<li><p>todo</p>
+<ol>
+<li>将存储实时进程的队列使用双向链表存储（或者其他办法解决上述的饥饿问题）</li>
+<li>多核CPU的实时调度<ul>
+<li>目前的实时调度是针对单核CPU的，需要实现多核CPU的实时调度</li>
+</ul>
+</li>
+<li>实现RT进程和普通进程之间的分配带宽的比例</li>
+<li>多个CPU之间实现负载均衡<ul>
+<li>最开始linux采用跟踪每个CPU的运行队列的负载情况来进行负载计算和决策</li>
+<li>之后linux引入PELT， <code>PELT, Per-entity load tracking </code>，通过跟踪每个调度实体的负载贡献来计算CPU负载，来进行调度决策</li>
+</ul>
+</li>
+<li>组调度<ul>
+<li><strong>要解决的问题：</strong>A和B两个用户使用同一台机器，A用户16个进程，B用户2个进程，如果按照进程的个数来分配CPU资源，显然A用户会占据大量的CPU时间，这对于B用户是不公平的。组调度就可以解决这个问题，分别将A、B用户进程划分成组，并将两组的权重设置成占比50%即可。（调度时不再以进程为单位，而是以进程组作为调度实体）</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://kkkkkong.github.io/posts/56746.html" title="DragonOS 实时调度器相关API" target="_blank" rel="external">https://kkkkkong.github.io/posts/56746.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/kkkkkong" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/kkkkkong" target="_blank"><span class="text-dark">虫兑变</span><small class="ml-1x">Back-End Developer &amp; Designer</small></a></h3>
+        <div>华工学生一枚</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    
+    <li class="next">
+      <a href="/posts/64491.html" title="leetcode 148"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -548,6 +641,34 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c3b604ec3834efb5c5fa',
+    clientSecret: 'e68f97b8ec9bb617527d18123bd4630e8cc1b98a',
+    repo: 'my-gitalk',
+    owner: 'kkkkkong',
+    admin: ['kkkkkong'],
+    id: md5(location.pathname),
+    distractionFreeMode: true,
+    language: 'zh-CN',
+    enableHotKey: 'true'
+  })
+  gitalk.render('comments')
+  </script>
+      
 
 
 
