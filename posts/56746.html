@@ -26,7 +26,7 @@
 <meta property="og:description" content="实时进程调度器相关的api&amp;emsp;&amp;emsp; RT（realtime scheduler），实时调度器。实时调度是为了完成实时处理任务而分配CPU的调度方法。 &amp;emsp;&amp;emsp;DragonOS的进程分为“实时进程”和“普通进程”两类；实时进程的优先级高于普通进程，如果当前的系统的执行队列中有“实时进程”，RT调度器会优先选择实时进程；如果队列中会有多个">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-02-12T01:55:50.000Z">
-<meta property="article:modified_time" content="2023-02-12T09:08:04.620Z">
+<meta property="article:modified_time" content="2023-02-12T12:20:33.233Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="学习">
 <meta property="article:tag" content="实时调度器">
@@ -384,7 +384,7 @@
         <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/56746.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.2k(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1.3k(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4(分)</span>
@@ -398,27 +398,27 @@
 <p>&amp;emsp;&amp;emsp;DragonOS的进程分为“实时进程”和“普通进程”两类；实时进程的优先级高于普通进程，如果当前的系统的执行队列中有“实时进程”，RT调度器会优先选择实时进程；如果队列中会有多个实时进程，调度器会选择优先级最高的实时进程来执行；</p>
 <h2 id="1-RTQueue-介绍"><a href="#1-RTQueue-介绍" class="headerlink" title="1. RTQueue 介绍"></a>1. RTQueue 介绍</h2><p>&amp;emsp;&amp;emsp; RTQueue是用来存放state为running的实时进程的调度队列，每个CPU维护一个RTQueue，主要使用Vec作为主要存储结构来实现。</p>
 <h3 id="1-1-主要函数"><a href="#1-1-主要函数" class="headerlink" title="1.1 主要函数"></a>1.1 主要函数</h3><ol>
-<li><p>enqueue(): 将pcb入队列</p>
+<li><p><strong>enqueue():</strong> 将pcb入队列</p>
 </li>
-<li><p>dequeue(): 将pcb出队列</p>
+<li><p><strong>dequeue():</strong> 将pcb出队列</p>
 </li>
 </ol>
 <h2 id="2-SchedulerRT-介绍"><a href="#2-SchedulerRT-介绍" class="headerlink" title="2. SchedulerRT 介绍"></a>2. SchedulerRT 介绍</h2><p>&amp;emsp;&amp;emsp; RT调度器类，主要实现了RT调度器类的初始化以及调度功能函数。</p>
 <h3 id="2-1-主要函数"><a href="#2-1-主要函数" class="headerlink" title="2.1 主要函数"></a>2.1 主要函数</h3><ol>
-<li><p>pick_next_task_rt(): 获取当前CPU中的第一个需要执行的RT pcb</p>
+<li><p><strong>pick_next_task_rt():</strong> 获取当前CPU中的第一个需要执行的RT pcb</p>
 </li>
-<li><p>sched(): 是对于Scheduler trait的sched()实现，是实时进程进行调度时的逻辑处理，该函数会返回接下来要执行的pcb，若没有符合要求的pcb，返回None</p>
+<li><p><strong>sched():</strong> 是对于Scheduler trait的sched()实现，是实时进程进行调度时的逻辑处理，该函数会返回接下来要执行的pcb，若没有符合要求的pcb，返回None</p>
 </li>
-<li><p>enqueue(): 同样是对于Scheduler trait的sched()实现，将一个pcb加入调度器的调度队列</p>
+<li><p><strong>enqueue():</strong> 同样是对于Scheduler trait的sched()实现，将一个pcb加入调度器的调度队列</p>
 </li>
 </ol>
-<h3 id="2-2-内核调度策略"><a href="#2-2-内核调度策略" class="headerlink" title="2.2 内核调度策略"></a>2.2 内核调度策略</h3><p>&amp;emsp;&amp;emsp; 目前在DragonOS中，主要的调度策略有SCHED_NORMAL 策略 | SCHED_FIFO 策略 | SCHED_RT 策略，具体的调度策略为：</p>
+<h3 id="2-2-内核调度策略"><a href="#2-2-内核调度策略" class="headerlink" title="2.2 内核调度策略"></a>2.2 内核调度策略</h3><p>目前在DragonOS中，主要的调度策略有SCHED_NORMAL 策略 | SCHED_FIFO 策略 | SCHED_RT 策略，具体的调度策略为：</p>
 <ol>
-<li><p>SCHED_NORMAL 策略：SCHED_NORMAL 是“绝对公平调度策略”，该策略的进程使用CFS进行调度。</p>
+<li><p><strong>SCHED_NORMAL 策略</strong>：SCHED_NORMAL 是“绝对公平调度策略”，该策略的进程使用CFS进行调度。</p>
 </li>
-<li><p>SCHED_FIFO 策略：SCHED_FIFO是“实时进程调度策略”，这是一种先进先出的调度策略，该策略不涉及到CPU时间片机制，在没有更高优先级进程的前提下，只能等待其他进程主动释放CPU资源；在SCHED_FIFO策略中，被调度器调度运行的进程，其运行时长不受限制，可以运行任意长的时间。</p>
+<li><p><strong>SCHED_FIFO 策略</strong>：SCHED_FIFO是“实时进程调度策略”，这是一种先进先出的调度策略，该策略不涉及到CPU时间片机制，在没有更高优先级进程的前提下，只能等待其他进程主动释放CPU资源；在SCHED_FIFO策略中，被调度器调度运行的进程，其运行时长不受限制，可以运行任意长的时间。</p>
 </li>
-<li><p>SCHED_RR 策略：SCHED_RR是“实时进程调度策略”，使用的是时间片轮转机制，对应进程的time_slice会在运行时减少，进程使用完CPU时间片后，会加入该CPU的与该进程优先级相同的执行队列中。同时，释放CPU资源，CPU的使用权会被分配给下一个执行的进程</p>
+<li><p><strong>SCHED_RR 策略</strong>：SCHED_RR是“实时进程调度策略”，使用的是时间片轮转机制，对应进程的time_slice会在运行时减少，进程使用完CPU时间片后，会加入该CPU的与该进程优先级相同的执行队列中。同时，释放CPU资源，CPU的使用权会被分配给下一个执行的进程</p>
 </li>
 </ol>
 <h2 id="3-Q-amp-A"><a href="#3-Q-amp-A" class="headerlink" title="3. Q&amp;A"></a>3. Q&amp;A</h2><ol>
@@ -429,33 +429,44 @@
 </li>
 <li><p>pcb中涉及到实时进程的字段含义</p>
 <ol>
-<li><p>policy：实时进程的策略，目前有：SCHED_FIFO与SCHED_RR</p>
+<li><p><strong>policy：</strong>实时进程的策略，目前有：SCHED_FIFO与SCHED_RR</p>
 </li>
-<li><p>priority: 实时进程的优先级，范围为0-99，数字越大，表示优先级越高</p>
+<li><p><strong>priority:</strong> 实时进程的优先级，范围为0-99，数字越大，表示优先级越高</p>
 </li>
-<li><p>rt_time_slice: 实时进程的时间片，默认为100，随着CPU运行而减少，在rt_time_slice为0时，将时间片赋初值并将该进程加入执行队列。</p>
+<li><p><strong>rt_time_slice:</strong> 调度策略为 “RR” 的实时进程的时间片，默认为100，随着CPU运行而减少，在rt_time_slice为0时，将时间片赋初值并将该进程加入执行队列。</p>
 </li>
 </ol>
 </li>
 <li><p>如何实时进程存储队列</p>
 <ul>
-<li>目前是使用Vec来保存，因为具体实现的逻辑原因，目前的入队列和出队列都是对队尾的操作，因此会有如下现象：系统中有多个优先级相同的实时进程等待运行时，会出现饥饿现象，也即上一个因为时间片耗尽的进程会在下一个执行，造成同优先级等待的进程饥饿。</li>
+<li>目前是使用 Vec 来保存，因为具体实现的逻辑原因，目前的入队列和出队列都是对队尾的操作，因此会有如下现象：系统中有<strong>多个优先级相同的实时进程</strong>等待运行时，会出现<strong>饥饿现象</strong>，也即上一个因为时间片耗尽的进程会在下一个执行，造成同优先级等待的进程饥饿。</li>
 </ul>
 </li>
-<li><p>todo</p>
+<li><p>TODO</p>
 <ol>
-<li>将存储实时进程的队列使用双向链表存储（或者其他办法解决上述的饥饿问题）</li>
-<li>多核CPU的实时调度<ul>
+<li><p>将存储实时进程的队列改为使用双向链表存储（或者其他办法解决上述的饥饿问题）</p>
+</li>
+<li><p>多核CPU的实时调度</p>
+<ul>
 <li>目前的实时调度是针对单核CPU的，需要实现多核CPU的实时调度</li>
 </ul>
 </li>
-<li>实现RT进程和普通进程之间的分配带宽的比例</li>
-<li>多个CPU之间实现负载均衡<ul>
-<li>最开始linux采用跟踪每个CPU的运行队列的负载情况来进行负载计算和决策</li>
-<li>之后linux引入PELT， <code>PELT, Per-entity load tracking </code>，通过跟踪每个调度实体的负载贡献来计算CPU负载，来进行调度决策</li>
+<li><p>RT进程带宽比</p>
+<ul>
+<li><p>由于实时任务的优先级高于普通任务，因而为了防止cpu消耗型的实时任务一直占用cpu引发其他任务”饥饿”的情况发生，linux内核采用了带宽限制手段来抑制实时任务的运行时间</p>
+</li>
+<li><p><strong>带宽限制：</strong>在任务调度中带宽限制就是指一定周期内一个队列上任务可运行的最大时间</p>
+</li>
 </ul>
 </li>
-<li>组调度<ul>
+<li><p>多个CPU之间实现<strong>负载均衡</strong></p>
+<ul>
+<li>最开始linux采用跟踪每个CPU的运行队列的负载情况来进行负载计算和决策</li>
+<li>之后linux引入PELT <code>PELT, Per-entity load tracking </code>，通过跟踪每个调度实体的负载贡献来计算CPU负载，来进行调度决策</li>
+</ul>
+</li>
+<li><p>更远：组调度</p>
+<ul>
 <li><strong>要解决的问题：</strong>A和B两个用户使用同一台机器，A用户16个进程，B用户2个进程，如果按照进程的个数来分配CPU资源，显然A用户会占据大量的CPU时间，这对于B用户是不公平的。组调度就可以解决这个问题，分别将A、B用户进程划分成组，并将两组的权重设置成占比50%即可。（调度时不再以进程为单位，而是以进程组作为调度实体）</li>
 </ul>
 </li>
