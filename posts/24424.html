@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>leetcode 1798 | 虫兑变的博客</title>
-  <meta name="description" content="题目描述1798. 你能构造出连续值的最大数目给你一个长度为 n 的整数数组 coins ，它代表你拥有的 n 个硬币。第 i 个硬币的值为 coins[i] 。如果你从这些硬币中选出一部分硬币，它们的和为 x ，那么称，你可以 构造 出 x 。 请返回从 0 开始（包括 0 ），你最多能 构造 出多少个连续整数。 你可能有多个相同值的硬币。 示例 1： 123456输入：coins &#x3D; [1,3">
+  <title>leetcode 525 | 虫兑变的博客</title>
+  <meta name="description" content="题目描述525. 连续数组给定一个二进制数组 nums , 找到含有相同数量的 0 和 1 的最长连续子数组，并返回该子数组的长度。 示例 1: 123输入: nums &#x3D; [0,1]输出: 2说明: [0, 1] 是具有相同数量 0 和 1 的最长连续子数组。    解题思路 这里的变0为-1真的是神来之笔   前缀和+变0为-1，将0变为-1后，主要统计前缀和，将第一次出现的元素保存到map中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 1798">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/3403.html">
+<meta property="og:title" content="leetcode 525">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/24424.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="题目描述1798. 你能构造出连续值的最大数目给你一个长度为 n 的整数数组 coins ，它代表你拥有的 n 个硬币。第 i 个硬币的值为 coins[i] 。如果你从这些硬币中选出一部分硬币，它们的和为 x ，那么称，你可以 构造 出 x 。 请返回从 0 开始（包括 0 ），你最多能 构造 出多少个连续整数。 你可能有多个相同值的硬币。 示例 1： 123456输入：coins &#x3D; [1,3">
+<meta property="og:description" content="题目描述525. 连续数组给定一个二进制数组 nums , 找到含有相同数量的 0 和 1 的最长连续子数组，并返回该子数组的长度。 示例 1: 123输入: nums &#x3D; [0,1]输出: 2说明: [0, 1] 是具有相同数量 0 和 1 的最长连续子数组。    解题思路 这里的变0为-1真的是神来之笔   前缀和+变0为-1，将0变为-1后，主要统计前缀和，将第一次出现的元素保存到map中">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-04T15:02:30.000Z">
-<meta property="article:modified_time" content="2023-02-04T15:08:49.071Z">
+<meta property="article:published_time" content="2023-02-17T03:20:26.000Z">
+<meta property="article:modified_time" content="2023-02-17T03:23:30.822Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/posts/3403.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/24424.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -344,14 +344,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-leetcode-1798" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-leetcode-525" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode 1798
+      leetcode 525
     </h1>
   
 
@@ -359,8 +359,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/3403.html" class="article-date">
-	  <time datetime="2023-02-04T15:02:30.000Z" itemprop="datePublished">2023-02-04</time>
+	<a href="/posts/24424.html" class="article-date">
+	  <time datetime="2023-02-17T03:20:26.000Z" itemprop="datePublished">2023-02-17</time>
 	</a>
 </span>
         
@@ -385,10 +385,10 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/3403.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/24424.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 391(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 321(字)</span>
 	
 	
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
@@ -398,25 +398,26 @@
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="1798-你能构造出连续值的最大数目"><a href="#1798-你能构造出连续值的最大数目" class="headerlink" title="1798. 你能构造出连续值的最大数目"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-number-of-consecutive-values-you-can-make/">1798. 你能构造出连续值的最大数目</a></h4><p>给你一个长度为 <code>n</code> 的整数数组 <code>coins</code> ，它代表你拥有的 <code>n</code> 个硬币。第 <code>i</code> 个硬币的值为 <code>coins[i]</code> 。如果你从这些硬币中选出一部分硬币，它们的和为 <code>x</code> ，那么称，你可以 <strong>构造</strong> 出 <code>x</code> 。</p>
-<p>请返回从 <code>0</code> 开始（<strong>包括</strong> <code>0</code> ），你最多能 <strong>构造</strong> 出多少个连续整数。</p>
-<p>你可能有多个相同值的硬币。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：coins = [1,3]</span><br><span class="line">输出：2</span><br><span class="line">解释：你可以得到以下这些值：</span><br><span class="line">- 0：什么都不取 []</span><br><span class="line">- 1：取 [1]</span><br><span class="line">从 0 开始，你可以构造出 2 个连续整数。</span><br></pre></td></tr></table></figure>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="525-连续数组"><a href="#525-连续数组" class="headerlink" title="525. 连续数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/contiguous-array/">525. 连续数组</a></h4><p>给定一个二进制数组 <code>nums</code> , 找到含有相同数量的 <code>0</code> 和 <code>1</code> 的最长连续子数组，并返回该子数组的长度。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: nums = [0,1]</span><br><span class="line">输出: 2</span><br><span class="line">说明: [0, 1] 是具有相同数量 0 和 1 的最长连续子数组。</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
-<li>贪心，排序后，假设当前的表述范围为[0,n]，数组尾部每多一个数字v，其表示的范围为[0,n]&amp;[0+v,n+v]，那么需要考虑n与v的大小关系，如果v&lt;&#x3D;n+1，则两个范围可以连续上，否则返回结果（看了评论的想法）</li>
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><blockquote>
+<p>这里的变0为-1真的是神来之笔</p>
+</blockquote>
+<ol>
+<li>前缀和+变0为-1，将0变为-1后，主要统计前缀和，将第一次出现的元素保存到map中。特殊的，和为0的表示天然符合题目要求</li>
 </ol>
 <blockquote>
-<p>执行用时：17 ms, 在所有 Java 提交中击败了100.00%的用户</p>
-<p>内存消耗：48.7 MB, 在所有 Java 提交中击败了92.31%的用户</p>
-<p>通过测试用例：72 &#x2F; 72</p>
-<p>时间 O(n*logn)，主要在排序的时间开销</p>
-<p>空间 O(logn)，排序需要的栈空间</p>
+<p>执行用时：13 ms, 在所有 Java 提交中击败了97.19%的用户</p>
+<p>内存消耗：49.6 MB, 在所有 Java 提交中击败了95.36%的用户</p>
+<p>通过测试用例：564 &#x2F; 564</p>
+<p>时间 O(n)</p>
+<p>空间 O(n)</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getMaximumConsecutive</span><span class="params">(<span class="type">int</span>[] coins)</span> &#123;</span><br><span class="line">        Arrays.sort(coins);</span><br><span class="line">        <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i:coins)&#123;</span><br><span class="line">            <span class="comment">// +1的目的是刚好i作为reshb的值</span></span><br><span class="line">            <span class="keyword">if</span>(i&lt;=res+<span class="number">1</span>)&#123;</span><br><span class="line">                res=res+i;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">return</span> res+<span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">findMaxLength</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n=nums.length;</span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span><span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]==<span class="number">0</span>)nums[i]=-<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 存放第一个和为k的元素位置</span></span><br><span class="line">        HashMap&lt;Integer,Integer&gt; map=<span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            sum+=nums[i];</span><br><span class="line">            <span class="keyword">if</span>(sum==<span class="number">0</span>)&#123;</span><br><span class="line">                ans=Math.max(ans,i+<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="type">int</span> tmp=map.getOrDefault(sum,-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span>(tmp==-<span class="number">1</span>)&#123;</span><br><span class="line">                map.put(sum,i);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                ans=Math.max(ans,i-tmp);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -427,7 +428,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://kkkkkong.github.io/posts/3403.html" title="leetcode 1798" target="_blank" rel="external">https://kkkkkong.github.io/posts/3403.html</a>
+      <a href="https://kkkkkong.github.io/posts/24424.html" title="leetcode 525" target="_blank" rel="external">https://kkkkkong.github.io/posts/24424.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -473,13 +474,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/65376.html" title="leetcode 48"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/32204.html" title="leetcode 2325"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/64472.html" title="leetcode 209"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
