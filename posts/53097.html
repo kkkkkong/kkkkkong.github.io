@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>leetcode 2303 | 虫兑变的博客</title>
-  <meta name="description" content="题目描述2303. 计算应缴税款总额给你一个下标从 0 开始的二维整数数组 brackets ，其中 brackets[i] &#x3D; [upperi, percenti] ，表示第 i 个税级的上限是 upperi ，征收的税率为 percenti 。税级按上限 从低到高排序（在满足 0 &lt; i &lt; brackets.length 的前提下，upperi-1 &lt; upperi）。 税">
+  <title>leetcode 930 | 虫兑变的博客</title>
+  <meta name="description" content="题目描述930. 和相同的二元子数组给你一个二元数组 nums ，和一个整数 goal ，请你统计并返回有多少个和为 goal 的 非空 子数组。 子数组 是数组的一段连续部分。 示例 1： 1234输入：nums &#x3D; [1,0,1,0,1], goal &#x3D; 2输出：4解释：有 4 个满足题目要求的子数组：[1,0,1]、[1,0,1,0]、[0,1,0,1]、[1,0,1]      解题思路">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 2303">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/8013.html">
+<meta property="og:title" content="leetcode 930">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/53097.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="题目描述2303. 计算应缴税款总额给你一个下标从 0 开始的二维整数数组 brackets ，其中 brackets[i] &#x3D; [upperi, percenti] ，表示第 i 个税级的上限是 upperi ，征收的税率为 percenti 。税级按上限 从低到高排序（在满足 0 &lt; i &lt; brackets.length 的前提下，upperi-1 &lt; upperi）。 税">
+<meta property="og:description" content="题目描述930. 和相同的二元子数组给你一个二元数组 nums ，和一个整数 goal ，请你统计并返回有多少个和为 goal 的 非空 子数组。 子数组 是数组的一段连续部分。 示例 1： 1234输入：nums &#x3D; [1,0,1,0,1], goal &#x3D; 2输出：4解释：有 4 个满足题目要求的子数组：[1,0,1]、[1,0,1,0]、[0,1,0,1]、[1,0,1]      解题思路">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-23T05:39:22.000Z">
-<meta property="article:modified_time" content="2023-01-23T05:45:51.135Z">
+<meta property="article:published_time" content="2023-02-19T07:17:09.000Z">
+<meta property="article:modified_time" content="2023-02-19T08:01:33.145Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/posts/8013.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/53097.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -344,14 +344,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-leetcode-2303" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-leetcode-930" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode 2303
+      leetcode 930
     </h1>
   
 
@@ -359,8 +359,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/8013.html" class="article-date">
-	  <time datetime="2023-01-23T05:39:22.000Z" itemprop="datePublished">2023-01-23</time>
+	<a href="/posts/53097.html" class="article-date">
+	  <time datetime="2023-02-19T07:17:09.000Z" itemprop="datePublished">2023-02-19</time>
 	</a>
 </span>
         
@@ -385,44 +385,51 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/8013.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/53097.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 441(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 449(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="2303-计算应缴税款总额"><a href="#2303-计算应缴税款总额" class="headerlink" title="2303. 计算应缴税款总额"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/calculate-amount-paid-in-taxes/">2303. 计算应缴税款总额</a></h4><p>给你一个下标从 <strong>0</strong> 开始的二维整数数组 <code>brackets</code> ，其中 <code>brackets[i] = [upperi, percenti]</code> ，表示第 <code>i</code> 个税级的上限是 <code>upperi</code> ，征收的税率为 <code>percenti</code> 。税级按上限 <strong>从低到高排序</strong>（在满足 <code>0 &lt; i &lt; brackets.length</code> 的前提下，<code>upperi-1 &lt; upperi</code>）。</p>
-<p>税款计算方式如下：</p>
-<ul>
-<li>不超过 <code>upper0</code> 的收入按税率 <code>percent0</code> 缴纳</li>
-<li>接着 <code>upper1 - upper0</code> 的部分按税率 <code>percent1</code> 缴纳</li>
-<li>然后 <code>upper2 - upper1</code> 的部分按税率 <code>percent2</code> 缴纳</li>
-<li>以此类推</li>
-</ul>
-<p>给你一个整数 <code>income</code> 表示你的总收入。返回你需要缴纳的税款总额。与标准答案误差不超 <code>10-5</code> 的结果将被视作正确答案。</p>
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="930-和相同的二元子数组"><a href="#930-和相同的二元子数组" class="headerlink" title="930. 和相同的二元子数组"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/binary-subarrays-with-sum/">930. 和相同的二元子数组</a></h4><p>给你一个二元数组 <code>nums</code> ，和一个整数 <code>goal</code> ，请你统计并返回有多少个和为 <code>goal</code> 的 <strong>非空</strong> 子数组。</p>
+<p><strong>子数组</strong> 是数组的一段连续部分。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：brackets = [[3,50],[7,10],[12,25]], income = 10</span><br><span class="line">输出：2.65000</span><br><span class="line">解释：</span><br><span class="line">前 $3 的税率为 50% 。需要支付税款 $3 * 50% = $1.50 。</span><br><span class="line">接下来 $7 - $3 = $4 的税率为 10% 。需要支付税款 $4 * 10% = $0.40 。</span><br><span class="line">最后 $10 - $7 = $3 的税率为 25% 。需要支付税款 $3 * 25% = $0.75 。</span><br><span class="line">需要支付的税款总计 $1.50 + $0.40 + $0.75 = $2.65 。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,0,1,0,1], goal = 2</span><br><span class="line">输出：4</span><br><span class="line">解释：</span><br><span class="line">有 4 个满足题目要求的子数组：[1,0,1]、[1,0,1,0]、[0,1,0,1]、[1,0,1]</span><br></pre></td></tr></table></figure>
+
+
 
 
 
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
-<li>模拟，从前到后遍历数组，如果income大于upper，计算upper以前的税收；否则，income小于等于upper，计算income以前的税收，遍历终止</li>
+<li>哈希表+前缀和：hashmap存放sum出现的次数</li>
 </ol>
 <blockquote>
-<p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p>
-<p>内存消耗：41.6 MB, 在所有 Java 提交中击败了22.05%的用户</p>
-<p>通过测试用例：227 &#x2F; 227</p>
-<p>时间 O(n)</p>
+<p>执行用时：20 ms, 在所有 Java 提交中击败了59.25%的用户</p>
+<p>内存消耗：46.1 MB, 在所有 Java 提交中击败了35.95%的用户</p>
+<p>通过测试用例：60 &#x2F; 60</p>
+<p>时间 O(N)</p>
+<p>空间 O(N)</p>
+</blockquote>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">numSubarraysWithSum</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> goal)</span> &#123;</span><br><span class="line">        <span class="comment">// hashmap存放sum出现的次数</span></span><br><span class="line">        Map &lt;Integer,Integer&gt; map=<span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        map.put(<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">        <span class="type">int</span> n=nums.length;</span><br><span class="line">        <span class="type">int</span> sum=<span class="number">0</span>,ans=<span class="number">0</span>;;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            sum+=nums[i];</span><br><span class="line">            <span class="type">int</span> value=map.getOrDefault(sum-goal,-<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">if</span>(value!=-<span class="number">1</span>)&#123;</span><br><span class="line">                ans+=value;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(sum,map.getOrDefault(sum,<span class="number">0</span>)+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>滑动窗口，重点打开思路，因为数组中只有0和1，需要使用两个左指针来表示right固定的情况下，有多少种情况满足</li>
+</ol>
+<blockquote>
+<p>执行用时：3 ms, 在所有 Java 提交中击败了78.77%的用户</p>
+<p>内存消耗：45.2 MB, 在所有 Java 提交中击败了60.27%的用户</p>
+<p>通过测试用例：60 &#x2F; 60</p>
+<p>时间 O(N)</p>
 <p>空间 O(1)</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">calculateTax</span><span class="params">(<span class="type">int</span>[][] brackets, <span class="type">int</span> income)</span> &#123;</span><br><span class="line">        <span class="type">int</span> pre=<span class="number">0</span>;</span><br><span class="line">        <span class="type">double</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> []get:brackets)&#123;</span><br><span class="line">            <span class="keyword">if</span>(income&gt;get[<span class="number">0</span>])&#123;</span><br><span class="line">                res+=((get[<span class="number">0</span>]-pre)*get[<span class="number">1</span>])/<span class="number">100.0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                res+=((income-pre)*get[<span class="number">1</span>])/<span class="number">100.0</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            pre=get[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">numSubarraysWithSum</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> goal)</span> &#123;</span><br><span class="line">        <span class="type">int</span> n=nums.length;</span><br><span class="line">        <span class="type">int</span> left1=<span class="number">0</span>,left2=<span class="number">0</span>,right=<span class="number">0</span>,ans=<span class="number">0</span>,sum1=<span class="number">0</span>,sum2=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(right&lt;n)&#123;</span><br><span class="line">            sum1+=nums[right];</span><br><span class="line">            <span class="keyword">while</span>(left1&lt;=right&amp;&amp;sum1&gt;goal)&#123;</span><br><span class="line">                sum1-=nums[left1];</span><br><span class="line">                left1++;</span><br><span class="line">            &#125;</span><br><span class="line">            sum2+=nums[right];</span><br><span class="line">            <span class="keyword">while</span>(left2&lt;=right&amp;&amp;sum2&gt;=goal)&#123;</span><br><span class="line">                sum2-=nums[left2];</span><br><span class="line">                left2++;</span><br><span class="line">            &#125;</span><br><span class="line">            ans+=left2-left1;</span><br><span class="line">            right++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -433,7 +440,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://kkkkkong.github.io/posts/8013.html" title="leetcode 2303" target="_blank" rel="external">https://kkkkkong.github.io/posts/8013.html</a>
+      <a href="https://kkkkkong.github.io/posts/53097.html" title="leetcode 930" target="_blank" rel="external">https://kkkkkong.github.io/posts/53097.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -479,13 +486,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/15996.html" title="leetcode 1828"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/51772.html" title="leetcode 1817"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/24328.html" title="leetcode 724"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
