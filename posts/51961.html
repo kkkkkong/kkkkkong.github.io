@@ -17,21 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>leetcode 2315 | 虫兑变的博客</title>
-  <meta name="description" content="题目描述2315. 统计星号给你一个字符串 s ，每 两个 连续竖线 &#39;|&#39; 为 一对 。换言之，第一个和第二个 &#39;|&#39; 为一对，第三个和第四个 &#39;|&#39; 为一对，以此类推。 请你返回 不在 竖线对之间，s 中 &#39;*&#39; 的数目。 注意，每个竖线 &#39;|&#39; 都会 恰好 属于一个对。 示例 1： 123456输入：s &#x3D; &amp;q">
+  <title>leetcode 438 | 虫兑变的博客</title>
+  <meta name="description" content="题目描述438. 找到字符串中所有字母异位词给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。 异位词 指由相同字母重排列形成的字符串（包括相同的字符串）。 示例 1: 12345输入: s &#x3D; &quot;cbaebabacd&quot;, p &#x3D; &quot;abc&quot;输出: [0,6]解释:起始索引等于 0 的子串是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 2315">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/36300.html">
+<meta property="og:title" content="leetcode 438">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/51961.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="题目描述2315. 统计星号给你一个字符串 s ，每 两个 连续竖线 &#39;|&#39; 为 一对 。换言之，第一个和第二个 &#39;|&#39; 为一对，第三个和第四个 &#39;|&#39; 为一对，以此类推。 请你返回 不在 竖线对之间，s 中 &#39;*&#39; 的数目。 注意，每个竖线 &#39;|&#39; 都会 恰好 属于一个对。 示例 1： 123456输入：s &#x3D; &amp;q">
+<meta property="og:description" content="题目描述438. 找到字符串中所有字母异位词给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。 异位词 指由相同字母重排列形成的字符串（包括相同的字符串）。 示例 1: 12345输入: s &#x3D; &quot;cbaebabacd&quot;, p &#x3D; &quot;abc&quot;输出: [0,6]解释:起始索引等于 0 的子串是">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-01-29T06:34:08.000Z">
-<meta property="article:modified_time" content="2023-01-29T06:49:26.318Z">
+<meta property="article:published_time" content="2023-02-21T06:29:10.000Z">
+<meta property="article:modified_time" content="2023-02-21T06:32:13.991Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/posts/36300.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/51961.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -344,14 +344,14 @@
   
 <main class="main" role="main">
   <div class="content">
-  <article id="post-leetcode-2315" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+  <article id="post-leetcode-438" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
     <div class="article-header">
       
         
   
     <h1 class="article-title" itemprop="name">
-      leetcode 2315
+      leetcode 438
     </h1>
   
 
@@ -359,8 +359,8 @@
       <div class="article-meta">
         <span class="article-date">
     <i class="icon icon-calendar-check"></i>
-	<a href="/posts/36300.html" class="article-date">
-	  <time datetime="2023-01-29T06:34:08.000Z" itemprop="datePublished">2023-01-29</time>
+	<a href="/posts/51961.html" class="article-date">
+	  <time datetime="2023-02-21T06:29:10.000Z" itemprop="datePublished">2023-02-21</time>
 	</a>
 </span>
         
@@ -385,38 +385,35 @@
 	</span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/36300.html#comments" class="article-comment-link">评论</a></span>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/51961.html#comments" class="article-comment-link">评论</a></span>
         
 	
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 379(字)</span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 445(字)</span>
 	
 	
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1(分)</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
 	
 
       </div>
     </div>
     <div class="article-entry marked-body" itemprop="articleBody">
       
-        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="2315-统计星号"><a href="#2315-统计星号" class="headerlink" title="2315. 统计星号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/count-asterisks/">2315. 统计星号</a></h4><p>给你一个字符串 <code>s</code> ，每 <strong>两个</strong> 连续竖线 <code>&#39;|&#39;</code> 为 <strong>一对</strong> 。换言之，第一个和第二个 <code>&#39;|&#39;</code> 为一对，第三个和第四个 <code>&#39;|&#39;</code> 为一对，以此类推。</p>
-<p>请你返回 <strong>不在</strong> 竖线对之间，<code>s</code> 中 <code>&#39;*&#39;</code> 的数目。</p>
-<p><strong>注意</strong>，每个竖线 <code>&#39;|&#39;</code> 都会 <strong>恰好</strong> 属于一个对。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;l|*e*et|c**o|*de|&quot;</span><br><span class="line">输出：2</span><br><span class="line">解释：不在竖线对之间的字符加粗加斜体后，得到字符串：&quot;l|*e*et|c**o|*de|&quot; 。</span><br><span class="line">第一和第二条竖线 &#x27;|&#x27; 之间的字符不计入答案。</span><br><span class="line">同时，第三条和第四条竖线 &#x27;|&#x27; 之间的字符也不计入答案。</span><br><span class="line">不在竖线对之间总共有 2 个星号，所以我们返回 2 。</span><br></pre></td></tr></table></figure>
-
-
+        <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="438-找到字符串中所有字母异位词"><a href="#438-找到字符串中所有字母异位词" class="headerlink" title="438. 找到字符串中所有字母异位词"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-all-anagrams-in-a-string/">438. 找到字符串中所有字母异位词</a></h4><p>给定两个字符串 <code>s</code> 和 <code>p</code>，找到 <code>s</code> 中所有 <code>p</code> 的 <strong>异位词</strong> 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。</p>
+<p><strong>异位词</strong> 指由相同字母重排列形成的字符串（包括相同的字符串）。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入: s = &quot;cbaebabacd&quot;, p = &quot;abc&quot;</span><br><span class="line">输出: [0,6]</span><br><span class="line">解释:</span><br><span class="line">起始索引等于 0 的子串是 &quot;cba&quot;, 它是 &quot;abc&quot; 的异位词。</span><br><span class="line">起始索引等于 6 的子串是 &quot;bac&quot;, 它是 &quot;abc&quot; 的异位词。</span><br></pre></td></tr></table></figure>
 
 <h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
-<li>遍历模拟：使用一个bool位作为是否为竖线中间的标记，如果不在竖线中间并且为*时，进行统计，如果遇到|，则将标记位取反</li>
+<li>数组差+滑窗，用两个数组分别表示字符串p中字母出现的次数以及滑窗中字母出现的次数，方便统计，采用变量diff表示两个数组的不同字母数。diff为0时，将left指针加入结果集中</li>
 </ol>
 <blockquote>
-<p>执行用时：1 ms, 在所有 Java 提交中击败了100.00%的用户</p>
-<p>内存消耗：39.7 MB, 在所有 Java 提交中击败了53.58%的用户</p>
-<p>通过测试用例：69 &#x2F; 69</p>
-<p>时间 O(n)</p>
-<p>空间O(1)</p>
+<p>执行用时：8 ms, 在所有 Java 提交中击败了67.39%的用户</p>
+<p>内存消耗：42.7 MB, 在所有 Java 提交中击败了38.45%的用户</p>
+<p>通过测试用例：64 &#x2F; 64</p>
+<p>时间 O(N)</p>
+<p>空间 O(N)</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">countAsterisks</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> res=<span class="number">0</span>;</span><br><span class="line">        <span class="type">int</span> n=s.length();</span><br><span class="line">        <span class="type">boolean</span> isEven=<span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="type">char</span> c=s.charAt(i);</span><br><span class="line">            <span class="keyword">if</span>(c==<span class="string">&#x27;*&#x27;</span>&amp;&amp;isEven)&#123;</span><br><span class="line">                res++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c==<span class="string">&#x27;|&#x27;</span>)&#123;</span><br><span class="line">                isEven=!isEven;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">findAnagrams</span><span class="params">(String s, String p)</span> &#123;</span><br><span class="line">        <span class="type">int</span> []ptmp=<span class="keyword">new</span> <span class="title class_">int</span> [<span class="number">26</span>];</span><br><span class="line">        <span class="type">int</span> []stmp=<span class="keyword">new</span> <span class="title class_">int</span> [<span class="number">26</span>];</span><br><span class="line">        <span class="type">int</span> left=<span class="number">0</span>,right=<span class="number">0</span>,n=s.length();</span><br><span class="line">        <span class="type">int</span> plen=p.length();</span><br><span class="line">        <span class="type">int</span> diff=plen;</span><br><span class="line">        List&lt;Integer&gt; ans=<span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;plen;i++)&#123;</span><br><span class="line">            ptmp[p.charAt(i)-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>(right&lt;n)&#123;</span><br><span class="line">            <span class="keyword">if</span>(right-left+<span class="number">1</span>&gt;plen)&#123;</span><br><span class="line">                <span class="keyword">if</span>(stmp[s.charAt(left)-<span class="string">&#x27;a&#x27;</span>]&lt;=ptmp[s.charAt(left)-<span class="string">&#x27;a&#x27;</span>])&#123;</span><br><span class="line">                    diff++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    diff--;</span><br><span class="line">                &#125;</span><br><span class="line">                stmp[s.charAt(left)-<span class="string">&#x27;a&#x27;</span>]--;</span><br><span class="line">                left++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                <span class="keyword">if</span>(stmp[s.charAt(right)-<span class="string">&#x27;a&#x27;</span>]&gt;=ptmp[s.charAt(right)-<span class="string">&#x27;a&#x27;</span>])&#123;</span><br><span class="line">                    diff++;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span>&#123;</span><br><span class="line">                    diff--;</span><br><span class="line">                &#125;</span><br><span class="line">                stmp[s.charAt(right)-<span class="string">&#x27;a&#x27;</span>]++;</span><br><span class="line">                right++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(diff==<span class="number">0</span>)&#123;</span><br><span class="line">                ans.add(left);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
@@ -427,7 +424,7 @@
     
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接：</strong>
-      <a href="https://kkkkkong.github.io/posts/36300.html" title="leetcode 2315" target="_blank" rel="external">https://kkkkkong.github.io/posts/36300.html</a>
+      <a href="https://kkkkkong.github.io/posts/51961.html" title="leetcode 438" target="_blank" rel="external">https://kkkkkong.github.io/posts/51961.html</a>
     </li>
     
     <li class="post-copyright-license">
@@ -473,13 +470,9 @@
   
   <ul class="pager pull-left">
     
-    <li class="prev">
-      <a href="/posts/52549.html" title="leetcode  1669"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
-    </li>
-    
     
     <li class="next">
-      <a href="/posts/14367.html" title="leetcode 1664"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+      <a href="/posts/39420.html" title="leetcode 1004"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
     </li>
     
     
