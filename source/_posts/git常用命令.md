@@ -34,6 +34,8 @@ date: 2022-11-28 19:21:24
 - git checkout -b newbranch origin/abranch ：从远程分支abranch创建本地新分支newbranch
 - git fetch --all : 拉取远程仓库的所有数据，包括更新的分支和提交
 - git fetch <remote-name> : 只想更新特定的远程仓库
+- git push origin_name -d branch_name：删除远程分支
+- git branch -d branch_name： 删除本地分支
 
 
 
