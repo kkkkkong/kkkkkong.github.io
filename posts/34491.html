@@ -17,16 +17,21 @@
   <meta http-equiv="window-target" content="_top" />
   
   
-  <title>标签: linux | 虫兑变的博客</title>
-  <meta property="og:type" content="website">
-<meta property="og:title" content="虫兑变的博客">
-<meta property="og:url" content="https://kkkkkong.github.io/tags/linux/index.html">
+  <title>JVM 学习 | 虫兑变的博客</title>
+  <meta name="description" content="经典面试题内存管理 介绍下 Java 内存区域（运行时数据区） （方法区、堆）线程共享，不安全 （栈、本地方法区、程序计数器）线程独享，安全   Java 对象的创建过程（五步，建议能默写出来并且要知道每一步虚拟机做了什么）1.  对象的访问定位的两种方式（句柄和直接指针两种方式）     垃圾回收 如何判断对象是否死亡（两种方法）。 引用计数法 给对象中添加一个引用计数器 每当有一个地方引用它，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JVM 学习">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/34491.html">
 <meta property="og:site_name" content="虫兑变的博客">
+<meta property="og:description" content="经典面试题内存管理 介绍下 Java 内存区域（运行时数据区） （方法区、堆）线程共享，不安全 （栈、本地方法区、程序计数器）线程独享，安全   Java 对象的创建过程（五步，建议能默写出来并且要知道每一步虚拟机做了什么）1.  对象的访问定位的两种方式（句柄和直接指针两种方式）     垃圾回收 如何判断对象是否死亡（两种方法）。 引用计数法 给对象中添加一个引用计数器 每当有一个地方引用它，">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-22T11:31:11.000Z">
+<meta property="article:modified_time" content="2023-02-22T12:07:42.625Z">
 <meta property="article:author" content="Kong Weichao">
+<meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
-  <link rel="canonical" href="https://kkkkkong.github.io/tags/linux/index.html">
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/34491.html">
   
     <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
   
@@ -336,130 +341,272 @@
 </aside>
 
   
-  <main class="main" role="main">
-  <article class="content article article-tags post-type-list" itemscope="">
-    <header class="article-header">
-      <h1 itemprop="name" class="hidden-xs">标签: linux</h1>
-      <p class="text-muted hidden-xs">共 2 篇文章</p>
-      <nav role="navigation" id="nav-main" class="okayNav">
-        <ul>
-          <li><a href="/tags">All</a></li>
-          
-          <li><a href="/tags/学习/">学习</a></li>
-          
-          <li><a href="/tags/论文阅读/">论文阅读</a></li>
-          
-          <li><a href="/tags/算力网络/">算力网络</a></li>
-          
-          <li><a href="/tags/边缘博弈/">边缘博弈</a></li>
-          
-          <li><a href="/tags/实时调度器/">实时调度器</a></li>
-          
-          <li><a href="/tags/githubpags/">githubpags</a></li>
-          
-          <li><a href="/tags/jekyll/">jekyll</a></li>
-          
-          <li><a href="/tags/java/">java</a></li>
-          
-          <li><a href="/tags/JDBC/">JDBC</a></li>
-          
-          <li><a href="/tags/Java/">Java</a></li>
-          
-          <li><a href="/tags/排序/">排序</a></li>
-          
-          <li><a href="/tags/git/">git</a></li>
-          
-          <li><a href="/tags/merge/">merge</a></li>
-          
-          <li><a href="/tags/pull/">pull</a></li>
-          
-          <li><a href="/tags/github/">github</a></li>
-          
-          <li><a href="/tags/刷题/">刷题</a></li>
-          
-          <li><a href="/tags/leetcode/">leetcode</a></li>
-          
-          <li><a href="/tags/浮点数精度/">浮点数精度</a></li>
-          
-          <li><a href="/tags/typora/">typora</a></li>
-          
-          <li><a href="/tags/小说/">小说</a></li>
-          
-          <li><a href="/tags/linux/">linux</a></li>
-          
-          <li><a href="/tags/市场经济/">市场经济</a></li>
-          
-          <li><a href="/tags/定价方法/">定价方法</a></li>
-          
-          <li><a href="/tags/摩斯电码/">摩斯电码</a></li>
-          
-          <li><a href="/tags/最优化问题/">最优化问题</a></li>
-          
-          <li><a href="/tags/hexo博客/">hexo博客</a></li>
-          
-          <li><a href="/tags/非技术/">非技术</a></li>
-          
-        </ul>
-      </nav>
-    </header>
-    <!-- /header -->
-    <div class="article-body">
-      <div class="row">
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-JVM-学习" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      
         
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2022-11-26T12:30:23.000Z" itemprop="datePublished">2022-11-26</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/posts/46423.html">实时调度器</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/" class="label label-default mb">实时调度器</a>
-     
-      <a href="/tags/linux/" class="label label-default mb">linux</a>
-     
-     
-   </div>
-   
-</article>
+  
+    <h1 class="article-title" itemprop="name">
+      JVM 学习
+    </h1>
+  
+
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/34491.html" class="article-date">
+	  <time datetime="2023-02-22T11:31:11.000Z" itemprop="datePublished">2023-02-22</time>
+	</a>
+</span>
+        
+  <span class="article-category">
+    <i class="icon icon-folder"></i>
+    <a class="article-category-link" href="/categories/Java/">Java</a>
+  </span>
+
+        
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/Java/" rel="tag">Java</a>
+  </span>
 
 
-</div>
-
-<div class="col-md-6">
-    
-<article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="panel-body">
-     <div class="article-meta">
-       <time datetime="2021-10-08T04:00:00.000Z" itemprop="datePublished">2021-10-08</time>
-     </div>
-     <h3 class="article-title" itemprop="name">
-       <a class="article-link" href="/posts/52308.html">鸟哥linux私房菜琐碎知识点</a>
-     </h3>
-   </div>
-   
-   <div class="panel-footer">
-     
-      <a href="/tags/linux/" class="label label-default mb">linux</a>
-     
-     
-   </div>
-   
-</article>
+        
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
 
 
-</div>
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/34491.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 735(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2(分)</span>
+	
 
       </div>
     </div>
+    <div class="article-entry marked-body" itemprop="articleBody">
+      
+        <h2 id="经典面试题"><a href="#经典面试题" class="headerlink" title="经典面试题"></a>经典面试题</h2><h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><ol>
+<li>介绍下 Java 内存区域（运行时数据区）<ol>
+<li>（方法区、堆）线程共享，不安全</li>
+<li>（栈、本地方法区、程序计数器）线程独享，安全</li>
+</ol>
+</li>
+<li>Java 对象的创建过程（五步，建议能默写出来并且要知道每一步虚拟机做了什么）<br>1. </li>
+<li>对象的访问定位的两种方式（句柄和直接指针两种方式）<ol>
+<li></li>
+</ol>
+</li>
+</ol>
+<h3 id="垃圾回收"><a href="#垃圾回收" class="headerlink" title="垃圾回收"></a>垃圾回收</h3><ol>
+<li>如何判断对象是否死亡（两种方法）。<ol>
+<li>引用计数法<ol>
+<li>给对象中添加一个引用计数器<ol>
+<li>每当有一个地方引用它，计数器加一</li>
+<li>当引用失效时，计数器减一</li>
+<li>任何时候计数器为0都说明对象不可能再被使用了</li>
+</ol>
+</li>
+<li>此方法简单，效率高。但目前主流的虚拟机并没有使用该方法，因为无法解决循环引用问题</li>
+</ol>
+</li>
+<li>可达性分析算法<ol>
+<li>基本思想是通过一些列“GC root” 的对象作为起点，从这些节点向下搜索，节点走过的路径称为引用链，当一个对象到GC root没有任何引用链的时候，则证明该对象是不可用的，需要回收。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>简单的介绍一下强引用、软引用、弱引用、虚引用（虚引用与软引用和弱引用的区别、使用软引用能带来的好处）。<ol>
+<li>强引用</li>
+<li>软引用</li>
+<li>弱引用</li>
+<li>虚引用</li>
+</ol>
+</li>
+<li>如何判断一个常量是废弃常量<ol>
+<li>没有被任何String对象引用的常量就是废弃常量</li>
+</ol>
+</li>
+<li>如何判断一个类是无用的类<ol>
+<li>三点<ol>
+<li>加载该类的Classloader被回收</li>
+<li>类对应的实例都被回收</li>
+<li>该类对应的java.lang.class对象没有在任何地方被引用，也无法通过反射机制访问该类的方法</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>垃圾收集有哪些算法，各自的特点？<ol>
+<li>标记清除-容易产生碎片</li>
+<li>标记复制-占用空间比较大</li>
+<li>标记整理-</li>
+<li>分代回收- 将java堆中的对象分为新生代、老年代和永久代</li>
+</ol>
+</li>
+<li>HotSpot 为什么要分为新生代和老年代？<ol>
+<li>方便垃圾回收，新生代每次回收都会有大量对象死去，因此选用标记清除算法，每次只需要少量的对象复制空间即可完成回收；而老年代多是存活纪律较高的对象，而且没有额外的空间去怼他进行分配担保，所以选用标记清除或标记整理进行回收</li>
+</ol>
+</li>
+<li>常见的垃圾回收器有哪些？<ol>
+<li>serial收集器</li>
+<li>parNew</li>
+<li>Parallel Scavenge</li>
+<li>Serial Old</li>
+<li>Parallel Old</li>
+<li>CMS<ol>
+<li>以获取最短回收时间为目标的收集器，第一个真正的并发收集器</li>
+</ol>
+</li>
+<li>G1</li>
+<li>ZGC</li>
+</ol>
+</li>
+<li>介绍一下 CMS,G1 收集器。<br>1. </li>
+<li>Minor Gc 和 Full GC 有什么不同呢？<ol>
+<li>Minor GC 回收年轻代</li>
+<li>Full GC： 负责从整个内存区回收</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://kkkkkong.github.io/posts/34491.html" title="JVM 学习" target="_blank" rel="external">https://kkkkkong.github.io/posts/34491.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/kkkkkong" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/kkkkkong" target="_blank"><span class="text-dark">虫兑变</span><small class="ml-1x">Back-End Developer &amp; Designer</small></a></h3>
+        <div>华工学生一枚</div>
+      </div>
+    </figure>
+  </div>
+</div>
+
+
+    </div>
   </article>
-   
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/24299.html" title="leetcode 567"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/51961.html" title="leetcode 438"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 </main>
 
   <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
@@ -516,6 +663,34 @@ window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 
 
 
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c3b604ec3834efb5c5fa',
+    clientSecret: 'e68f97b8ec9bb617527d18123bd4630e8cc1b98a',
+    repo: 'my-gitalk',
+    owner: 'kkkkkong',
+    admin: ['kkkkkong'],
+    id: md5(location.pathname),
+    distractionFreeMode: true,
+    language: 'zh-CN',
+    enableHotKey: 'true'
+  })
+  gitalk.render('comments')
+  </script>
+      
 
 
 
