@@ -121,3 +121,38 @@ class Solution {
 }
 ```
 
+2. 回溯：元素无重复的可重复选的组合问题。重点在于start的位置
+
+> 执行用时：2 ms, 在所有 Java 提交中击败了75.99%的用户
+>
+> 内存消耗：41.3 MB, 在所有 Java 提交中击败了98.76%的用户
+>
+> 通过测试用例：160 / 160
+>
+> 时间 O(N)
+>
+> 空间 O(N)
+
+```
+class Solution {
+    List<List<Integer>> ans=new ArrayList();
+    List<Integer> list=new ArrayList();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        backTrack(candidates,target,0);
+        return ans;
+    }
+    public void backTrack(int []candidates,int target,int start){
+        if(target==0){
+            ans.add(new ArrayList(list));
+            return ;
+        }
+        if(target<0)return ;
+        for(int i=start;i<candidates.length;i++){
+            list.add(candidates[i]);
+            backTrack(candidates,target-candidates[i],i);
+            list.remove(list.size()-1);
+        }
+    }
+}
+```
+
