@@ -6,7 +6,7 @@
   <link href="https://kkkkkong.github.io/atom.xml" rel="self"/>
   
   <link href="https://kkkkkong.github.io/"/>
-  <updated>2023-03-04T14:16:50.879Z</updated>
+  <updated>2023-03-06T03:01:35.597Z</updated>
   <id>https://kkkkkong.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode 77</title>
+    <link href="https://kkkkkong.github.io/posts/2848.html"/>
+    <id>https://kkkkkong.github.io/posts/2848.html</id>
+    <published>2023-03-06T02:57:08.000Z</published>
+    <updated>2023-03-06T03:01:35.597Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="77-组合"><a href="#77-组合" class="headerlink" title="77. 组合"></a><a href="https://leetcode.cn/problems/combinations/">77. 组合</a></h4><p>给定两个整数 <code>n</code> 和 <code>k</code>，返回范围 <code>[1, n]</code> 中所有可能的 <code>k</code> 个数的组合。</p><p>你可以按 <strong>任何顺序</strong> 返回答案。</p><p><strong>示例 1：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 4, k = 2</span><br><span class="line">输出：</span><br><span class="line">[</span><br><span class="line">  [2,4],</span><br><span class="line">  [3,4],</span><br><span class="line">  [2,3],</span><br><span class="line">  [1,2],</span><br><span class="line">  [1,3],</span><br><span class="line">  [1,4],</span><br><span class="line">]</span><br></pre></td></tr></table></figure><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>回溯：元素无重复不可复选问题</li></ol><blockquote><p>执行用时：18 ms, 在所有 Java 提交中击败了25.06%的用户</p><p>内存消耗：42.9 MB, 在所有 Java 提交中击败了37.61%的用户</p><p>通过测试用例：27 &#x2F; 27</p><p>时间 O(N)</p><p>空间 O(N)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; res=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; list=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">combine</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        backTrace(n,<span class="number">1</span>,k);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">backTrace</span><span class="params">(<span class="type">int</span> n,<span class="type">int</span> begin,<span class="type">int</span> k)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(list.size()==k)&#123;</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>(list));</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(;begin&lt;=n;begin++)&#123;</span><br><span class="line">            list.add(begin);</span><br><span class="line">            backTrace(n,begin+<span class="number">1</span>,k);</span><br><span class="line">            list.remove(list.size()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;77-组合&quot;&gt;&lt;a href=&quot;#77-组合&quot; class=&quot;headerlink&quot; title=&quot;77. 组合&quot;</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="https://kkkkkong.github.io/categories/leetcode/"/>
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode 78</title>
+    <link href="https://kkkkkong.github.io/posts/3936.html"/>
+    <id>https://kkkkkong.github.io/posts/3936.html</id>
+    <published>2023-03-06T02:32:06.000Z</published>
+    <updated>2023-03-06T02:41:19.599Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="78-子集"><a href="#78-子集" class="headerlink" title="78. 子集"></a><a href="https://leetcode.cn/problems/subsets/">78. 子集</a></h4><p>给你一个整数数组 <code>nums</code> ，数组中的元素 <strong>互不相同</strong> 。返回该数组所有可能的子集（幂集）。</p><p>解集 <strong>不能</strong> 包含重复的子集。你可以按 <strong>任意顺序</strong> 返回解集。</p><p><strong>示例 1：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [1,2,3]</span><br><span class="line">输出：[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]</span><br></pre></td></tr></table></figure><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>回溯+组合：元素无重复不可重复选问题</li></ol><blockquote><p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p><p>内存消耗：41.9 MB, 在所有 Java 提交中击败了6.15%的用户</p><p>通过测试用例：10 &#x2F; 10</p><p>时间 O(N)</p><p>空间 O(N)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; res=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">subsets</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        getSets(nums,<span class="number">0</span>,<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;());</span><br><span class="line">        res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>());</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getSets</span><span class="params">(<span class="type">int</span> []nums,<span class="type">int</span> begin,List&lt;Integer&gt; list)</span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(;begin&lt;nums.length;begin++)&#123;</span><br><span class="line">            list.add(nums[begin]);</span><br><span class="line">            res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>(list));</span><br><span class="line">            getSets(nums,begin+<span class="number">1</span>,list);</span><br><span class="line">            list.remove(list.size()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="2"><li>稍微修改一下</li></ol><blockquote><p>执行用时：0 ms, 在所有 Java 提交中击败了100.00%的用户</p><p>内存消耗：41.9 MB, 在所有 Java 提交中击败了10.75%的用户</p><p>通过测试用例：10 &#x2F; 10</p><p>时间 O(N)</p><p>空间 O(N)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    List&lt;List&lt;Integer&gt;&gt; res=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;List&lt;Integer&gt;&gt;();</span><br><span class="line">    List&lt;Integer&gt; list=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;Integer&gt;();</span><br><span class="line">    <span class="keyword">public</span> List&lt;List&lt;Integer&gt;&gt; <span class="title function_">subsets</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        getSets(nums,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">getSets</span><span class="params">(<span class="type">int</span> []nums,<span class="type">int</span> begin)</span>&#123;</span><br><span class="line">        res.add(<span class="keyword">new</span> <span class="title class_">ArrayList</span>(list));</span><br><span class="line">        <span class="keyword">for</span>(;begin&lt;nums.length;begin++)&#123;</span><br><span class="line">            list.add(nums[begin]);</span><br><span class="line">            getSets(nums,begin+<span class="number">1</span>);</span><br><span class="line">            list.remove(list.size()-<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;78-子集&quot;&gt;&lt;a href=&quot;#78-子集&quot; class=&quot;headerlink&quot; title=&quot;78. 子集&quot;</summary>
+      
+    
+    
+    
+    <category term="leetcode" scheme="https://kkkkkong.github.io/categories/leetcode/"/>
+    
+    
+    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>一台电脑连接多个github账户如何配置秘钥</title>
@@ -442,54 +490,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;3-无重复字符的最长子串&quot;&gt;&lt;a href=&quot;#3-无重复字符的最长子串&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    <category term="leetcode" scheme="https://kkkkkong.github.io/categories/leetcode/"/>
-    
-    
-    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 523</title>
-    <link href="https://kkkkkong.github.io/posts/24040.html"/>
-    <id>https://kkkkkong.github.io/posts/24040.html</id>
-    <published>2023-02-20T01:08:11.000Z</published>
-    <updated>2023-02-20T02:16:10.208Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="523-连续的子数组和"><a href="#523-连续的子数组和" class="headerlink" title="523. 连续的子数组和"></a><a href="https://leetcode.cn/problems/continuous-subarray-sum/">523. 连续的子数组和</a></h4><p>给你一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，编写一个函数来判断该数组是否含有同时满足下述条件的连续子数组：</p><ul><li>子数组大小 <strong>至少为 2</strong> ，且</li><li>子数组元素总和为 <code>k</code> 的倍数。</li></ul><p>如果存在，返回 <code>true</code> ；否则，返回 <code>false</code> 。</p><p>如果存在一个整数 <code>n</code> ，令整数 <code>x</code> 符合 <code>x = n * k</code> ，则称 <code>x</code> 是 <code>k</code> 的一个倍数。<code>0</code> 始终视为 <code>k</code> 的一个倍数。</p><p><strong>示例 1：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [23,2,4,6,7], k = 6</span><br><span class="line">输出：true</span><br><span class="line">解释：[2,4] 是一个大小为 2 的子数组，并且和为 6 。</span><br></pre></td></tr></table></figure><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>哈希表+同余定理+前缀和</li></ol><blockquote><p>执行用时：25 ms, 在所有 Java 提交中击败了9.51%的用户</p><p>内存消耗：56.9 MB, 在所有 Java 提交中击败了59.05%的用户</p><p>通过测试用例：98 &#x2F; 98</p><p>时间 O(N)</p><p>空间 O(N)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">checkSubarraySum</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; map=<span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        map.put(<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">        <span class="type">int</span> sum=<span class="number">0</span>,n=nums.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            sum+=nums[i];</span><br><span class="line">            <span class="type">int</span> mod=sum%k;</span><br><span class="line">            <span class="type">int</span> value=map.getOrDefault(mod,-<span class="number">2</span>);</span><br><span class="line">            <span class="keyword">if</span>(value!=-<span class="number">2</span>&amp;&amp;i-value&gt;<span class="number">1</span>)&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(mod,map.getOrDefault(mod,i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;523-连续的子数组和&quot;&gt;&lt;a href=&quot;#523-连续的子数组和&quot; class=&quot;headerlink&quot; ti</summary>
-      
-    
-    
-    
-    <category term="leetcode" scheme="https://kkkkkong.github.io/categories/leetcode/"/>
-    
-    
-    <category term="刷题" scheme="https://kkkkkong.github.io/tags/%E5%88%B7%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>leetcode 974</title>
-    <link href="https://kkkkkong.github.io/posts/52330.html"/>
-    <id>https://kkkkkong.github.io/posts/52330.html</id>
-    <published>2023-02-19T08:52:01.000Z</published>
-    <updated>2023-02-19T08:57:55.890Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="974-和可被-K-整除的子数组"><a href="#974-和可被-K-整除的子数组" class="headerlink" title="974. 和可被 K 整除的子数组"></a><a href="https://leetcode.cn/problems/subarray-sums-divisible-by-k/">974. 和可被 K 整除的子数组</a></h4><p>给定一个整数数组 <code>nums</code> 和一个整数 <code>k</code> ，返回其中元素之和可被 <code>k</code> 整除的（连续、非空） <strong>子数组</strong> 的数目。</p><p><strong>子数组</strong> 是数组的 <strong>连续</strong> 部分。</p><p><strong>示例 1：</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">输入：nums = [4,5,0,-2,-3,1], k = 5</span><br><span class="line">输出：7</span><br><span class="line">解释：</span><br><span class="line">有 7 个子数组满足其元素之和可被 k = 5 整除：</span><br><span class="line">[4, 5, 0, -2, -3, 1], [5], [5, 0], [5, 0, -2, -3], [0], [0, -2, -3], [-2, -3]</span><br></pre></td></tr></table></figure><h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol><li>前缀和+同余定理+哈希表，a和b对k的余数相同，那么(a-b)对k取余为0</li></ol><blockquote><p>执行用时：16 ms, 在所有 Java 提交中击败了81.95%的用户</p><p>内存消耗：47.6 MB, 在所有 Java 提交中击败了5.25%的用户</p><p>通过测试用例：73 &#x2F; 73</p><p>时间 O(N)</p><p>空间 O(N)</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">subarraysDivByK</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; map=<span class="keyword">new</span> <span class="title class_">HashMap</span>();</span><br><span class="line">        map.put(<span class="number">0</span>,<span class="number">1</span>);</span><br><span class="line">        <span class="type">int</span> ans=<span class="number">0</span>,sum=<span class="number">0</span>,n=nums.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            sum+=nums[i];</span><br><span class="line">            <span class="type">int</span> mod=(sum%k+k)%k;</span><br><span class="line">            <span class="type">int</span> value=map.getOrDefault(mod,<span class="number">0</span>);</span><br><span class="line">            <span class="keyword">if</span>(value!=<span class="number">0</span>)&#123;</span><br><span class="line">                ans+=value;</span><br><span class="line">            &#125;</span><br><span class="line">            map.put(mod,value+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;题目描述&quot;&gt;&lt;a href=&quot;#题目描述&quot; class=&quot;headerlink&quot; title=&quot;题目描述&quot;&gt;&lt;/a&gt;题目描述&lt;/h2&gt;&lt;h4 id=&quot;974-和可被-K-整除的子数组&quot;&gt;&lt;a href=&quot;#974-和可被-K-整除的子数组&quot; class=&quot;head</summary>
       
     
     
