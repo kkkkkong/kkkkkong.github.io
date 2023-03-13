@@ -3,6 +3,7 @@ title: DragonOS 实时调度器相关API
 tags:
   - 学习
   - 实时调度器
+category: DragonOS
 abbrlink: 56746
 date: 2023-02-12 09:55:50
 ---
