@@ -2,8 +2,9 @@
 title: github 首页个人信息展示
 tags:
   - github
+  - git
 category:
-  - github
+  - git
 abbrlink: 18448
 date: 2023-03-06 20:35:20
 ---
