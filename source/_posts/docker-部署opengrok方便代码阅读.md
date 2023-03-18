@@ -3,7 +3,7 @@ title: docker 部署opengrok方便代码阅读
 tags:
   - docker
   - opengrok
-category: [git,服务器]
+category: [git，服务器]
 abbrlink: 1728
 date: 2023-03-18 10:41:18
 ---
