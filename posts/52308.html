@@ -1,22 +1,24 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
+<html lang=zh>
 <head>
-  <meta charset="UTF-8">
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/avatar.png">
-  <link rel="icon" href="/img/avatar.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="kong">
-  <meta name="keywords" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no,email=no,adress=no">
+  <!-- Color theme for statusbar -->
+  <meta name="theme-color" content="#000000" />
+  <!-- 强制页面在当前窗口以独立页面显示,防止别人在框架里调用页面 -->
+  <meta http-equiv="window-target" content="_top" />
   
-    <meta name="description" content="鸟哥linux私房菜琐碎知识点 看懂了在整理，这样子整理的才有意义； 切记不要为了整理而整理！！！  0. 计算机基础知识固态硬盘（solid state disk，ssd）​	优点：马达不需要转动，所以速度快； ​	缺点：写入次数限制，所以寿命短； 数据表示方式文字编码系统 每个符号（英文数字或符号）都占用1bytes，所以有2^8^&#x3D;256种变化； 每个汉字占用2bytes，所以用2">
+  
+  <title>鸟哥linux私房菜琐碎知识点 | 虫兑变的博客</title>
+  <meta name="description" content="鸟哥linux私房菜琐碎知识点 看懂了在整理，这样子整理的才有意义； 切记不要为了整理而整理！！！  0. 计算机基础知识固态硬盘（solid state disk，ssd）​	优点：马达不需要转动，所以速度快； ​	缺点：写入次数限制，所以寿命短； 数据表示方式文字编码系统 每个符号（英文数字或符号）都占用1bytes，所以有2^8^&#x3D;256种变化； 每个汉字占用2bytes，所以用2">
 <meta property="og:type" content="article">
 <meta property="og:title" content="鸟哥linux私房菜琐碎知识点">
 <meta property="og:url" content="https://kkkkkong.github.io/posts/52308.html">
@@ -104,256 +106,372 @@
 <meta property="article:modified_time" content="2022-11-27T03:06:05.234Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="linux">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/%E9%B8%9F%E5%93%A5.png">
+  <!-- Canonical links -->
+  <link rel="canonical" href="https://kkkkkong.github.io/posts/52308.html">
+  
+    <link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
   
   
   
-  <title>鸟哥linux私房菜琐碎知识点 - 虫兑变的博客</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.css">
   
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
+<body class="main-center" itemscope itemtype="http://schema.org/WebPage">
+  <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+  <div class="slimContent">
+    <div class="navbar-header">
+      
+      
+      <div class="profile-block text-center">
+        <a id="avatar" href="https://github.com/kkkkkong" target="_blank">
+          <img class="img-circle img-rotate" src="/images/avatar.jpg" width="200" height="200">
+        </a>
+        <h2 id="name" class="hidden-xs hidden-sm">虫兑变</h2>
+        <h3 id="title" class="hidden-xs hidden-sm hidden-md">Back-End Developer &amp; Designer</h3>
+        <small id="location" class="text-muted hidden-xs hidden-sm"><i class="icon icon-map-marker"></i> GuangZhou, China</small>
+      </div>
+      
+      <div class="search" id="search-form-wrap">
+
+    <form class="search-form sidebar-form">
+        <div class="input-group">
+            <input type="text" class="search-form-input form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+                <button type="submit" class="search-form-submit btn btn-flat" onclick="return false;"><i class="icon icon-search"></i></button>
+            </span>
+        </div>
+    </form>
+    <div class="ins-search">
+  <div class="ins-search-mask"></div>
+  <div class="ins-search-container">
+    <div class="ins-input-wrapper">
+      <input type="text" class="ins-search-input" placeholder="想要查找什么..." x-webkit-speech />
+      <button type="button" class="close ins-close ins-selectable" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+    </div>
+    <div class="ins-section-wrapper">
+      <div class="ins-section-container"></div>
+    </div>
+  </div>
+</div>
 
 
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"kkkkkong.github.io","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+</div>
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav id="main-navbar" class="collapse navbar-collapse" itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation">
+      <ul class="nav navbar-nav main-nav ">
+        
+        
+        <li class="menu-item menu-item-home">
+          <a href="/.">
+            
+            <i class="icon icon-home-fill"></i>
+            
+            <span class="menu-title">首页</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives">
+            
+            <i class="icon icon-archives-fill"></i>
+            
+            <span class="menu-title">归档</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories">
+            
+            <i class="icon icon-folder"></i>
+            
+            <span class="menu-title">分类</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags">
+            
+            <i class="icon icon-tags"></i>
+            
+            <span class="menu-title">标签</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-repository">
+          <a href="/repository">
+            
+            <i class="icon icon-project"></i>
+            
+            <span class="menu-title">项目</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books">
+            
+            <i class="icon icon-book-fill"></i>
+            
+            <span class="menu-title">书单</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-links">
+          <a href="/links">
+            
+            <i class="icon icon-friendship"></i>
+            
+            <span class="menu-title">友链</span>
+          </a>
+        </li>
+        
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about">
+            
+            <i class="icon icon-cup-fill"></i>
+            
+            <span class="menu-title">关于</span>
+          </a>
+        </li>
+        
+      </ul>
+      
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/kkkkkong" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
 
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
+    </nav>
+  </div>
+</header>
+
   
-
-
-  
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="虫兑变的博客" type="application/atom+xml">
-</head>
-
-
-<body>
-  
-
-  <header>
+    <aside class="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
     
+      <div class="widget">
+    <h3 class="widget-title">公告</h3>
+    <div class="widget-body">
+        <div id="board">
+            <div class="content">
+                <p>欢迎交流与分享经验!</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="header-inner" style="height: 70vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>虫兑变</strong>
-    </a>
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DragonOS/">DragonOS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/leetcode/">leetcode</a><span class="category-list-count">109</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/">论文阅读</a><span class="category-list-count">4</span></li></ul>
+    </div>
+  </div>
 
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
 
-    <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/DragonOS/" rel="tag">DragonOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NextCloud/" rel="tag">NextCloud</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/docker/" rel="tag">docker</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/github/" rel="tag">github</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/githubpags/" rel="tag">githubpags</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo%E5%8D%9A%E5%AE%A2/" rel="tag">hexo博客</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jekyll/" rel="tag">jekyll</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/" rel="tag">linux</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/merge/" rel="tag">merge</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/opengrok/" rel="tag">opengrok</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pull/" rel="tag">pull</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/" rel="tag">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/typora/" rel="tag">typora</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%B7%E9%A2%98/" rel="tag">刷题</a><span class="tag-list-count">108</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/" rel="tag">定价方法</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/" rel="tag">实时调度器</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B0%8F%E8%AF%B4/" rel="tag">小说</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/" rel="tag">市场经济</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/" rel="tag">摩斯电码</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/" rel="tag">最优化问题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6/" rel="tag">浮点数精度</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/" rel="tag">算力网络</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" rel="tag">论文阅读</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" rel="tag">负载均衡</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" rel="tag">边缘博弈</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9D%9E%E6%8A%80%E6%9C%AF/" rel="tag">非技术</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget-body tagcloud">
+      <a href="/tags/DragonOS/" style="font-size: 13.25px;">DragonOS</a> <a href="/tags/JDBC/" style="font-size: 13px;">JDBC</a> <a href="/tags/Java/" style="font-size: 13.25px;">Java</a> <a href="/tags/NextCloud/" style="font-size: 13px;">NextCloud</a> <a href="/tags/docker/" style="font-size: 13px;">docker</a> <a href="/tags/git/" style="font-size: 13.75px;">git</a> <a href="/tags/github/" style="font-size: 13.75px;">github</a> <a href="/tags/githubpags/" style="font-size: 13px;">githubpags</a> <a href="/tags/hexo%E5%8D%9A%E5%AE%A2/" style="font-size: 13px;">hexo博客</a> <a href="/tags/java/" style="font-size: 13.25px;">java</a> <a href="/tags/jekyll/" style="font-size: 13px;">jekyll</a> <a href="/tags/leetcode/" style="font-size: 13px;">leetcode</a> <a href="/tags/linux/" style="font-size: 13.25px;">linux</a> <a href="/tags/merge/" style="font-size: 13px;">merge</a> <a href="/tags/opengrok/" style="font-size: 13px;">opengrok</a> <a href="/tags/pull/" style="font-size: 13px;">pull</a> <a href="/tags/ssh/" style="font-size: 13px;">ssh</a> <a href="/tags/typora/" style="font-size: 13px;">typora</a> <a href="/tags/%E5%88%B7%E9%A2%98/" style="font-size: 14px;">刷题</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 13.25px;">学习</a> <a href="/tags/%E5%AE%9A%E4%BB%B7%E6%96%B9%E6%B3%95/" style="font-size: 13px;">定价方法</a> <a href="/tags/%E5%AE%9E%E6%97%B6%E8%B0%83%E5%BA%A6%E5%99%A8/" style="font-size: 13.25px;">实时调度器</a> <a href="/tags/%E5%B0%8F%E8%AF%B4/" style="font-size: 13px;">小说</a> <a href="/tags/%E5%B8%82%E5%9C%BA%E7%BB%8F%E6%B5%8E/" style="font-size: 13px;">市场经济</a> <a href="/tags/%E6%8E%92%E5%BA%8F/" style="font-size: 13px;">排序</a> <a href="/tags/%E6%91%A9%E6%96%AF%E7%94%B5%E7%A0%81/" style="font-size: 13px;">摩斯电码</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 13px;">数据库</a> <a href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96%E9%97%AE%E9%A2%98/" style="font-size: 13px;">最优化问题</a> <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0%E7%B2%BE%E5%BA%A6/" style="font-size: 13px;">浮点数精度</a> <a href="/tags/%E7%AE%97%E5%8A%9B%E7%BD%91%E7%BB%9C/" style="font-size: 13.5px;">算力网络</a> <a href="/tags/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB/" style="font-size: 13.5px;">论文阅读</a> <a href="/tags/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" style="font-size: 13px;">负载均衡</a> <a href="/tags/%E8%BE%B9%E7%BC%98%E5%8D%9A%E5%BC%88/" style="font-size: 13.5px;">边缘博弈</a> <a href="/tags/%E9%9D%9E%E6%8A%80%E6%9C%AF/" style="font-size: 13px;">非技术</a>
+    </div>
+  </div>
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget-body">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/04/">四月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a><span class="archive-list-count">30</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a><span class="archive-list-count">45</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a><span class="archive-list-count">41</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/11/">十一月 2022</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/11/">十一月 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget-body">
+      <ul class="recent-post-list list-unstyled no-thumbnail">
         
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/26852.html" class="title">leetcode 92</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-04-05T01:14:16.000Z" itemprop="datePublished">2023-04-05</time>
+              </p>
+            </div>
           </li>
           
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/44910.html" class="title">leetcode 196</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-22T01:47:12.000Z" itemprop="datePublished">2023-03-22</time>
+              </p>
+            </div>
           </li>
-        
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/64622.html" class="title">leetcode 182</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-22T01:37:18.000Z" itemprop="datePublished">2023-03-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/65259.html" class="title">leetcode 144</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-22T01:23:30.000Z" itemprop="datePublished">2023-03-22</time>
+              </p>
+            </div>
+          </li>
+          
+          <li>
+            
+            <div class="item-inner">
+              <p class="item-category">
+                <a class="category-link" href="/categories/leetcode/">leetcode</a>
+              </p>
+              <p class="item-title">
+                <a href="/posts/15914.html" class="title">leetcode 145</a>
+              </p>
+              <p class="item-date">
+                <time datetime="2023-03-22T01:20:51.000Z" itemprop="datePublished">2023-03-22</time>
+              </p>
+            </div>
+          </li>
+          
       </ul>
     </div>
   </div>
-</nav>
-
   
 
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="鸟哥linux私房菜琐碎知识点"></span>
-          
-        </div>
-
-        
-          
-  <div class="mt-3">
-    
-    
-      <span class="post-meta">
-        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2021-10-08 12:00" pubdate>
-          2021年10月8日 中午
-        </time>
-      </span>
     
   </div>
+</aside>
 
-  <div class="mt-1">
+  
+  
+<main class="main" role="main">
+  <div class="content">
+  <article id="post-鸟哥linux私房菜琐碎知识点整理" class="article article-type-post" itemscope itemtype="http://schema.org/BlogPosting">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-chart"></i>
+    <div class="article-header">
+      
         
-          13k 字
-        
-      </span>
-    
+  
+    <h1 class="article-title" itemprop="name">
+      鸟哥linux私房菜琐碎知识点
+    </h1>
+  
 
-    
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-clock-fill"></i>
+      
+      <div class="article-meta">
+        <span class="article-date">
+    <i class="icon icon-calendar-check"></i>
+	<a href="/posts/52308.html" class="article-date">
+	  <time datetime="2021-10-08T04:00:00.000Z" itemprop="datePublished">2021-10-08</time>
+	</a>
+</span>
         
         
-        
-          111 分钟
-        
-      </span>
-    
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>
+	<a class="article-tag-link-link" href="/tags/linux/" rel="tag">linux</a>
+  </span>
 
-    
-    
-  </div>
-
 
         
+	<span class="article-read hidden-xs">
+	    <i class="icon icon-eye-fill" aria-hidden="true"></i>
+	    <span id="busuanzi_container_page_pv">
+			<span id="busuanzi_value_page_pv">0</span>
+		</span>
+	</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i> <a href="/posts/52308.html#comments" class="article-comment-link">评论</a></span>
+        
+	
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 9.4k(字)</span>
+	
+	
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 33(分)</span>
+	
+
       </div>
-
-      
     </div>
-  </div>
-</div>
-
-</div>
-
-  </header>
-
-  <main>
-    
+    <div class="article-entry marked-body" itemprop="articleBody">
       
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
-        <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">鸟哥linux私房菜琐碎知识点</h1>
-            
-            
-              <div class="markdown-body">
-                
-                <h1 id="鸟哥linux私房菜琐碎知识点"><a href="#鸟哥linux私房菜琐碎知识点" class="headerlink" title="鸟哥linux私房菜琐碎知识点"></a>鸟哥linux私房菜琐碎知识点</h1><blockquote>
+        <h1 id="鸟哥linux私房菜琐碎知识点"><a href="#鸟哥linux私房菜琐碎知识点" class="headerlink" title="鸟哥linux私房菜琐碎知识点"></a>鸟哥linux私房菜琐碎知识点</h1><blockquote>
 <p>看懂了在整理，这样子整理的才有意义；</p>
 <p>切记不要为了整理而整理！！！</p>
 </blockquote>
@@ -378,11 +496,11 @@
 <li>GCC&#x3D;GNU Compiler Collection，是linux下的编译器，目前支持C、C++、Java、Objective-C、Fortran、Ada。</li>
 <li>GPL&#x3D;GNU General Public License，自由软件的版权。</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/%E9%B8%9F%E5%93%A5.png" srcset="/img/loading.gif" lazyload alt="是"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/%E9%B8%9F%E5%93%A5.png" alt="是"></p>
 <ul>
 <li>open source 协议说明</li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200205220035465.png" srcset="/img/loading.gif" lazyload alt="版权控制说明"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200205220035465.png" alt="版权控制说明"></p>
 <h3 id="linux发展"><a href="#linux发展" class="headerlink" title="linux发展"></a>linux发展</h3><ul>
 <li><p><strong>重要人物</strong>：Linus Torvalds（托瓦兹），早期的Unix系统只提供运算功能，terminal仅负责IO，他想自己搞一个Unix，首先找到了minix。</p>
 </li>
@@ -391,7 +509,7 @@
 <li><p><strong>linux0.02：</strong>托瓦兹参考minux的设计理念，写出的操作系统，早期的linux。</p>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206094811396.png" srcset="/img/loading.gif" lazyload alt="image-20200206094811396"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206094811396.png" alt="image-20200206094811396"></p>
 <ul>
 <li><strong>linux虚拟团队的发展：</strong><ul>
 <li><strong>单人维护：</strong>最开始托瓦兹将linux核心放置在FTP上，用户下载使用发现问题主动汇给他；</li>
@@ -400,10 +518,10 @@
 </ul>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206100231360.png" srcset="/img/loading.gif" lazyload alt="image-20200206100231360"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206100231360.png" alt="image-20200206100231360"></p>
 <ul>
 <li><p><strong>linux的核心版本：</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206101541956.png" srcset="/img/loading.gif" lazyload alt="image-20200206101541956"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206101541956.png" alt="image-20200206101541956"></p>
 <ul>
 <li><p><strong>奇偶版本分类：</strong></p>
 <ul>
@@ -431,7 +549,7 @@
 <li>使用dpkg方式安装软件的系统：Debian、Ubuntu、B2D等；</li>
 </ol>
 <p><strong>鸟哥的选择建议：</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206104202391.png" srcset="/img/loading.gif" lazyload alt="image-20200206104202391"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206104202391.png" alt="image-20200206104202391"></p>
 </li>
 </ul>
 <h3 id="linux当前的应用角色"><a href="#linux当前的应用角色" class="headerlink" title="linux当前的应用角色"></a>linux当前的应用角色</h3><p>主要分为企业应用于个人应用，这几年非常流行的云端运算机制中，linux似乎更有着力点。</p>
@@ -468,7 +586,7 @@
 <p>数据集中在云端，企业员工无时无地都可以办公，不知对于员工来说是喜是忧:smile:</p>
 <ol>
 <li><p><strong>云程序：</strong>公司内部私有云、大型因特网供货商等等</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206151658688.png" srcset="/img/loading.gif" lazyload alt="image-20200206151658688"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206151658688.png" alt="image-20200206151658688"></p>
 </li>
 <li><p><strong>端设备：</strong>连接上面的云程序，很多时候使用智能手机、平板，连接到某云就可以使用了；还有像是更迷你的端点设备树莓派、香蕉派，网上售价百十块钱的样子。</p>
 </li>
@@ -479,18 +597,18 @@
 <li><p>站在要让linux成为自己的好用的工具为出发点学习。</p>
 </li>
 <li><p>从头学起。vi文本编辑器、shell scripts 、软件管理员（安装方式）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206182729268.png" srcset="/img/loading.gif" lazyload alt="image-20200206182729268"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206182754327.png" srcset="/img/loading.gif" lazyload alt="image-20200206182754327"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206182729268.png" alt="image-20200206182729268"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206182754327.png" alt="image-20200206182754327"></p>
 </li>
 <li><p>讨论地址</p>
 <p><a target="_blank" rel="noopener" href="http://phorum.study-area.org/">http://phorum.study-area.org/</a></p>
 <p><a target="_blank" rel="noopener" href="https://phorum.vbird.org/">https://phorum.vbird.org/</a></p>
 </li>
 <li><p>好习惯</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206184135286.png" srcset="/img/loading.gif" lazyload alt="image-20200206184135286"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206184135286.png" alt="image-20200206184135286"></p>
 </li>
 <li><p>兴趣、成就感</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206184306861.png" srcset="/img/loading.gif" lazyload alt="image-20200206184306861"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206184306861.png" alt="image-20200206184306861"></p>
 </li>
 <li><p><strong>不同的环境下，解决问题的办法有很多种，只要行得通，就是好办法！</strong></p>
 </li>
@@ -515,15 +633,15 @@
 <h4 id="3-各硬件装置在linux文件夹中的命名"><a href="#3-各硬件装置在linux文件夹中的命名" class="headerlink" title="3.各硬件装置在linux文件夹中的命名"></a>3.各硬件装置在linux文件夹中的命名</h4><blockquote>
 <p>在linux中，每个装置都被当成一个文件夹来对待</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206203309823.png" srcset="/img/loading.gif" lazyload alt="image-20200206203309823"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206203333441.png" srcset="/img/loading.gif" lazyload alt="image-20200206203333441"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206203309823.png" alt="image-20200206203309823"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206203333441.png" alt="image-20200206203333441"></p>
 <h4 id="使用虚拟机学习"><a href="#使用虚拟机学习" class="headerlink" title="使用虚拟机学习"></a>使用虚拟机学习</h4><ul>
 <li>Windows：VMware、VirtualBox</li>
 <li>linux：KVM</li>
 </ul>
 <h3 id="磁盘分区"><a href="#磁盘分区" class="headerlink" title="磁盘分区"></a>磁盘分区</h3><h4 id="磁盘连接方式与装置文件名的关系"><a href="#磁盘连接方式与装置文件名的关系" class="headerlink" title="磁盘连接方式与装置文件名的关系"></a>磁盘连接方式与装置文件名的关系</h4><p>正常实体机大概使用的都是&#x2F;dev&#x2F;sd[a-]磁盘文件名，但是在虚拟环境下，为了加速可能就会有&#x2F;dev&#x2F;vd[a-p]这种装置文件名。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206210514548.png" srcset="/img/loading.gif" lazyload alt="image-20200206210514548"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206210531763.png" srcset="/img/loading.gif" lazyload alt="image-20200206210531763"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206210514548.png" alt="image-20200206210514548"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206210531763.png" alt="image-20200206210531763"></p>
 <blockquote>
 <p>我的阿里云服务器，centos7.4，对应的文件名称为&#x2F;dec&#x2F;vda、&#x2F;dev&#x2F;vda1</p>
 </blockquote>
@@ -532,7 +650,7 @@
 <blockquote>
 <p>吧啦吧啦，脑子不够用，看不懂了，总之这里出现了文件名称后面的对应数字。&#x2F;dev&#x2F;sda2</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206211749441.png" srcset="/img/loading.gif" lazyload alt="image-20200206211749441"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200206211749441.png" alt="image-20200206211749441"></p>
 </li>
 <li><p>GUID partition table，GPT磁盘分区表</p>
 <blockquote>
@@ -540,7 +658,7 @@
 </blockquote>
 </li>
 </ul>
-<h4 id="开机流程中的BIOS与UEFI开机检测"><a href="#开机流程中的BIOS与UEFI开机检测" class="headerlink" title="开机流程中的BIOS与UEFI开机检测"></a>开机流程中的BIOS与UEFI开机检测</h4><h5 id="BIOS搭配MBR-x2F-GPT的开机流程"><a href="#BIOS搭配MBR-x2F-GPT的开机流程" class="headerlink" title="BIOS搭配MBR&#x2F;GPT的开机流程"></a>BIOS搭配MBR&#x2F;GPT的开机流程</h5><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200207113232733.png" srcset="/img/loading.gif" lazyload alt="image-20200207113232733"></p>
+<h4 id="开机流程中的BIOS与UEFI开机检测"><a href="#开机流程中的BIOS与UEFI开机检测" class="headerlink" title="开机流程中的BIOS与UEFI开机检测"></a>开机流程中的BIOS与UEFI开机检测</h4><h5 id="BIOS搭配MBR-x2F-GPT的开机流程"><a href="#BIOS搭配MBR-x2F-GPT的开机流程" class="headerlink" title="BIOS搭配MBR&#x2F;GPT的开机流程"></a>BIOS搭配MBR&#x2F;GPT的开机流程</h5><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200207113232733.png" alt="image-20200207113232733"></p>
 <blockquote>
 <p>BIOS不懂GPT</p>
 </blockquote>
@@ -550,11 +668,11 @@
 <h4 id="linux安装的磁盘分区"><a href="#linux安装的磁盘分区" class="headerlink" title="linux安装的磁盘分区"></a>linux安装的磁盘分区</h4><ul>
 <li><p>目录树结构</p>
 <p>所有文件都是由根目录衍生来的</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/127.png" srcset="/img/loading.gif" lazyload alt="image-20200207114016865"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/127.png" alt="image-20200207114016865"></p>
 </li>
 <li><p>文件系统与目录树的关系：挂载</p>
 <p>定义：所谓的挂载就是利用一个目录当成进入点，将磁盘分区槽的数据放置在该目录下，即进入高目录就可以读取该分区槽。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/126.png" srcset="/img/loading.gif" lazyload alt="image-20200207114547832"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/126.png" alt="image-20200207114547832"></p>
 </li>
 </ul>
 <blockquote>
@@ -597,11 +715,11 @@
 <p>鸟哥说：没有装过十次以上的linux，是学不会linux与磁盘分区的:smile:</p>
 <p>我有幸装过两三次了</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/125.png" srcset="/img/loading.gif" lazyload alt="image-20200208162047374"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/125.png" alt="image-20200208162047374"></p>
 <h2 id="3-安装CentOS7-x"><a href="#3-安装CentOS7-x" class="headerlink" title="3.安装CentOS7.x"></a>3.安装CentOS7.x</h2><blockquote>
 <p>由于我之前安装过Ubuntu1604，加上租的阿里云的Centos7.4的云服务器，这章就不跟着整理了。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/124.png" srcset="/img/loading.gif" lazyload alt="image-20200208205809610"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/124.png" alt="image-20200208205809610"></p>
 <h2 id="4-登入系统"><a href="#4-登入系统" class="headerlink" title="4.登入系统"></a>4.登入系统</h2><h4 id="登入"><a href="#登入" class="headerlink" title="登入"></a>登入</h4><p>一般使用非管理员用户登录，因为系统管理员权限太高，避免出现一些手滑操作。</p>
 <h4 id="基础操作介绍"><a href="#基础操作介绍" class="headerlink" title="基础操作介绍"></a>基础操作介绍</h4><ul>
 <li><p>Ctrl+Alt+F1-F6切换终端</p>
@@ -611,7 +729,7 @@
 <li><p>关机指令：shutdown、poweroff、reboot、halt</p>
 </li>
 <li><p>复杂关机指令：systemctl 【指令】，上面的几个指令都是调用这个指令。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/123.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/123.jpg"></p>
 </li>
 </ul>
 <h2 id="5-Linux的文件权限与目录配置"><a href="#5-Linux的文件权限与目录配置" class="headerlink" title="5.Linux的文件权限与目录配置"></a>5.Linux的文件权限与目录配置</h2><h4 id="使用者与群组"><a href="#使用者与群组" class="headerlink" title="使用者与群组"></a>使用者与群组</h4><ul>
@@ -620,7 +738,7 @@
 <li><p>群组（group）：比如在团队协作的时候，某些文件是具有一定的保密性的，只能让团队里面的成员使用，组内成员之间可以互相修改对方的数据，但是其他组的成员不能看到本组的文件内容。帐号支持多群组设定。</p>
 </li>
 <li><p>其他人（others）：与文件拥有没有任何关系，只有上述两种使用者给予权限才可访问。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix1.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix1.jpg"></p>
 <blockquote>
 <p>上图中例子：以王三毛为例，王三毛这个文件的拥有者为王三毛，王三毛属于王大毛这个群组，而张小猪相对于王三毛，只是个其他人而已。</p>
 <p>图中有一个特殊的人物，就是天神（root），拥有无限的权利，所以他可以访问任何一个地方。</p>
@@ -635,7 +753,7 @@
 </blockquote>
 </li>
 </ul>
-<h4 id="Linux文件权限概念"><a href="#Linux文件权限概念" class="headerlink" title="Linux文件权限概念"></a>Linux文件权限概念</h4><h5 id="Linux文件属性"><a href="#Linux文件属性" class="headerlink" title="Linux文件属性"></a>Linux文件属性</h5><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix3.jpg" srcset="/img/loading.gif" lazyload></p>
+<h4 id="Linux文件权限概念"><a href="#Linux文件权限概念" class="headerlink" title="Linux文件权限概念"></a>Linux文件权限概念</h4><h5 id="Linux文件属性"><a href="#Linux文件属性" class="headerlink" title="Linux文件属性"></a>Linux文件属性</h5><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix3.jpg"></p>
 <ul>
 <li><p>第一栏表示这个文件的类型与权限</p>
 <p>共有10个字符</p>
@@ -722,7 +840,7 @@
 </li>
 <li><p>符号类型更改权限：</p>
 <p>使用user（u）、group（g）、others（o）表示三种身份的权限，a则代表全部的身份。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200211202434460.png" srcset="/img/loading.gif" lazyload alt="image-20200211202434460"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200211202434460.png" alt="image-20200211202434460"></p>
 </li>
 </ul>
 </li>
@@ -747,7 +865,7 @@
 </li>
 </ul>
 <p>x：代表用户能否进入该目录成为工作目录的用途。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200211212933823.png" srcset="/img/loading.gif" lazyload alt="image-20200211212933823"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200211212933823.png" alt="image-20200211212933823"></p>
 <blockquote>
 <p>上图例子中，r都不是必须的，因为我知道要找的文件file1的名字，缺少r只是缺少了tab补全。</p>
 </blockquote>
@@ -806,7 +924,7 @@
 <p>由于使用Linux开发产品或者distributions的开发者太多了，如果每个人都按照自己的想法来配置文件防止的目录，那可能会造成管理上的困扰，这就有了后来的FHS（Filesystem Hierarchy Standard）标准出炉了。</p>
 </blockquote>
 <p>FHS根据文件系统使用的频繁与否与是否允许使用者随意更改，而将目录定义成为四种交互作用的形态，类似下图：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212183430045.png" srcset="/img/loading.gif" lazyload alt="image-20200212183430045"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212183430045.png" alt="image-20200212183430045"></p>
 <p>这是一些代表性的目录，关于这四种类型：</p>
 <ul>
 <li>可分享的：可以分享给其他系统挂在使用的目录，像是执行文件、用户的邮件等数据。</li>
@@ -823,17 +941,17 @@
 <blockquote>
 <p>下面是FHS系统规定的必须要存在的目录以及建议存在的目录</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204726879.png" srcset="/img/loading.gif" lazyload alt="image-20200212204726879"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204749591.png" srcset="/img/loading.gif" lazyload alt="image-20200212204749591"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204814579.png" srcset="/img/loading.gif" lazyload alt="image-20200212204814579"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204833246.png" srcset="/img/loading.gif" lazyload alt="image-20200212204833246"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204854755.png" srcset="/img/loading.gif" lazyload alt="image-20200212204854755"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204912143.png" srcset="/img/loading.gif" lazyload alt="image-20200212204912143"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204726879.png" alt="image-20200212204726879"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204749591.png" alt="image-20200212204749591"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204814579.png" alt="image-20200212204814579"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204833246.png" alt="image-20200212204833246"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204854755.png" alt="image-20200212204854755"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212204912143.png" alt="image-20200212204912143"></p>
 <blockquote>
 <p>在CentOS 7 中，目录编排与过去版本不同，将一部分原本在根目录下的目录，内部数据全部挪到&#x2F;usr 中，然后进行连接设定，具体如下：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212205251812.png" srcset="/img/loading.gif" lazyload alt="image-20200212205251812"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212205251812.png" alt="image-20200212205251812"></p>
 </blockquote>
-<h5 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h5><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212205640418.png" srcset="/img/loading.gif" lazyload alt="image-20200212205640418"></p>
+<h5 id="目录树"><a href="#目录树" class="headerlink" title="目录树"></a>目录树</h5><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200212205640418.png" alt="image-20200212205640418"></p>
 <blockquote>
 <p>如图，&#x2F;var 目录最好能够独立出来，这样对于系统的数据还有一些安全性的保护，至少&#x2F;var 死掉时，根目录还活着，还能够进入救援模式。</p>
 <p>个人理解因为&#x2F;var 存放的是常态性变动文件，所以容易被搞出事情，所以这里强调将其单独放出来。</p>
@@ -887,20 +1005,20 @@
 <p>添加PATH：PATH&#x3D;”${PATH}:&#x2F;root”。</p>
 <p>安全起见，不建议将. 加入PATH中，避免写某些文件过度使用权限。</p>
 </blockquote>
-<h3 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h3><h4 id="文件目录查看：ls"><a href="#文件目录查看：ls" class="headerlink" title="文件目录查看：ls"></a>文件目录查看：ls</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213204432458.png" srcset="/img/loading.gif" lazyload alt="image-20200213204432458"></p>
+<h3 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h3><h4 id="文件目录查看：ls"><a href="#文件目录查看：ls" class="headerlink" title="文件目录查看：ls"></a>文件目录查看：ls</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213204432458.png" alt="image-20200213204432458"></p>
 <blockquote>
 <p>bash shell 实现了将ll 代表ls -l 的指令。</p>
 </blockquote>
 <h4 id="复制、删除与移动：cp，rm，mv"><a href="#复制、删除与移动：cp，rm，mv" class="headerlink" title="复制、删除与移动：cp，rm，mv"></a>复制、删除与移动：cp，rm，mv</h4><ul>
 <li><p>cp（copy）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213205052303.png" srcset="/img/loading.gif" lazyload alt="image-20200213205052303"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213205052303.png" alt="image-20200213205052303"></p>
 <blockquote>
 <p>常用-a 或-p 来完整复制文件的权限，否则都会按照默认的权限复制的！</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213205345601.png" srcset="/img/loading.gif" lazyload alt="image-20200213205345601"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213210154434.png" srcset="/img/loading.gif" lazyload alt="image-20200213210154434"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213210211747.png" srcset="/img/loading.gif" lazyload alt="image-20200213210211747"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213210305522.png" srcset="/img/loading.gif" lazyload alt="image-20200213210305522"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213205345601.png" alt="image-20200213205345601"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213210154434.png" alt="image-20200213210154434"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213210211747.png" alt="image-20200213210211747"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213210305522.png" alt="image-20200213210305522"></p>
 <blockquote>
 <p>总之，由于cp有种种的文件属性与权限的特性，所以在复制时必须要考虑到：</p>
 </blockquote>
@@ -918,18 +1036,18 @@
 </blockquote>
 </li>
 <li><p>rm（remove）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213211042388.png" srcset="/img/loading.gif" lazyload alt="image-20200213211042388"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213211052093.png" srcset="/img/loading.gif" lazyload alt="image-20200213211052093"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213211042388.png" alt="image-20200213211042388"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213211052093.png" alt="image-20200213211052093"></p>
 <blockquote>
 <p>rm -r 递归删除一些废弃文件夹很好用，慎用。</p>
 <p>当然还有毁天灭地的rm -rf &#x2F;* 指令，千万别用！！！:smile:</p>
 </blockquote>
 </li>
 <li><p>mv(move)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213212307438.png" srcset="/img/loading.gif" lazyload alt="image-20200213212307438"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213212307438.png" alt="image-20200213212307438"></p>
 </li>
 </ul>
-<h4 id="获取路径的文件名与目录名称"><a href="#获取路径的文件名与目录名称" class="headerlink" title="获取路径的文件名与目录名称"></a>获取路径的文件名与目录名称</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213212512116.png" srcset="/img/loading.gif" lazyload alt="image-20200213212512116"></p>
+<h4 id="获取路径的文件名与目录名称"><a href="#获取路径的文件名与目录名称" class="headerlink" title="获取路径的文件名与目录名称"></a>获取路径的文件名与目录名称</h4><p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213212512116.png" alt="image-20200213212512116"></p>
 <h3 id="文件内容查阅"><a href="#文件内容查阅" class="headerlink" title="文件内容查阅"></a>文件内容查阅</h3><ol>
 <li><p>cat：从第一行开始显示文件内容；</p>
 </li>
@@ -953,22 +1071,22 @@
 </blockquote>
 <ul>
 <li><p>cat(concatenate)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213213722126.png" srcset="/img/loading.gif" lazyload alt="image-20200213213722126"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213213750140.png" srcset="/img/loading.gif" lazyload alt="image-20200213213750140"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213213722126.png" alt="image-20200213213722126"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213213750140.png" alt="image-20200213213750140"></p>
 </li>
 <li><p>tac</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213214349626.png" srcset="/img/loading.gif" lazyload alt="image-20200213214349626"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213214349626.png" alt="image-20200213214349626"></p>
 <p>有点意思，tac就是将cat输出的内容按照行数倒序连续输出。</p>
 </li>
 <li><p>nl(添加行号打印)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213215313331.png" srcset="/img/loading.gif" lazyload alt="image-20200213215313331"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213215335744.png" srcset="/img/loading.gif" lazyload alt="image-20200213215335744"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213215313331.png" alt="image-20200213215313331"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213215335744.png" alt="image-20200213215335744"></p>
 <blockquote>
 <p>nl的预设和cat -n有点不太一样，nl可以将行号做比较多的显示设计，包括位数与是否自动补齐0等等。</p>
 </blockquote>
 </li>
 <li><p>more()</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213215713217.png" srcset="/img/loading.gif" lazyload alt="image-20200213215713217"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213215713217.png" alt="image-20200213215713217"></p>
 <blockquote>
 <ul>
 <li>空格键：代表向下翻一页；</li>
@@ -982,29 +1100,29 @@
 </blockquote>
 </li>
 <li><p>less(一页一页翻动)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213220719850.png" srcset="/img/loading.gif" lazyload alt="image-20200213220719850"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213220831228.png" srcset="/img/loading.gif" lazyload alt="image-20200213220831228"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213220719850.png" alt="image-20200213220719850"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213220831228.png" alt="image-20200213220831228"></p>
 <blockquote>
 <p>man page 就是使用less来显示说明文件的内容的。</p>
 </blockquote>
 </li>
 <li><p>head(取出前面几行)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213220956469.png" srcset="/img/loading.gif" lazyload alt="image-20200213220956469"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213220956469.png" alt="image-20200213220956469"></p>
 <blockquote>
 <p>如果n 为负数，代表不显示后面-n行。</p>
 </blockquote>
 </li>
 <li><p>tail()</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221120485.png" srcset="/img/loading.gif" lazyload alt="image-20200213221120485"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221120485.png" alt="image-20200213221120485"></p>
 <blockquote>
 <p>类似tail ，相反方向。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221443604.png" srcset="/img/loading.gif" lazyload alt="image-20200213221443604"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221507687.png" srcset="/img/loading.gif" lazyload alt="image-20200213221507687"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221443604.png" alt="image-20200213221443604"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221507687.png" alt="image-20200213221507687"></p>
 </li>
 <li><p>od(非纯文本文档)</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221550546.png" srcset="/img/loading.gif" lazyload alt="image-20200213221550546"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221607454.png" srcset="/img/loading.gif" lazyload alt="image-20200213221607454"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221550546.png" alt="image-20200213221550546"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200213221607454.png" alt="image-20200213221607454"></p>
 </li>
 <li><p>修改文件时间或新建文档：touch</p>
 <p>Linux下记录许多的时间参数，其实是三个主要的变动时间：</p>
@@ -1019,9 +1137,9 @@
 <p>当文件的内容被取用时，就会更新这个时间，比如使用cat读取文件内容，就会更新这个时间。</p>
 </li>
 </ul>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214103905832.png" srcset="/img/loading.gif" lazyload alt="image-20200214103905832"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214103921169.png" srcset="/img/loading.gif" lazyload alt="image-20200214103921169"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214103948331.png" srcset="/img/loading.gif" lazyload alt="image-20200214103948331"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214103905832.png" alt="image-20200214103905832"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214103921169.png" alt="image-20200214103921169"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214103948331.png" alt="image-20200214103948331"></p>
 <blockquote>
 <p>touch改变的是mtime和atime，因此常被用来更改文件日期为某时间。</p>
 <p>另一个常用是创建一个空文件。</p>
@@ -1034,36 +1152,36 @@
 <p>当使用者建立目录则预设默认所有权限均开放，最大数字为777，即drwxrwxrwx。</p>
 </blockquote>
 <p>umask的数字代表被减掉的权限，以umask为022为例，相当于：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214170455218.png" srcset="/img/loading.gif" lazyload alt="image-20200214170455218"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214170455218.png" alt="image-20200214170455218"></p>
 <h4 id="文件隐藏属性"><a href="#文件隐藏属性" class="headerlink" title="文件隐藏属性"></a>文件隐藏属性</h4><ul>
 <li><p>chattr（配置文件隐藏属性）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214184446932.png" srcset="/img/loading.gif" lazyload alt="image-20200214184446932"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214184502739.png" srcset="/img/loading.gif" lazyload alt="image-20200214184502739"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214184446932.png" alt="image-20200214184446932"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214184502739.png" alt="image-20200214184502739"></p>
 </li>
 <li><p>lsattr（显示文件隐藏属性）</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214184555202.png" srcset="/img/loading.gif" lazyload alt="image-20200214184555202"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214184555202.png" alt="image-20200214184555202"></p>
 </li>
 </ul>
 <h4 id="文件特殊权限：SUID，SGID，SBIT"><a href="#文件特殊权限：SUID，SGID，SBIT" class="headerlink" title="文件特殊权限：SUID，SGID，SBIT"></a>文件特殊权限：SUID，SGID，SBIT</h4><ul>
 <li><p>Set UID</p>
 <p>当s出现在文件拥有者的x权限上时，即称为SUID。</p>
 <p>SUID针对文件设定。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214191238116.png" srcset="/img/loading.gif" lazyload alt="image-20200214191238116"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214191238116.png" alt="image-20200214191238116"></p>
 <blockquote>
 <p>例子：Linux的所有账号密码都在&#x2F;etc&#x2F;shadow 这个文件里，这个文件权限为———- 1 root root ,即为只有root可用。但是作为普通用户可以通过passwd修改自己的密码，更改该文件，这就是SUID的功能。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214191548099.png" srcset="/img/loading.gif" lazyload alt="image-20200214191548099"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214191548099.png" alt="image-20200214191548099"></p>
 <p>但是像用户dmtsai并不能使用cat查看&#x2F;etc&#x2F;shadow ，因为cat不具有SUID权限。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214191838591.png" srcset="/img/loading.gif" lazyload alt="image-20200214191838591"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214191838591.png" alt="image-20200214191838591"></p>
 </blockquote>
 </li>
 <li><p>Set GID</p>
 <p>当s出现在文件群组的x权限上时，即称为SGID。</p>
 <p>SGID针对目录和文件设定。</p>
 <p>当对一个文件设定了SGID权限时：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214192112500.png" srcset="/img/loading.gif" lazyload alt="image-20200214192112500"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214192112500.png" alt="image-20200214192112500"></p>
 <p>与SUID类似，在执行一些有SGID权限的文件时会获得对应群组的权限支持。</p>
 <p>当对一个目录设定了SGID权限时：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214192301506.png" srcset="/img/loading.gif" lazyload alt="image-20200214192301506"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200214192301506.png" alt="image-20200214192301506"></p>
 </li>
 <li><p>Sticky Bit</p>
 <p>SBIT仅作用在目录上。对于目录的作用为：</p>
@@ -1075,7 +1193,7 @@
 <p>t的作用就是不能删除别人的文件。</p>
 </blockquote>
 <p>留白，root用户创建的777权限的目录下，普通用户能否进行更改权限，删除文件等操作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">正常情况下，更改权限只能是文件拥有者或是root用户进行。该目录下用户可以删除文件和空目录，非空目录能否删除取决于目录及目录内文件的权限设置。<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">正常情况下，更改权限只能是文件拥有者或是root用户进行。该目录下用户可以删除文件和空目录，非空目录能否删除取决于目录及目录内文件的权限设置。</span><br></pre></td></tr></table></figure>
 
 
 </li>
@@ -1088,30 +1206,30 @@
 <p>在原先的７７７权限之前加上一个数字，因为这三个数字分别在三个用户组下，所以不会有冲突。像是chmod 4755 filename ，当出现Ｓ，Ｔ时，表示对应位置没有ｘ权限。</p>
 </li>
 <li><p>字母指令</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix0-1581686048358.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix0-1581686048358.jpg"></p>
 </li>
 </ul>
 </li>
 <li><p>观察文件类型：file</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix1-1581686146762.jpg" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/sendpix1-1581686146762.jpg"></p>
 </li>
 </ul>
 <h3 id="指令与权限的搜寻"><a href="#指令与权限的搜寻" class="headerlink" title="指令与权限的搜寻"></a>指令与权限的搜寻</h3><h4 id="脚本文件名的搜寻"><a href="#脚本文件名的搜寻" class="headerlink" title="脚本文件名的搜寻"></a>脚本文件名的搜寻</h4><ul>
 <li><p>which</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193803899.png" srcset="/img/loading.gif" lazyload alt="image-20200215193803899"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193803899.png" alt="image-20200215193803899"></p>
 </li>
 <li><p>type</p>
 </li>
 </ul>
 <h4 id="文档名的搜索"><a href="#文档名的搜索" class="headerlink" title="文档名的搜索"></a>文档名的搜索</h4><ul>
 <li><p>whereis</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193841400.png" srcset="/img/loading.gif" lazyload alt="image-20200215193841400"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193841400.png" alt="image-20200215193841400"></p>
 </li>
 <li><p>locate &#x2F; updatedb</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193910644.png" srcset="/img/loading.gif" lazyload alt="image-20200215193910644"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193910644.png" alt="image-20200215193910644"></p>
 </li>
 <li><p>find</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193923828.png" srcset="/img/loading.gif" lazyload alt="image-20200215193923828"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20200215193923828.png" alt="image-20200215193923828"></p>
 <blockquote>
 <p>find 有很多的用途，懒惰至极的我没整理。</p>
 </blockquote>
@@ -1121,351 +1239,222 @@
 <p>这一章后面的习题很精彩，在Pages 276</p>
 </blockquote>
 <h2 id="认识Linux的文件系统"><a href="#认识Linux的文件系统" class="headerlink" title="认识Linux的文件系统"></a>认识Linux的文件系统</h2>
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/linux/">#linux</a>
       
     </div>
-  
+    <div class="article-footer">
+      <blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接：</strong>
+      <a href="https://kkkkkong.github.io/posts/52308.html" title="鸟哥linux私房菜琐碎知识点" target="_blank" rel="external">https://kkkkkong.github.io/posts/52308.html</a>
+    </li>
+    
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong> 本博客所有文章除特别声明外，均采用 <a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN协议</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+</blockquote>
+
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/kkkkkong" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="/images/avatar.jpg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/kkkkkong" target="_blank"><span class="text-dark">虫兑变</span><small class="ml-1x">Back-End Developer &amp; Designer</small></a></h3>
+        <div>华工学生一枚</div>
+      </div>
+    </figure>
+  </div>
 </div>
 
 
-              
-  
-
-  <div class="license-box my-3">
-    <div class="license-title">
-      <div>鸟哥linux私房菜琐碎知识点</div>
-      <div>https://kkkkkong.github.io/posts/52308.html</div>
     </div>
-    <div class="license-meta">
-      
-        <div class="license-meta-item">
-          <div>作者</div>
-          <div>kong</div>
-        </div>
-      
-      
-        <div class="license-meta-item license-meta-date">
-          <div>发布于</div>
-          <div>2021年10月8日</div>
-        </div>
-      
-      
-      
-        <div class="license-meta-item">
-          <div>许可协议</div>
-          <div>
-            
-              
-              
-                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
-                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
-                    <i class="iconfont icon-by"></i>
-                  </span>
-                </a>
-              
-            
+  </article>
+  
+    
+  <section id="comments">
+  	
+           
+    
+  </section>
+
+
+  
+</div>
+
+  <nav class="bar bar-footer clearfix" data-stick-bottom>
+  <div class="bar-inner">
+  
+  <ul class="pager pull-left">
+    
+    <li class="prev">
+      <a href="/posts/20962.html" title="使用typora+github实现图床"><i class="icon icon-angle-left" aria-hidden="true"></i><span>&nbsp;&nbsp;上一篇</span></a>
+    </li>
+    
+    
+    <li class="next">
+      <a href="/posts/18120.html" title="push项目遇到timeout"><span>下一篇&nbsp;&nbsp;</span><i class="icon icon-angle-right" aria-hidden="true"></i></a>
+    </li>
+    
+    
+  </ul>
+  
+  
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-fancy btn-donate pop-onhover bg-gradient-warning" data-toggle="modal" data-target="#donateModal"><span>赏</span></button>
+  <!-- <div class="wave-icon wave-icon-danger btn-donate" data-toggle="modal" data-target="#donateModal">
+    <div class="wave-circle"><span class="icon"><i class="icon icon-bill"></i></span></div>
+  </div> -->
+  
+  
+  <div class="bar-right">
+    
+    <div class="share-component" data-sites="weibo,qq,wechat,facebook,twitter" data-mobile-sites="weibo,qq,qzone"></div>
+    
+  </div>
+  </div>
+</nav>
+  
+<!-- Modal -->
+<div class="modal modal-center modal-small modal-xs-full fade" id="donateModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content donate">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <div class="modal-body">
+        <div class="donate-box">
+          <div class="donate-head">
+            <p>感谢您的支持，我会继续努力的!</p>
+          </div>
+          <div class="tab-content">
+            <div role="tabpanel" class="tab-pane fade active in" id="alipay">
+              <div class="donate-payimg">
+                <img src="/images/donate/alipayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开支付宝扫一扫，即可进行扫码打赏哦</p>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="wechatpay">
+              <div class="donate-payimg">
+                <img src="/images/donate/wechatpayimg.png" alt="扫码支持" title="扫一扫" />
+              </div>
+              <p class="text-muted mv">扫码打赏，你说多少就多少</p>
+              <p class="text-grey">打开微信扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+          <div class="donate-footer">
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+              <li role="presentation" class="active">
+                <a href="#alipay" id="alipay-tab" role="tab" data-toggle="tab" aria-controls="alipay" aria-expanded="true"><i class="icon icon-alipay"></i> 支付宝</a>
+              </li>
+              <li role="presentation" class="">
+                <a href="#wechatpay" role="tab" id="wechatpay-tab" data-toggle="tab" aria-controls="wechatpay" aria-expanded="false"><i class="icon icon-wepay"></i> 微信支付</a>
+              </li>
+            </ul>
           </div>
         </div>
-      
+      </div>
     </div>
-    <div class="license-icon iconfont"></div>
   </div>
+</div>
 
 
 
-              
-                <div class="post-prevnext my-3">
-                  <article class="post-prev col-6">
-                    
-                    
-                      <a href="/posts/20962.html" title="使用typora+github实现图床">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">使用typora+github实现图床</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
-                  </article>
-                  <article class="post-next col-6">
-                    
-                    
-                      <a href="/posts/18120.html" title="push项目遇到timeout">
-                        <span class="hidden-mobile">push项目遇到timeout</span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
-                    
-                  </article>
-                </div>
-              
-            </div>
+</main>
 
-            
-          </article>
+  <footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+	
+	
+    <ul class="social-links">
+    	
+        <li><a href="https://github.com/kkkkkong" target="_blank" title="Github" data-toggle=tooltip data-placement=top><i class="icon icon-github"></i></a></li>
+        
+        <li><a href="/atom.xml" target="_blank" title="Rss" data-toggle=tooltip data-placement=top><i class="icon icon-rss"></i></a></li>
+        
+    </ul>
+
+    <div class="copyright">
+    	
+        &copy; 2023 Kong Weichao
+        
+        <div class="publishby">
+        	Theme by <a href="https://github.com/cofess" target="_blank"> cofess </a>base on <a href="https://github.com/cofess/hexo-theme-pure" target="_blank">pure</a>.
         </div>
-      </div>
     </div>
-
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-  <aside class="sidebar" style="margin-left: -1rem">
-    <div id="toc">
-  <p class="toc-header">
-    <i class="iconfont icon-list"></i>
-    <span>目录</span>
-  </p>
-  <div class="toc-body" id="toc-body"></div>
-</div>
-
-
-
-  </aside>
-
-
-    </div>
-  </div>
-</div>
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
-
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  
+</footer>
+  <script src="//cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <script>
-  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
-    var toc = jQuery('#toc');
-    if (toc.length === 0 || !window.tocbot) { return; }
-    var boardCtn = jQuery('#board-ctn');
-    var boardTop = boardCtn.offset().top;
-
-    window.tocbot.init(Object.assign({
-      tocSelector     : '#toc-body',
-      contentSelector : '.markdown-body',
-      linkClass       : 'tocbot-link',
-      activeLinkClass : 'tocbot-active-link',
-      listClass       : 'tocbot-list',
-      isCollapsedClass: 'tocbot-is-collapsed',
-      collapsibleClass: 'tocbot-is-collapsible',
-      scrollSmooth    : true,
-      includeTitleTags: true,
-      headingsOffset  : -boardTop,
-    }, CONFIG.toc));
-    if (toc.find('.toc-list-item').length > 0) {
-      toc.css('visibility', 'visible');
-    }
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('tocbot' in window) {
-        tocbot.refresh();
-        var toc = jQuery('#toc');
-        if (toc.length === 0 || !tocbot) {
-          return;
-        }
-        if (toc.find('.toc-list-item').length > 0) {
-          toc.css('visibility', 'visible');
-        }
-      }
-    });
-  });
+window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')
 </script>
 
-
-  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
-
-  <script>Fluid.plugins.codeWidget();</script>
+<script src="/js/plugin.min.js"></script>
 
 
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
-    window.anchors.options = {
-      placement: CONFIG.anchorjs.placement,
-      visible  : CONFIG.anchorjs.visible
+<script src="/js/application.js"></script>
+
+
+    <script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
     };
-    if (CONFIG.anchorjs.icon) {
-      window.anchors.options.icon = CONFIG.anchorjs.icon;
-    }
-    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-    var res = [];
-    for (var item of el) {
-      res.push('.markdown-body > ' + item.trim());
-    }
-    if (CONFIG.anchorjs.placement === 'left') {
-      window.anchors.options.class = 'anchorjs-link-left';
-    }
-    window.anchors.add(res.join(', '));
-
-    Fluid.events.registerRefreshCallback(function() {
-      if ('anchors' in window) {
-        anchors.removeAll();
-        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
-        var res = [];
-        for (var item of el) {
-          res.push('.markdown-body > ' + item.trim());
-        }
-        if (CONFIG.anchorjs.placement === 'left') {
-          anchors.options.class = 'anchorjs-link-left';
-        }
-        anchors.add(res.join(', '));
-      }
-    });
-  });
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
 </script>
 
-
-  
-<script>
-  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
-    Fluid.plugins.fancyBox();
-  });
-</script>
-
-
-  <script>Fluid.plugins.imageCaption();</script>
-
-  <script  src="/js/local-search.js" ></script>
+<script src="/js/insight.js"></script>
 
 
 
 
 
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
+
+   
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
-  
 
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
+
+
+   
+    
+  <!-- <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk@1.6.2/dist/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: 'c3b604ec3834efb5c5fa',
+    clientSecret: 'e68f97b8ec9bb617527d18123bd4630e8cc1b98a',
+    repo: 'my-gitalk',
+    owner: 'kkkkkong',
+    admin: ['kkkkkong'],
+    id: md5(location.pathname),
+    distractionFreeMode: true,
+    language: 'zh-CN',
+    enableHotKey: 'true'
+  })
+  gitalk.render('comments')
+  </script>
+      
+
+
+
+
+
+
+
 </body>
 </html>

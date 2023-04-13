@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /posts/
+Allow: /archives/
+Allow: /tags/
+Allow: /categories/
+Allow: /link/
+Allow: /about/
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
+Sitemap: https://kkkkkong.github.io/sitemap.xml
+Sitemap: hhttps://kkkkkong.github.io/baidusitemap.xml
+
