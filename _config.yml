@@ -99,7 +99,7 @@ ignore:
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 # theme: pure
-theme: hexo-theme-fluid
+theme: fluid
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
