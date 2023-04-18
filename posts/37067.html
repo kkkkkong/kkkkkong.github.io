@@ -24,7 +24,7 @@
 <meta property="og:description" content="MySQL InnoDB MVCC 机制理解1. 什么是MVCCMVCC，即Multi-Version Concurrency Control （多版本并发控制）。它是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。 mysql数据库隔离级别读已提交、可重复读 都是基于MVCC实现的，相对于加锁简单粗暴的方式，它用更好的方式去处理读写冲突，能有效提高数">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-04-18T03:33:33.000Z">
-<meta property="article:modified_time" content="2023-04-18T03:42:46.434Z">
+<meta property="article:modified_time" content="2023-04-18T03:44:44.663Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="MySQL">
 <meta property="article:tag" content="MVCC">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          1.6k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          12 分钟
+          14 分钟
         
       </span>
     
@@ -279,6 +279,31 @@
                 <h2 id="MySQL-InnoDB-MVCC-机制理解"><a href="#MySQL-InnoDB-MVCC-机制理解" class="headerlink" title="MySQL InnoDB MVCC 机制理解"></a>MySQL InnoDB MVCC 机制理解</h2><h3 id="1-什么是MVCC"><a href="#1-什么是MVCC" class="headerlink" title="1. 什么是MVCC"></a>1. 什么是MVCC</h3><p>MVCC，即<strong>Multi-Version Concurrency Control （多版本并发控制）</strong>。它是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。</p>
 <p>mysql数据库隔离级别读<strong>已提交、可重复读</strong> 都是基于MVCC实现的，相对于加锁简单粗暴的方式，它用更好的方式去处理读写冲突，能有效提高数据库并发性能。</p>
 <h3 id="2-MVCC实现关键知识点"><a href="#2-MVCC实现关键知识点" class="headerlink" title="2. MVCC实现关键知识点"></a>2. MVCC实现关键知识点</h3><p>MVCC是通过UndoLog+ReadView实现</p>
+<h4 id="2-0-隐藏字段"><a href="#2-0-隐藏字段" class="headerlink" title="2.0 隐藏字段"></a>2.0 隐藏字段</h4><p>对于InnoDB存储引擎，每一行记录都有两个隐藏列<strong>trx_id</strong>、<strong>roll_pointer</strong>，如果表中没有主键和非NULL唯一键时，则还会有第三个隐藏的主键列<strong>row_id</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>是否必须</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>row_id</td>
+<td>否</td>
+<td>单调递增的行ID，不是必需的，占用6个字节。</td>
+</tr>
+<tr>
+<td>trx_id</td>
+<td>是</td>
+<td>记录操作该数据事务的事务ID</td>
+</tr>
+<tr>
+<td>roll_pointer</td>
+<td>是</td>
+<td>这个隐藏列就相当于一个指针，指向回滚段的undo日志</td>
+</tr>
+</tbody></table>
 <h4 id="2-1-Undolog"><a href="#2-1-Undolog" class="headerlink" title="2.1 Undolog"></a>2.1 Undolog</h4><p>Undo log 主要用于<code>记录</code>数据被<code>修改之前</code>的日志，在表信息修改之前先会把数据拷贝到<code>undo log</code>里。<br>当<code>事务</code>进行<code>回滚时</code>可以通过undo log 里的日志进行<code>数据还原</code>。</p>
 <p><strong>undo log主要分为两种：</strong></p>
 <ul>
@@ -313,6 +338,7 @@
 </ol>
 <h4 id="2-4-MVCC在RC和RR实现上的区别"><a href="#2-4-MVCC在RC和RR实现上的区别" class="headerlink" title="2.4 MVCC在RC和RR实现上的区别"></a>2.4 MVCC在RC和RR实现上的区别</h4><p>在RC下，事务中每执行一条sql都会有<strong>新的readview</strong>，所以会出现不可重复读的问题，但RR下在同一个事务中<strong>使用同一个readview对象</strong></p>
 <h3 id="3-参考链接"><a href="#3-参考链接" class="headerlink" title="3. 参考链接"></a>3. 参考链接</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7016165148020703246#heading-22">看一遍就理解:MVCC原理详解 - 掘金</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/492249490">看一遍就懂，全网最全一篇数据库MVCC详解！ - 知乎 (zhihu.com)</a></p>
 
                 
               </div>
