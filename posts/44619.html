@@ -16,23 +16,22 @@
   <meta name="author" content="Kong Weichao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="MySQL InnoDB MVCC 机制理解1. 什么是MVCCMVCC，即Multi-Version Concurrency Control （多版本并发控制）。它是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。 mysql数据库隔离级别读已提交、可重复读 都是基于MVCC实现的，相对于加锁简单粗暴的方式，它用更好的方式去处理读写冲突，能有效提高数">
+    <meta name="description" content="题目描述354. 俄罗斯套娃信封问题给你一个二维整数数组 envelopes ，其中 envelopes[i] &#x3D; [wi, hi] ，表示第 i 个信封的宽度和高度。 当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。 请计算 最多能有多少个 信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。 注意：不允许旋转信封。 示例 1">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL InnoDB MVCC 机制理解">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/37067.html">
+<meta property="og:title" content="leetcode 354">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/44619.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="MySQL InnoDB MVCC 机制理解1. 什么是MVCCMVCC，即Multi-Version Concurrency Control （多版本并发控制）。它是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。 mysql数据库隔离级别读已提交、可重复读 都是基于MVCC实现的，相对于加锁简单粗暴的方式，它用更好的方式去处理读写冲突，能有效提高数">
+<meta property="og:description" content="题目描述354. 俄罗斯套娃信封问题给你一个二维整数数组 envelopes ，其中 envelopes[i] &#x3D; [wi, hi] ，表示第 i 个信封的宽度和高度。 当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。 请计算 最多能有多少个 信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。 注意：不允许旋转信封。 示例 1">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-04-18T03:33:33.000Z">
-<meta property="article:modified_time" content="2023-04-18T03:44:44.663Z">
+<meta property="article:published_time" content="2023-04-19T01:19:34.000Z">
+<meta property="article:modified_time" content="2023-04-19T01:26:54.405Z">
 <meta property="article:author" content="Kong Weichao">
-<meta property="article:tag" content="MySQL">
-<meta property="article:tag" content="MVCC">
+<meta property="article:tag" content="刷题">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>MySQL InnoDB MVCC 机制理解 - 虫兑变的博客</title>
+  <title>leetcode 354 - 虫兑变的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="MySQL InnoDB MVCC 机制理解"></span>
+            <span id="subtitle" data-typed-text="leetcode 354"></span>
           
         </div>
 
@@ -210,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-18 11:33" pubdate>
-          2023年4月18日 中午
+        <time datetime="2023-04-19 09:19" pubdate>
+          2023年4月19日 上午
         </time>
       </span>
     
@@ -222,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          1.1k 字
         
       </span>
     
@@ -233,7 +232,7 @@
         
         
         
-          14 分钟
+          10 分钟
         
       </span>
     
@@ -271,74 +270,31 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">MySQL InnoDB MVCC 机制理解</h1>
+            <h1 style="display: none">leetcode 354</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="MySQL-InnoDB-MVCC-机制理解"><a href="#MySQL-InnoDB-MVCC-机制理解" class="headerlink" title="MySQL InnoDB MVCC 机制理解"></a>MySQL InnoDB MVCC 机制理解</h2><h3 id="1-什么是MVCC"><a href="#1-什么是MVCC" class="headerlink" title="1. 什么是MVCC"></a>1. 什么是MVCC</h3><p>MVCC，即<strong>Multi-Version Concurrency Control （多版本并发控制）</strong>。它是一种并发控制的方法，一般在数据库管理系统中，实现对数据库的并发访问，在编程语言中实现事务内存。</p>
-<p>mysql数据库隔离级别读<strong>已提交、可重复读</strong> 都是基于MVCC实现的，相对于加锁简单粗暴的方式，它用更好的方式去处理读写冲突，能有效提高数据库并发性能。</p>
-<h3 id="2-MVCC实现关键知识点"><a href="#2-MVCC实现关键知识点" class="headerlink" title="2. MVCC实现关键知识点"></a>2. MVCC实现关键知识点</h3><p>MVCC是通过UndoLog+ReadView实现</p>
-<h4 id="2-0-隐藏字段"><a href="#2-0-隐藏字段" class="headerlink" title="2.0 隐藏字段"></a>2.0 隐藏字段</h4><p>对于InnoDB存储引擎，每一行记录都有两个隐藏列<strong>trx_id</strong>、<strong>roll_pointer</strong>，如果表中没有主键和非NULL唯一键时，则还会有第三个隐藏的主键列<strong>row_id</strong>。</p>
-<table>
-<thead>
-<tr>
-<th>列名</th>
-<th>是否必须</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>row_id</td>
-<td>否</td>
-<td>单调递增的行ID，不是必需的，占用6个字节。</td>
-</tr>
-<tr>
-<td>trx_id</td>
-<td>是</td>
-<td>记录操作该数据事务的事务ID</td>
-</tr>
-<tr>
-<td>roll_pointer</td>
-<td>是</td>
-<td>这个隐藏列就相当于一个指针，指向回滚段的undo日志</td>
-</tr>
-</tbody></table>
-<h4 id="2-1-Undolog"><a href="#2-1-Undolog" class="headerlink" title="2.1 Undolog"></a>2.1 Undolog</h4><p>Undo log 主要用于<code>记录</code>数据被<code>修改之前</code>的日志，在表信息修改之前先会把数据拷贝到<code>undo log</code>里。<br>当<code>事务</code>进行<code>回滚时</code>可以通过undo log 里的日志进行<code>数据还原</code>。</p>
-<p><strong>undo log主要分为两种：</strong></p>
-<ul>
-<li>insert undo log<br>代表事务在insert新记录时产生的undo log , 只在事务回滚时需要，并且在事务提交后可以被立即丢弃</li>
-<li>update undo log（主要）<br>事务在进行update或delete时产生的undo log ; 不仅在事务回滚时需要，在快照读时也需要；<br>所以不能随便删除，只有在快速读或事务回滚不涉及该日志时，对应的日志才会被purge线程统一清除</li>
-</ul>
-<h4 id="2-2-Readview"><a href="#2-2-Readview" class="headerlink" title="2.2 Readview"></a>2.2 Readview</h4><h5 id="readview中的属性"><a href="#readview中的属性" class="headerlink" title="readview中的属性"></a>readview中的属性</h5><ol>
-<li><code>trx_ids</code>: 当前系统活跃(<code>未提交</code>)事务版本号集合。</li>
-<li><code>low_limit_id</code>: 创建当前read view 时“当前系统<code>最大事务版本号</code>+1”。</li>
-<li><code>up_limit_id(min_limit_id)</code>: 创建当前read view 时“系统正处于活跃事务<code>最小版本号</code>”</li>
-<li><code>creator_trx_id</code>: 创建当前read view的事务版本号；</li>
+                <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><h4 id="354-俄罗斯套娃信封问题"><a href="#354-俄罗斯套娃信封问题" class="headerlink" title="354. 俄罗斯套娃信封问题"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/russian-doll-envelopes/">354. 俄罗斯套娃信封问题</a></h4><p>给你一个二维整数数组 <code>envelopes</code> ，其中 <code>envelopes[i] = [wi, hi]</code> ，表示第 <code>i</code> 个信封的宽度和高度。</p>
+<p>当另一个信封的宽度和高度都比这个信封大的时候，这个信封就可以放进另一个信封里，如同俄罗斯套娃一样。</p>
+<p>请计算 <strong>最多能有多少个</strong> 信封能组成一组“俄罗斯套娃”信封（即可以把一个信封放到另一个信封里面）。</p>
+<p><strong>注意</strong>：不允许旋转信封。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight inform7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs inform7">输入：envelopes = <span class="hljs-comment">[<span class="hljs-comment">[5,4]</span>,<span class="hljs-comment">[6,4]</span>,<span class="hljs-comment">[6,7]</span>,<span class="hljs-comment">[2,3]</span>]</span><br>输出：3<br>解释：最多信封的个数为 3, 组合为: <span class="hljs-comment">[2,3]</span> =&gt; <span class="hljs-comment">[5,4]</span> =&gt; <span class="hljs-comment">[6,7]</span>。<br></code></pre></td></tr></table></figure>
+
+<h2 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h2><ol>
+<li>拆解为二维dp，先将原数组按照宽度升序排序，如果宽度相同，按照长度降序排序，这样不会出现多个宽度相同的信封</li>
 </ol>
-<h5 id="readview匹配规则"><a href="#readview匹配规则" class="headerlink" title="readview匹配规则"></a>readview匹配规则</h5><ol>
-<li>如果数据事务ID <code>trx_id &lt; min_limit_id</code>，表明生成该版本的事务在生成Read View前，已经提交(因为事务ID是递增的)，所以该版本可以被当前事务访问。</li>
-<li>如果<code>trx_id&gt;= max_limit_id</code>，表明生成该版本的事务在生成ReadView后才生成，所以该版本不可以被当前事务访问。</li>
-<li>如果 <code>min_limit_id =&lt;trx_id&lt; max_limit_id</code>,需要分3种情况讨论</li>
-<li><blockquote>
-<ul>
-<li>如果<code>m_ids</code>包含<code>trx_id</code>,则代表Read View生成时刻，这个事务还未提交，但是如果数据的<code>trx_id</code>等于<code>creator_trx_id</code>的话，表明数据是自己生成的，因此是<strong>可见</strong>的。</li>
-<li>如果<code>m_ids</code>包含<code>trx_id</code>，并且<code>trx_id</code>不等于<code>creator_trx_id</code>，则Read   View生成时，事务未提交，并且不是自己生产的，所以当前事务也是<strong>看不见</strong>的；</li>
-<li>如果<code>m_ids</code>不包含<code>trx_id</code>，则说明你这个事务在Read View生成之前就已经提交了，修改的结果，当前事务是能看见的。</li>
-</ul>
+<blockquote>
+<p>超时</p>
+<p>时间 O(NlogN)</p>
+<p>空间 O(N)</p>
 </blockquote>
-</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">maxEnvelopes</span><span class="hljs-params">(<span class="hljs-type">int</span>[][] envelopes)</span> &#123;<br>        Arrays.sort(envelopes,<span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>&lt;<span class="hljs-type">int</span>[]&gt;()&#123;<br>            <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(<span class="hljs-type">int</span> []o1,<span class="hljs-type">int</span> []o2)</span>&#123;<br>                <span class="hljs-comment">// 宽度相同，按长度降序排序</span><br>                <span class="hljs-keyword">return</span> o1[<span class="hljs-number">0</span>]==o2[<span class="hljs-number">0</span>]?<br>                o2[<span class="hljs-number">1</span>]-o1[<span class="hljs-number">1</span>]:o1[<span class="hljs-number">0</span>]-o2[<span class="hljs-number">0</span>];<br>            &#125;<br>        &#125;);<br>        <span class="hljs-type">int</span> len=envelopes.length;<br>        <span class="hljs-type">int</span> []length=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[len];<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;len;i++)&#123;<br>            length[i]=envelopes[i][<span class="hljs-number">1</span>];<br>        &#125;<br>        <span class="hljs-keyword">return</span> getLis(length);<br><br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getLis</span><span class="hljs-params">(<span class="hljs-type">int</span> []arr)</span>&#123;<br>        <span class="hljs-type">int</span> []dp=<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span> [arr.length];<br>        Arrays.fill(dp,<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++)&#123;<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j=<span class="hljs-number">0</span>;j&lt;i;j++)&#123;<br>                <span class="hljs-keyword">if</span>(arr[i]&gt;arr[j])&#123;<br>                    dp[i]=Math.max(dp[i],dp[j]+<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-type">int</span> ans=<span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;arr.length;i++)&#123;<br>            ans=Math.max(ans,dp[i]);<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>使用二分做，不是正常人想的，近期理解普通dp就行</li>
 </ol>
-<h4 id="2-3-主要过程"><a href="#2-3-主要过程" class="headerlink" title="2.3 主要过程"></a>2.3 主要过程</h4><ol>
-<li>获取事务自己的版本号，即事务ID</li>
-<li>获取Read View</li>
-<li>查询得到的数据，然后Read View中的事务版本号进行比较。</li>
-<li>如果不符合Read View的可见性规则， 即就需要Undo log中历史快照;</li>
-<li>最后返回符合规则的数据</li>
-</ol>
-<h4 id="2-4-MVCC在RC和RR实现上的区别"><a href="#2-4-MVCC在RC和RR实现上的区别" class="headerlink" title="2.4 MVCC在RC和RR实现上的区别"></a>2.4 MVCC在RC和RR实现上的区别</h4><p>在RC下，事务中每执行一条sql都会有<strong>新的readview</strong>，所以会出现不可重复读的问题，但RR下在同一个事务中<strong>使用同一个readview对象</strong></p>
-<h3 id="3-参考链接"><a href="#3-参考链接" class="headerlink" title="3. 参考链接"></a>3. 参考链接</h3><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/7016165148020703246#heading-22">看一遍就理解:MVCC原理详解 - 掘金</a></p>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/492249490">看一遍就懂，全网最全一篇数据库MVCC详解！ - 知乎 (zhihu.com)</a></p>
 
                 
               </div>
@@ -357,7 +313,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/MySQL/" class="category-chain-item">MySQL</a>
+  <a href="/categories/leetcode/" class="category-chain-item">leetcode</a>
   
   
 
@@ -372,9 +328,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/MySQL/">#MySQL</a>
-      
-        <a href="/tags/MVCC/">#MVCC</a>
+        <a href="/tags/%E5%88%B7%E9%A2%98/">#刷题</a>
       
     </div>
   
@@ -386,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>MySQL InnoDB MVCC 机制理解</div>
-      <div>https://kkkkkong.github.io/posts/37067.html</div>
+      <div>leetcode 354</div>
+      <div>https://kkkkkong.github.io/posts/44619.html</div>
     </div>
     <div class="license-meta">
       
@@ -399,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年4月18日</div>
+          <div>2023年4月19日</div>
         </div>
       
       
@@ -431,18 +385,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/45782.html" title="BBC纪录片《睡眠十律》">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">BBC纪录片《睡眠十律》</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/15689.html" title="leetcode 300">
-                        <span class="hidden-mobile">leetcode 300</span>
+                      <a href="/posts/45782.html" title="BBC纪录片《睡眠十律》">
+                        <span class="hidden-mobile">BBC纪录片《睡眠十律》</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
