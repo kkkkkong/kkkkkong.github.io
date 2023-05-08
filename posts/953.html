@@ -24,7 +24,7 @@
 <meta property="og:description" content="git常用命令总结 总结我常用的git命令，不然每次想不起来了还要去找 持续更新…   git add ：添加文件到缓存，常用git add . 添加所有文件夹 git status ：查看项目内文件的状态 git stash : 暂存当前的修改（不能保存为追踪文件，如新建文件） git stash pop : 将暂存文件恢复，与git stash 配合使用 git diff ：查看未缓存的更改">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-11-28T11:21:24.000Z">
-<meta property="article:modified_time" content="2023-02-23T09:35:40.114Z">
+<meta property="article:modified_time" content="2023-05-08T13:07:21.830Z">
 <meta property="article:author" content="Kong Weichao">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          850 字
+          1.4k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          8 分钟
+          12 分钟
         
       </span>
     
@@ -294,21 +294,48 @@
 <li>git pull originname a ：将远程originname分支的a拉取到本地当前分支上</li>
 <li>git reset –hard “commitID” ：回退到某个版本</li>
 <li>git reset HEAD test.txt ：取消已缓存的test.txt文件</li>
-<li>git branch ：查看本地的分支<ul>
-<li>git branch newbranch ：创建分支newbranch</li>
-</ul>
-</li>
-<li>git checkout branchname：切换到branchname 分支</li>
 <li>git merge branchname ：将任意分支合并到到当前分支中</li>
 <li>git branch -d branchname)：删除某个分支</li>
 <li>git remote add urlname urllink：添加新的远程仓库地址，一般一个项目托管到不同平台用得到</li>
 <li>git remote：查看当前的远程仓库</li>
 <li>git merge –abort ：取消merging状态</li>
-<li>git checkout -b newbranch origin&#x2F;abranch ：从远程分支abranch创建本地新分支newbranch</li>
 <li>git fetch –all : 拉取远程仓库的所有数据，包括更新的分支和提交</li>
 <li>git fetch <remote-name> : 只想更新特定的远程仓库</li>
+</ul>
+<h3 id="对于分支的操作"><a href="#对于分支的操作" class="headerlink" title="对于分支的操作"></a>对于分支的操作</h3><ul>
+<li>新建分支<ul>
+<li>git checkout -b new_barnch origin&#x2F;master： 从origin的master创建new_branch，后面不写默认从当前分支创建新分支</li>
+<li>git branch newbranch ：创建分支newbranch</li>
+</ul>
+</li>
+<li>删除分支<ul>
+<li>git branch -d new_branch： 删除本地分支new_branch，-D强制删除</li>
 <li>git push origin_name -d branch_name：删除远程分支</li>
-<li>git branch -d branch_name： 删除本地分支</li>
+</ul>
+</li>
+<li>查看分支<ul>
+<li>git branch：-a是查看全部，-r是查看远程，默认是看本地</li>
+</ul>
+</li>
+<li>切换分支<ul>
+<li>git checkout other_branch：切换到其他分支</li>
+</ul>
+</li>
+</ul>
+<h3 id="feature分支合并一些主分支的新内容常见步骤"><a href="#feature分支合并一些主分支的新内容常见步骤" class="headerlink" title="feature分支合并一些主分支的新内容常见步骤"></a>feature分支合并一些主分支的新内容常见步骤</h3><ol>
+<li>从feature分支新建分支new_feature ：git checkout -b new_feature origin&#x2F;feature_barnch </li>
+<li>合并master : git pull origin master</li>
+<li>merge后提交远程，然后pr到feature</li>
+</ol>
+<h3 id="stash"><a href="#stash" class="headerlink" title="stash"></a>stash</h3><p>主要用来存储当前的代码，主要应用场景为需要切换到其他分支，但又不想提交一个commit，此时使用stash暂存代码</p>
+<ul>
+<li>git stash：将当前未commit的代码保存起来，包括add和未add的</li>
+<li>git stash pop ：恢复存储的最近一次代码，这个指令会将缓存堆栈中的第一条删除</li>
+<li>git stash apply：这个功能同上，区别在于他不会删除代码</li>
+<li>git stash list ：展示现有的stash</li>
+<li>git stash drop：移除某个stash，一般使用git stash drop stash@{0} 格式</li>
+<li>git stash clear：删除全部stash</li>
+<li>还有一些复杂的，目前没用到，用到再说</li>
 </ul>
 <h2 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h2>
                 
