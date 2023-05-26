@@ -1,6 +1,7 @@
 ---
 title: git常用命令
 tags: git
+category: git
 abbrlink: 953
 date: 2022-11-28 19:21:24
 ---
