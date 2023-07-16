@@ -16,25 +16,25 @@
   <meta name="author" content="Kong Weichao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="事发经过最近在做一个项目，数据放在云服务器的docker上跑的mysql 下午还在写代码测数据，晚上回来连接的时候报错  “null, message from server: “Host ‘xxxx‘ is not allowed to connect to this MySQL server“  第一时间想的是是不是远程容器停了，上去后发现在运行 然后查了这个错误，是登录用户没有对应ip的连接">
+    <meta name="description" content="记录一次stash误删恢复过程今天写代码切换分支的时候，把一些暂时不想commit的代码stash了，然后到其他分支做别的事情，然后想着清理一下stash list（因为之前的太乱了，有很多不用了的），结果不小心drop了一段有用的代码（400多行） 恢复网上找了大佬们的解决方案各种尝试，有的说使用git reflog，但我的没有效果（查不到stash的记录，里面都是HEAD的内容），找到了一个有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记录一次数据库被攻击">
-<meta property="og:url" content="https://kkkkkong.github.io/posts/26533.html">
+<meta property="og:title" content="记录一次git stash drop误删恢复">
+<meta property="og:url" content="https://kkkkkong.github.io/posts/22396.html">
 <meta property="og:site_name" content="虫兑变的博客">
-<meta property="og:description" content="事发经过最近在做一个项目，数据放在云服务器的docker上跑的mysql 下午还在写代码测数据，晚上回来连接的时候报错  “null, message from server: “Host ‘xxxx‘ is not allowed to connect to this MySQL server“  第一时间想的是是不是远程容器停了，上去后发现在运行 然后查了这个错误，是登录用户没有对应ip的连接">
+<meta property="og:description" content="记录一次stash误删恢复过程今天写代码切换分支的时候，把一些暂时不想commit的代码stash了，然后到其他分支做别的事情，然后想着清理一下stash list（因为之前的太乱了，有很多不用了的），结果不小心drop了一段有用的代码（400多行） 恢复网上找了大佬们的解决方案各种尝试，有的说使用git reflog，但我的没有效果（查不到stash的记录，里面都是HEAD的内容），找到了一个有">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230517214251128.png">
-<meta property="article:published_time" content="2023-05-17T13:34:26.000Z">
-<meta property="article:modified_time" content="2023-05-17T13:55:54.251Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230526202831064.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230526203100585.png">
+<meta property="article:published_time" content="2023-05-26T12:16:01.000Z">
+<meta property="article:modified_time" content="2023-05-26T12:36:12.208Z">
 <meta property="article:author" content="Kong Weichao">
-<meta property="article:tag" content="服务器">
-<meta property="article:tag" content="mysql">
+<meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230517214251128.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230526202831064.png">
   
   
   
-  <title>记录一次数据库被攻击 - 虫兑变的博客</title>
+  <title>记录一次git stash drop误删恢复 - 虫兑变的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -201,7 +201,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="记录一次数据库被攻击"></span>
+            <span id="subtitle" data-typed-text="记录一次git stash drop误删恢复"></span>
           
         </div>
 
@@ -212,8 +212,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-17 21:34" pubdate>
-          2023年5月17日 晚上
+        <time datetime="2023-05-26 20:16" pubdate>
+          2023年5月26日 晚上
         </time>
       </span>
     
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          896 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          10 分钟
+          8 分钟
         
       </span>
     
@@ -273,46 +273,37 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">记录一次数据库被攻击</h1>
+            <h1 style="display: none">记录一次git stash drop误删恢复</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="事发经过"><a href="#事发经过" class="headerlink" title="事发经过"></a>事发经过</h2><p>最近在做一个项目，数据放在云服务器的docker上跑的mysql</p>
-<p>下午还在写代码测数据，晚上回来连接的时候报错</p>
-<blockquote>
-<p>“null, message from server: “Host ‘xxxx‘ is not allowed to connect to this MySQL server“</p>
-</blockquote>
-<p>第一时间想的是是不是远程容器停了，上去后发现在运行</p>
-<p>然后查了这个错误，是登录用户没有对应ip的连接权限，这就很奇怪，明明下午可以用</p>
-<p>然后想到是不是用的梯子自动切换了不常用的ip</p>
-<p>但没理由，之前设置root的权限连接ip是%，也就是所有ip</p>
-<p>那么直接登上服务器的数据库查看</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql">use mysql ;<br><span class="hljs-keyword">select</span> <span class="hljs-keyword">user</span>,host <span class="hljs-keyword">from</span> <span class="hljs-keyword">user</span>;<br></code></pre></td></tr></table></figure>
+                <h2 id="记录一次stash误删恢复"><a href="#记录一次stash误删恢复" class="headerlink" title="记录一次stash误删恢复"></a>记录一次stash误删恢复</h2><h3 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h3><p>今天写代码切换分支的时候，把一些暂时不想commit的代码stash了，然后到其他分支做别的事情，然后想着清理一下stash list（因为之前的太乱了，有很多不用了的），结果不小心drop了一段有用的代码（400多行）</p>
+<h3 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h3><p>网上找了大佬们的解决方案各种尝试，有的说使用git reflog，但我的没有效果（查不到stash的记录，里面都是HEAD的内容），找到了一个有一种成功，分享一下</p>
+<p>适用于我这种，<strong>删除了stash一段记录，并且不知道版本号，但是记得删除的内容</strong>的情况</p>
+<ol>
+<li>将查找的内容存入文件</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git fsck --lost-found &gt;&gt; 1.txt<br></code></pre></td></tr></table></figure>
 
-<p>竟然root的host 变成了localhost，此时意识到不对劲</p>
-<p>把host修改为%后连接查看</p>
-<p>好家伙，我的数据库表没了，取而代之的是这东西</p>
-<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230517214251128.png" srcset="/img/loading.gif" lazyload alt="image-20230517214251128"></p>
-<blockquote>
-<p>全文是：</p>
-<p>readme: 您的数据库已删除。您必须支付 0.013 比特币 (BTC) 才能取回它们。我拥有的备份：community。通过 <a href="mailto:&#x67;&#111;&#110;&#x67;&#51;&#49;&#x32;&#52;&#56;&#x40;&#116;&#117;&#x74;&#x61;&#110;&#x6f;&#116;&#97;&#46;&#x63;&#111;&#109;">&#x67;&#111;&#110;&#x67;&#51;&#49;&#x32;&#52;&#56;&#x40;&#116;&#117;&#x74;&#x61;&#110;&#x6f;&#116;&#97;&#46;&#x63;&#111;&#109;</a> 与我联系 只有与付款相关的邮件才会得到答复！</p>
-<p>BTC_address: bc1q6vrkdyxk9w4a0guw75xfkylg7qj22fylcp4e9q</p>
-<p>email: <a href="mailto:&#103;&#111;&#x6e;&#x67;&#51;&#49;&#50;&#52;&#x38;&#64;&#x74;&#117;&#116;&#97;&#110;&#111;&#x74;&#97;&#46;&#x63;&#111;&#x6d;">&#103;&#111;&#x6e;&#x67;&#51;&#49;&#50;&#52;&#x38;&#64;&#x74;&#117;&#116;&#97;&#110;&#111;&#x74;&#97;&#46;&#x63;&#111;&#x6d;</a></p>
-</blockquote>
-<h4 id="我的数据库被攻击了！！！"><a href="#我的数据库被攻击了！！！" class="headerlink" title="我的数据库被攻击了！！！"></a>我的数据库被攻击了！！！</h4><h3 id="事后处理"><a href="#事后处理" class="headerlink" title="事后处理"></a>事后处理</h3><h4 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h4><p>看看能不能挽救，立刻去网上查，发现有一个老哥遇到的问题和我几乎一样，但他的文件我这里没得，尴尬</p>
-<h4 id="数据恢复"><a href="#数据恢复" class="headerlink" title="数据恢复"></a>数据恢复</h4><p>别看了，没有备份。。。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><h4 id="猜测被攻击的原因"><a href="#猜测被攻击的原因" class="headerlink" title="猜测被攻击的原因"></a>猜测被攻击的原因</h4><ol>
-<li>暴露的端口是3306，太常见了，我用数据库的时候都用的默认值，容易被攻击</li>
-<li>密码过于简单</li>
-<li>之前暴露过自己的服务器ip</li>
+<p>内容是这样的，这记录了这段时间的内容，但是看不懂</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230526202831064.png" srcset="/img/loading.gif" lazyload alt="image-20230526202831064"></p>
+<ol start="2">
+<li>筛选结果，创建脚本快速查找（直接使用现成的脚本）</li>
 </ol>
-<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><ol>
-<li>更改常用的端口，不适用3306，改成其他的端口</li>
-<li>使用复杂密码</li>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs shell"><span class="hljs-meta prompt_">#</span><span class="language-bash">!/bin/sh</span><br>READFILENAME=&quot;1.txt&quot;      #上步文件名【1.txt dangling commit，2.txt对应unreachable commit】<br>RETFILENAME=&quot;./ret.txt&quot;   #筛选结果文件名<br>while read -r line       <br>do 	<br>    VAR=`echo $line | awk &#x27;/dangling commit/ &#123;print $3&#125;&#x27;`<br>    if [ $VAR ]; then<br>        git show $VAR &gt;&gt; $RETFILENAME    <br>        echo &quot;-------------------------------------\n&quot; &gt;&gt;$RETFILENAME #每条记录用---分割开<br>    fi<br>done &lt; $READFILENAME<br><br></code></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>得到筛选结果，筛选结果里是有代码的对应修改记录，可凭借这个找到对应的记录，然后找到相应的commitID</li>
 </ol>
-<p>最后，就是以后一定会注意数据库的安全相关内容，这次被攻击的数据库只是自己的刚开始的项目的数据，没有太多重要的内容，所以重建也还好，但如果涉及到一些比较重要的内容，可能就要面临很大的问题了</p>
-<h3 id="参考连接"><a href="#参考连接" class="headerlink" title="参考连接"></a>参考连接</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40124555/article/details/122704359">(16条消息) MySQL数据库被攻击，被删库勒索，逼迫我使出洪荒之力进行恢复数据_Java技术债务的博客-CSDN博客</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Kong-PR/Typora-picture@latest/img/image-20230526203100585.png" srcset="/img/loading.gif" lazyload alt="image-20230526203100585"></p>
+<ol start="4">
+<li>恢复，直接stash apply即可</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">git stash apply commitID<br></code></pre></td></tr></table></figure>
+
+<p>ad3a5391759ee979610b9a2a0d16f89e2d8af35c</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014213012/article/details/104640094">(17条消息) git stash drop 误用恢复_缘客_ql的博客-CSDN博客</a></p>
 
                 
               </div>
@@ -331,7 +322,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="category-chain-item">数据库</a>
+  <a href="/categories/git/" class="category-chain-item">git</a>
   
   
 
@@ -346,9 +337,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">#服务器</a>
-      
-        <a href="/tags/mysql/">#mysql</a>
+        <a href="/tags/git/">#git</a>
       
     </div>
   
@@ -360,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>记录一次数据库被攻击</div>
-      <div>https://kkkkkong.github.io/posts/26533.html</div>
+      <div>记录一次git stash drop误删恢复</div>
+      <div>https://kkkkkong.github.io/posts/22396.html</div>
     </div>
     <div class="license-meta">
       
@@ -373,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月17日</div>
+          <div>2023年5月26日</div>
         </div>
       
       
@@ -405,9 +394,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/posts/22396.html" title="记录一次git stash drop误删恢复">
+                      <a href="/posts/31970.html" title="x-admin项目相关">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">记录一次git stash drop误删恢复</span>
+                        <span class="hidden-mobile">x-admin项目相关</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -415,8 +404,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/posts/56055.html" title="牛客论坛实现技术细节">
-                        <span class="hidden-mobile">牛客论坛实现技术细节</span>
+                      <a href="/posts/26533.html" title="记录一次数据库被攻击">
+                        <span class="hidden-mobile">记录一次数据库被攻击</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
