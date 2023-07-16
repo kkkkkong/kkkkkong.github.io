@@ -31,6 +31,7 @@ date: 2022-11-28 19:21:24
 - git merge --abort ：取消merging状态
 - git fetch --all : 拉取远程仓库的所有数据，包括更新的分支和提交
 - git fetch <remote-name> : 只想更新特定的远程仓库
+- git push -u origin_name origin_branch_name: 本地当前分支与远程分支绑定，下次可以直接push，不需要写远程名字
 
 
 
